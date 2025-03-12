@@ -1,0 +1,41 @@
+\babel@toc {english}{}\relax 
+\contentsline {chapter}{List of Figures}{vii}{chapter*.5}%
+\contentsline {chapter}{Abbreviations}{viii}{section*.6}%
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Background}{1}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Objectives}{2}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Project Requirements}{2}{section.1.3}%
+\contentsline {section}{\numberline {1.4}Scope \& Limitations}{4}{section.1.4}%
+\contentsline {section}{\numberline {1.5}Report Outline}{4}{section.1.5}%
+\contentsline {chapter}{\numberline {2}Literature Review }{5}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Overview of Frequency Domain Analysis in Spectrum Analyzer Designs}{6}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Frequency Domain Analysis of Signals}{6}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}Principles of Spectrum Analyzers}{6}{subsection.2.1.2}%
+\contentsline {section}{\numberline {2.2}Digitizing Spectrum Analyzer Outputs}{6}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Output Voltage Regulation and Preparation for Frequency Analysis}{6}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Transforming Spectrum Analyzer Output Signals to Digital Frequency Domain}{6}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}Interfacing Computers with Spectrum Analyzers}{6}{subsection.2.2.3}%
+\contentsline {section}{\numberline {2.3}Modern Spectrum Analyzer Displays}{6}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Configurations and Displayed Data in Modern Spectrum Analyzer Displays}{6}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}Technological Developments in Signal Analyzer Displays}{6}{subsection.2.3.2}%
+\contentsline {chapter}{\numberline {3}Methodology}{7}{chapter.3}%
+\contentsline {section}{\numberline {3.1}System Overview}{7}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Design Implementation}{7}{section.3.2}%
+\contentsline {section}{\numberline {3.3}System Requirements}{7}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Scope \& Limitations}{8}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Report Outline}{8}{section.3.5}%
+\contentsline {chapter}{\numberline {4}Results}{9}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Background}{9}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Objectives}{9}{section.4.2}%
+\contentsline {section}{\numberline {4.3}System Requirements}{9}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Scope \& Limitations}{10}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Report Outline}{10}{section.4.5}%
+\contentsline {chapter}{\numberline {5}Discussion}{11}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Background}{11}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Objectives}{11}{section.5.2}%
+\contentsline {section}{\numberline {5.3}System Requirements}{11}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Scope \& Limitations}{12}{section.5.4}%
+\contentsline {section}{\numberline {5.5}Report Outline}{12}{section.5.5}%
+\contentsline {chapter}{\numberline {6}Conclusions }{13}{chapter.6}%
+\contentsline {chapter}{\numberline {7}Recommendations }{14}{chapter.7}%
+\contentsline {chapter}{Bibliography}{15}{chapter*.11}%

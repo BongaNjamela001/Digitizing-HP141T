@@ -1,0 +1,39 @@
+% ----------------------------------------------------
+% Introduction
+% ----------------------------------------------------
+\documentclass[class=report,11pt,crop=false]{standalone}
+\input{../Style/ChapterStyle.tex}
+\input{../FrontMatter/Glossary.tex}
+\begin{document}
+	% ----------------------------------------------------
+	\chapter{Methodology}
+	%\epigraph{Philosophers have hitherto only interpreted the world in various ways; the point is to change it.}%
+	%    {\emph{---Karl Marx}}
+	%\vspace{0.5cm}
+	% ----------------------------------------------------
+	
+	%\lipsum[1]
+
+	
+	\section{System Overview}
+	\lipsum[1]
+	
+	\section{Design Implementation}
+	\lipsum[1]
+	
+	\section{System Requirements}
+	\lipsum[1]
+	
+	\section{Scope \& Limitations}
+	\lipsum[1]
+	
+	\section{Report Outline}
+	\lipsum[1]
+	
+	% ----------------------------------------------------
+	\ifstandalone
+	\bibliography{../Bibliography/References.bib}
+	\printnoidxglossary[type=\acronymtype,nonumberlist]
+	\fi
+\end{document}
+% ----------------------------------------------------

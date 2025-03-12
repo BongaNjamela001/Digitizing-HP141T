@@ -1,0 +1,37 @@
+% ----------------------------------------------------
+% Literature Review
+% ----------------------------------------------------
+\documentclass[class=report,11pt,crop=false]{standalone}
+\input{../Style/ChapterStyle.tex}
+\input{../FrontMatter/Glossary.tex}
+\begin{document}
+\ifstandalone
+\tableofcontents
+\fi
+% ----------------------------------------------------
+\chapter{Literature Review \label{ch:literature}}
+\vspace{0.25cm}
+% ----------------------------------------------------
+The aim of this chapter is to conceptualize the operation of spectrum analyzers and establish a theoretical foundation for the frequency analysis techniques applied to produce the correct output. This conceptualization is then integrated with a broader review of digitizing and modernizing the display of spectrum analyzers.
+
+In circumventing design limitations of spectrum analyzer displays, it is prudent to survey the most suitable hardware components. This is particularly true for the case where electronic components are required to perform in a broad frequency bandwidth. For example, for high frequency signals, the Nyquist theorem indicates that the ADC is required to have a sample at a frequency that is more than double the frequency of the output signal. Furthermore, the challenge of presenting signals in the frequency domain using electronics exists due to the fact the input signal to the ADC holds information about frequency in the time domain. Therefore, the investigation of literature that is presented in this chapter aims to provide a motivation for the design decisions taken in digitizing and modernizing the HP141T display.
+
+The chapter begins with an evaluation of the frequency domain analysis theory that is applied in the operation of signal analyzers. Then, the different principles that distinguish different types of analyzers are explored to form the basis understanding the expected behaviour of a spectrum analyzer with specific settings. Following descriptions of the operation of spectrum analyzers from literature, the chapter includes a review of the investigation into different techniques for digitizing analyzer displays. This also includes a review of the different electronic components and techniques for digitizing frequency information in order to survey available hardware options that can be selected for a cost effective implementation. Finally, a broad discussion is included on different types of displays for analyzers in literature and a critique of the literature is provided to outline the purpose of the proposed design. 
+
+\section{Overview of Frequency Domain Analysis in Spectrum Analyzer Designs}
+\subsection{Frequency Domain Analysis of Signals}
+\subsection{Principles of Spectrum Analyzers}
+\section{Digitizing Spectrum Analyzer Outputs}
+\subsection{Output Voltage Regulation and Preparation for Frequency Analysis}
+\subsection{Transforming Spectrum Analyzer Output Signals to Digital Frequency Domain}
+\subsection{Interfacing Computers with Spectrum Analyzers}
+\section{Modern Spectrum Analyzer Displays}
+\subsection{Configurations and Displayed Data in Modern Spectrum Analyzer Displays}
+\subsection{Technological Developments in Signal Analyzer Displays}
+% ----------------------------------------------------
+\ifstandalone
+\bibliography{../Bibliography/References.bib}
+\printnoidxglossary[type=\acronymtype,nonumberlist]
+\fi
+\end{document}
+% ----------------------------------------------------
