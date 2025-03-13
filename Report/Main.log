@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.15)  11 MAR 2025 23:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.15)  13 MAR 2025 03:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1119,41 +1119,41 @@ Package caption Info: supertabular package is loaded.
 Package caption Info: End \AtBeginDocument code.
 
 (./FrontMatter/Title.tex
-<FrontMatter/UCT_logo.png, id=164, 1554.80875pt x 1578.89874pt>
+<FrontMatter/UCT_logo.png, id=160, 1554.80875pt x 1578.89874pt>
 File: FrontMatter/UCT_logo.png Graphic file (type png)
 <use FrontMatter/UCT_logo.png>
 Package pdftex.def Info: FrontMatter/UCT_logo.png  used on input line 14.
 (pdftex.def)             Requested size: 193.47578pt x 196.47044pt.
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 2
-1.
+9.
  (/usr/share/texmf/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 2
-1.
+9.
 
 (/usr/share/texmf/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-21.
+29.
 
 (/usr/share/texmf/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-21.
+29.
 
 (/usr/share/texmf/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 21.
+(Font)              <12> on input line 29.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 21.
+(Font)              <8> on input line 29.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 21.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 21.
+(Font)              <6> on input line 29.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 29.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
@@ -1162,7 +1162,7 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 21.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 29.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
@@ -1171,22 +1171,22 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 21
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 29
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 21.
+(Font)              <9> on input line 29.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 21.
+(Font)              <5> on input line 29.
 )
 (./FrontMatter/Declaration.tex [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./FrontMatter/UCT_logo.png
 >]
-<signature.png, id=179, 232.61906pt x 144.54pt>
+<signature.png, id=175, 232.61906pt x 144.54pt>
 File: signature.png Graphic file (type png)
 <use signature.png>
 Package pdftex.def Info: signature.png  used on input line 21.
@@ -1217,27 +1217,189 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 \tf@lof=\write5
 \openout5 = `Main.lof'.
 
- [7
 
-]
+Using TeX to sort glossary entries---this may take a while
+[7
 
-Package glossaries Warning: Empty glossary for \printnoidxglossary[type={main}]
-. Rerun may be required (or you may have forgotten to use commands like \gls) o
-n input line 19.
-
-[8
+] [8
 
 
 ] (./Chapters/Introduction.tex
 Chapter 1.
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+12.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+12.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+14.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+14.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+14.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+14.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+16.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+16.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+18.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+18.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+18.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+18.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+20.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+20.
+
 [1
 
 ]
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+22.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+22.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+26.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+26.
+
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 3
 1.
- (/usr/share/texmf/tex/latex/lm/ts1lmr.fd
+(/usr/share/texmf/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+31.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+31.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+35.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+35.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+44.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+54.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+54.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+54.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+56.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+59.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+61.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+63.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+66.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+70.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+78.
+
+
 Overfull \hbox (34.25298pt too wide) in paragraph at lines 50--83
  [][] 
  []
@@ -1247,23 +1409,131 @@ Overfull \hbox (34.25298pt too wide) in paragraph at lines 90--110
  [][] 
  []
 
-[3]) (./Chapters/Literature.tex [4]
+[3]
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+119.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+130.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+130.
+
+) (./Chapters/Literature.tex [4]
 Chapter 2.
 ) (./Chapters/Methodology.tex [5
 
 ] [6]
 Chapter 3.
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+18.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+18.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+18.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+18.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+20.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+20.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+20.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+20.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+20.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+20.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+20.
+
+
+Package caption Warning: \label without proper reference on input line 30.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `fig:design-stages-diagram' on page 7 undefined on inp
+ut line 26.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+26.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+26.
+
 [7
 
-]) (./Chapters/Results.tex [8]
+]
+<Figures/Methodology/design-stages-diagram.png, id=371, 1739.49875pt x 744.7825
+pt>
+File: Figures/Methodology/design-stages-diagram.png Graphic file (type png)
+<use Figures/Methodology/design-stages-diagram.png>
+Package pdftex.def Info: Figures/Methodology/design-stages-diagram.png  used on
+ input line 31.
+(pdftex.def)             Requested size: 483.69687pt x 207.09439pt.
+ [8 <./Figures/Methodology/design-stages-diagram.png>]
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+60.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+60.
+
+) (./Chapters/Results.tex [9] [10]
 Chapter 4.
-[9
+) (./Chapters/Discussion.tex [11
 
-]) (./Chapters/Discussion.tex [10]
+]
 Chapter 5.
-[11
+) (./Chapters/Conclusions.tex [12
 
-]) (./Chapters/Conclusions.tex [12]
+]
 Chapter 6.
 ) (./Chapters/Recommendations.tex [13
 
@@ -1293,22 +1563,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 26--29
 
 ] (./Main.aux)
 
-Package rerunfilecheck Warning: File `Main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
+LaTeX Warning: There were undefined references.
 
-Package rerunfilecheck Info: Checksums for `Main.out':
-(rerunfilecheck)             Before: F04D190CF2771D8C0BE1842D19FF7AB0;7001
-(rerunfilecheck)             After:  9235E46AE1A3AC581D5E3C926F5E4CF0;7077.
+Package rerunfilecheck Info: File `Main.out' has not changed.
+(rerunfilecheck)             Checksum: B0CC3A72C946D0BA1CD40CE141523ACF;8093.
  ) 
 Here is how much of TeX's memory you used:
- 34103 strings out of 478287
- 649084 string characters out of 5849289
- 1164325 words of memory out of 5000000
- 51446 multiletter control sequences out of 15000+600000
- 561806 words of font info for 183 fonts, out of 8000000 for 9000
+ 34639 strings out of 478287
+ 656760 string characters out of 5849289
+ 1172469 words of memory out of 5000000
+ 51949 multiletter control sequences out of 15000+600000
+ 562207 words of font info for 188 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 111i,14n,108p,1205b,1062s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 111i,14n,108p,1205b,1150s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exi
 st, replaced by a fixed one
 
@@ -1321,10 +1588,10 @@ ts/type1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb
 1/public/lm/lmr17.pfb></usr/share/texmf/fonts/type1/public/lm/lmr6.pfb></usr/sh
 are/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/l
 m/lmr9.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb>
-Output written on Main.pdf (23 pages, 418308 bytes).
+Output written on Main.pdf (23 pages, 589871 bytes).
 PDF statistics:
- 420 PDF objects out of 1000 (max. 8388607)
- 365 compressed objects within 4 object streams
- 82 named destinations out of 1000 (max. 500000)
- 51531 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 499 PDF objects out of 1000 (max. 8388607)
+ 441 compressed objects within 5 object streams
+ 103 named destinations out of 1000 (max. 500000)
+ 51528 words of extra memory for PDF output out of 51595 (max. 10000000)
 

@@ -6,33 +6,33 @@
 \input{../FrontMatter/Glossary.tex}
 \begin{document}
 % ----------------------------------------------------
-\chapter{Introduction}
+\chapter{Introduction \label{ch:intro}}
 
 \section{Background}
-Designed and patented in the 1970s, Hewlett-Packard's (HP) high performance plug-in model 8552B and 8555A spectrum analyzers (SA), equipped with the 141T display, remain powerful tools for characterising signals in the frequency domain. The 8552B is particularly convenient for measuring spectra in a wide frequency range between $\SI{20}{\hertz}$ to $\SI{40}{\giga\hertz}$. Another advantage of these spectrum analysers is that a user can broaden frequency requirements by increasing the number of tuning sections. Additionally, the 141T features absolute calibration of amplitude as well as high resolution, sensitivity and a simple display output.  
+Designed and patented in the 1970s, Hewlett-Packard Company's (\acrshort{hp}) high performance plug-in model 8552B and 8555A spectrum analyzers (\acrshort{sa}), equipped with the 141T display, remain powerful tools for characterising signals in the frequency domain. The 8552B is particularly convenient for measuring spectra in a wide frequency range between $\SI{20}{\hertz}$ to $\SI{40}{\giga\hertz}$. Another advantage of these spectrum analysers is that a user can broaden frequency requirements by increasing the number of tuning sections. Additionally, the 141T features absolute calibration of amplitude as well as high resolution, sensitivity and a simple display output.  
 
-The shortcoming of the spectrum analyzer, however, is that it uses a cathode ray tube (CRT) display which is prone to degradation after extended periods of usage and is outdated compared to the display on most modern devices. In this project, a single board computer and a liquid crystal display (LCD) touch screen is interfaced with the 141T display unit, thereby, replacing the outdated CRT technology. This allows users to continue to exploit the advantageous capabilities of the spectrum analyzer, such as the wide frequency bandwidth, despite damage to the CRT display. In addition, interfacing a single board computer with the 141T offers improved software-based features for performing frequency analysis.
+The shortcoming of the spectrum analyzer, however, is that it uses a cathode ray tube (\acrshort{crt}) display which is prone to degradation after extended periods of usage and is outdated compared to the display on most modern devices. In this project, a single board computer and a liquid crystal display (\acrshort{lcd}) touch screen is interfaced with the 141T display unit, thereby, replacing the outdated \acrshort{crt} technology. This allows users to continue to exploit the advantageous capabilities of the spectrum analyzer, such as the wide frequency bandwidth, despite damage to the \acrshort{crt} display. In addition, interfacing a single board computer with the 141T offers improved software-based features for performing frequency analysis.
 
-Specifically, this project aims to develop a new display for the high resolution 8552B intermediate frequency (IF) section equipped with the 8555A spectrum analyzer RF section which can make frequency domain measurements from $\SI{10}{\mega\hertz}$ to $\SI{18}{\giga\hertz}$. The broad scanning frequency bandwidth of this model makes it suitable for spectrum surveillance, RF and EMC field strength analysis with a calibrated antenna \cite{HP}. 
+Specifically, this project aims to develop a new display for the high resolution 8552B intermediate frequency (\acrshort{if}) section equipped with the 8555A spectrum analyzer radio frequency (\acrshort{rf}) section which can make frequency domain measurements from $\SI{10}{\mega\hertz}$ to $\SI{18}{\giga\hertz}$. The broad scanning frequency bandwidth of this model makes it suitable for frequency domain analyses in engineering applications such as mechanical vibrations and EMC field strength analysis with a calibrated antenna \cite{HP}. 
 
-The CRT display subsystem consists of a post-accelerator storage tube with a $\SI{9}{\kilo\volt}$ accelerating potential and aluminized P31 phosphor for producing high trace brightness. When calibrated, the CRT screen can display frequency bandwidths of up to $\SI{2}{\giga\hertz}$ wide. To display the full frequency range with a maximum of $\SI{18}{\giga\hertz}$, the CRT can be calibrated in 10 frequency bands using internal mixing. One of advantage of the 141T over other displays that were manufactured during that time is that more detail can be observed in the spectrum by progressively narrowing frequency width from $\SI{100}{\hertz}/\text{division}$ to $\SI{2}{\kilo\hertz}/\text{division}$. Overall, the 141T consists of a CRT graticule which can plot the frequency domain representation of a signal on a 2D plane with 8 x 10 divisions. 
+The \acrshort{crt} display subsystem consists of a post-accelerator storage tube with a $\SI{9}{\kilo\volt}$ accelerating potential and aluminized P31 phosphor for producing high trace brightness. When calibrated, the \acrshort{crt} screen can display frequency bandwidths of up to $\SI{2}{\giga\hertz}$ wide. To display the full frequency range with a maximum of $\SI{18}{\giga\hertz}$, the \acrshort{crt} can be calibrated in 10 frequency bands using internal mixing. One of advantage of the 141T over other displays that were manufactured during that time is that more detail can be observed in the spectrum by progressively narrowing frequency width from $\SI{100}{\hertz}/\text{division}$ to $\SI{2}{\kilo\hertz}/\text{division}$. Overall, the 141T consists of a \acrshort{crt} graticule which can plot the frequency domain representation of a signal on a 2D plane with 8 x 10 divisions. 
 
-For this project, the 141T is powered by a $\SI{220}{\volt}$ single-phase source at $\SI{60}{\hertz}$, requiring less than $\SI{225}{W}$ even when plug-ins are connected. To achieve the $\SI{9}{\kilo\volt}$ accelerating potential for deflecting electron beams in producing the CRT display, the device uses a step-up transformer and transistorized oscillator. The main disadvantage of having to increase the accelerating potential in a CRT display system is that the performance of electronic voltage regulation components such as capacitors, diodes and resistors can degrade over time. 
+For this project, the 141T is powered by a $\SI{220}{\volt}$ single-phase source at $\SI{60}{\hertz}$, requiring less than $\SI{225}{W}$ even when plug-ins are connected. To achieve the $\SI{9}{\kilo\volt}$ accelerating potential for deflecting electron beams in producing the \acrshort{crt} display, the device uses a step-up transformer and transistorized oscillator. The main disadvantage of having to increase the accelerating potential in a \acrshort{crt} display system is that the performance of electronic voltage regulation components such as capacitors, diodes and resistors can degrade over time. 
 
-Another challenge of using a phosphor CRT display is the effect of persistence on the saccadic information transfer which can lead to bias in experimental results \cite{wolf1997}. This effect of persistence on experimental results is of particular interest to frequency domain analysis since displayed signals include noise from the environment which can make it difficult to extract accurate frequency information from plots. For the Model 141T, the persistence varies from the natural persistence of P31 phosphor ($\SI{0.1}{\second}$) to a maximum of $\SI{15}{\second}$ when the device is operating in the maximum writing rate mode. Therefore, phosphor persistence in the CRT display can significantly affect the amount of time to acquire measurements as well as the precision of the data extracted from the display.
+Another challenge of using a phosphor \acrshort{crt} display is the effect of persistence on the saccadic information transfer which can lead to bias in experimental results \cite{wolf1997}. This effect of persistence on experimental results is of particular interest to frequency domain analysis since displayed signals include noise from the environment which can make it difficult to extract accurate frequency information from plots. For the Model 141T, the persistence varies from the natural persistence of P31 phosphor ($\SI{0.1}{\second}$) to a maximum of $\SI{15}{\second}$ when the device is operating in the maximum writing rate mode. Therefore, phosphor persistence in the \acrshort{crt} display can significantly affect the amount of time to acquire measurements as well as the precision of the data extracted from the display.
 
 \section{Objectives}
 %\lipsum[1]
-The aim of this project is to design a new display with full functionality and computer-aided signal processing features such as signal normalization. The digital display has to be compatible with the voltage outputs that enable analog signals to be plotted by the 141T. The aim of digitizing the signals is to interface measures from the spectrum analyzer with a computer that can perform tasks and store data accordingly. Therefore, a survey of the 8555A RF section and 8552B IF section outputs and available single board computer and touch screen options must be conducted. Furthermore, the project aims to investigate basic XYZ replicas, performing digital signal processing algorithms, how to correctly display signal data on annotated axes depending on available instrument settings.
+The aim of this project is to design a new display with full functionality and computer-aided signal processing features such as signal normalization. The digital display has to be compatible with the voltage outputs that enable analog signals to be plotted by the 141T. The aim of digitizing the signals is to interface measures from the spectrum analyzer with a computer that can perform tasks and store data accordingly. Therefore, a survey of the 8555A \acrshort{rf} section and 8552B \acrshort{if} section outputs and available single board computer and touch screen options must be conducted. Furthermore, the project aims to investigate basic XYZ replicas, performing digital signal processing algorithms, how to correctly display signal data on annotated axes depending on available instrument settings.
 
 This report aims to provide:
 \begin{itemize}
 	\item 
-	Characterization of the HP141 display inputs from the 8555A RF section and 8552B IF section
+	Characterization of the HP141 display inputs from the 8555A \acrshort{rf} section and 8552B \acrshort{if} section
 	\item 
 	Available options for single-board computer and touchscreens options and the most suitable selection for interfacing with the two spectrum analyzer sections
 	\item 
-	A design and simulation of interface between the single-board computer which includes analog converter for digitizing outputs from the RF and IF sections
+	A design and simulation of interface between the single-board computer which includes analog converter for digitizing outputs from the \acrshort{rf} and \acrshort{if} sections
 	\item 
 	Algorithms for processing the digital signals and performing operations on displayed spectra
 	\item 
@@ -41,7 +41,7 @@ This report aims to provide:
 
 \section{Project Requirements}
 
-Before detailing system requirements, user requirements were used to scope the project in terms of objectives that are not related to functions and performance. In designing the upgraded or "new" SA, selection of hardware components was conducted with the aim of formulating specifications that successfully fulfill user requirements. Table \ref{tab:user-requirements} summarises the user requirements and gives a short description of the objective.
+Before detailing system requirements, user requirements were used to scope the project in terms of objectives that are not related to functions and performance. In designing the upgraded or "new" \acrshort{sa}, selection of hardware components was conducted with the aim of formulating specifications that successfully fulfill user requirements. Table \ref{tab:user-requirements} summarises the user requirements and gives a short description of the objective.
 
 \begin{table}[!ht]
 	\centering
@@ -51,33 +51,33 @@ Before detailing system requirements, user requirements were used to scope the p
 		\hline
 		\textbf{ID}	& \textbf{Requirement Description}\\
 		\hline
-		UR-01	& Display of the new SA must behave like the display of newer generations of signal analyzers, such as the Field Fox. That is, the new SA must achieve more or less the same number data points as the Field Fox (801 points). \\
+		UR01	& Display of the new \acrshort{sa} must behave like the display of newer generations of \acrshort{sa}s, such as the Field Fox. That is, the new \acrshort{sa} must achieve more or less the same number data points as the Field Fox (801 points). \\
 		\hline
-		UR-02	& SA must have the following display modes:
+		UR02	& The \acrshort{sa} must have the following display modes:
 		\begin{enumerate}[label=(\alph*)]
 			\item 
-			Peak hold mode (PHM) which displays the largest value seen and updated at each scan.
+			Peak hold mode (\acrshort{phm}) which displays the largest value seen and updated at each scan.
 			\item 
-			Average mode (AvM) in which each frequency bin's average is updated at each scan. 
+			Average mode (\acrshort{avm}) in which each frequency bin's average is updated at each scan. 
 			\item 
-			Raw mode (RwM) where the latest value is displayed until the next scan and overwriting each value during a scan event.
+			Raw mode (\acrshort{rwm}) where the latest value is displayed until the next scan and overwriting each value during a scan event.
 		\end{enumerate}\\
 		\hline
-		UR-03	& SA unit must have a suitable vertical resolution based on a $\SI{10}{\decibel}\text{/division}$ in the logarithmic scale.\\
+		UR03	& \acrshort{sa} unit must have a suitable vertical resolution based on a $\SI{10}{\decibel}\text{/division}$ in the logarithmic scale.\\
 		\hline
-		UR-04	& Linear display mode must have low priority.\\
+		UR04	& Linear display mode must have low priority.\\
 		\hline
-		UR-05	& SA display subsystem must have setting markers, similar to the Field Fox analyzer.\\
+		UR05	& \acrshort{sa} display subsystem must have setting markers, similar to the Field Fox analyzer.\\
 		\hline
-		UR-06	& Design must be capable of storing and recalling traces.\\
+		UR06	& Design must be capable of storing and recalling traces.\\
 		\hline
-		UR-07	& Users must be able to change modes by touching the screen and must be able to enter data using a keyboard.\\
+		UR07	& Users must be able to change modes by touching the screen and must be able to enter data using a keyboard.\\
 		\hline
-		UR-08	& All software must load on power up.\\
+		UR08	& All software must load on power up.\\
 		\hline
-		UR-09	& SA unit must use a single wall wart power source for the display subsystem.\\
+		UR09	& \acrshort{sa} unit must use a single wall wart power source for the display subsystem.\\
 		\hline
-		UR-10	& Project must develop an HP141T display emulator of horizontal sweep, vertical sawtooth and pen lift state.\\
+		UR10	& Project must develop an HP141T display emulator of horizontal sweep, vertical sawtooth and pen lift state.\\
 		\hline
 	\end{tabular}
 \end{table}
@@ -91,19 +91,19 @@ Table \ref{tab:sys-requirements} details system requirements in terms of functio
 		\hline
 		\textbf{ID} & \textbf{Requirement Description}\\
 		\hline
-		SR-01 	& The system must digitize analog outputs from an HP141T 8555A model which performs frequency domain measurements between $\SI{20}{\hertz}$ and $\SI{18}{\giga\hertz}$.\\
+		SR01 	& The system must digitize analog outputs from an HP141T 8555A model which performs frequency domain measurements between $\SI{20}{\hertz}$ and $\SI{18}{\giga\hertz}$.\\
 		\hline
-		SR-02	& Digitized outputs must be interfaced with a single board computer for performing signal processing tasks.\\
+		SR02	& Digitized outputs must be interfaced with a single board computer for performing signal processing tasks.\\
+		%\hline
+		%SR-03	& The HP141T must interface with a LCD touchscreen display to produce a valid display.\\
 		\hline
-		SR-03	& The HP141T must interface with a LCD touchscreen display to produce a valid display.\\
+		SR03	& The system must include a signal conditioning box for debugging purposes and replicating the outputs of the spectrum analyzer during testing.\\
 		\hline
-		SR-04	& The system must include a signal conditioning box for debugging purposes and replicating the outputs of the spectrum analyzer during testing.\\
+		SR04   & The system must be simulated using software.\\
 		\hline
-		SR-05   & The system must be simulated using software.\\
+		SR05	& The display must include new annotations that take instrument and operator manual inputs into account. \\
 		\hline
-		SR-06	& The display must include new annotations that take instrument and operator manual inputs into account. \\
-		\hline
-		SR-07	& The system must include appropriate documentation such as tutorials and operational instructions when using the signal processor and screen.\\
+		SR06	& The system must include appropriate documentation such as tutorials and operational instructions when using the signal processor and screen.\\
 		\hline
 	\end{tabular}
 \label{tab:sys-requirements}
@@ -116,7 +116,7 @@ In addition to the above mentioned system requirements, the project considers th
 	\item 
 	Setting the reference amplitude for frequency responses and a span that is suitable for the spectrum analyzer
 	\item 
-	Setting the frequency resolution according to the passband of the IF filter
+	Setting the frequency resolution according to the passband of the \acrshort{if} filter
 	\item 
 	Setting the sweep time required to record the full frequency spectrum that is of interest
 \end{itemize}
@@ -127,7 +127,7 @@ The focus of this report is in the design and implementation of a digitized disp
 
 \section{Report Outline}
 %\lipsum[1]
-Chapter 2 initiates the report by establishing the general history and theoretical framework for the design and applications of spectrum analyzers in engineering. The same chapter details the previous techniques for converting the output of a SA to digital values that can be manipulated by a processor. Finally, designs of displays are explored in literature to establish an approach to representing the processor output on a LCD screen. 
+Chapter 2 initiates the report by establishing the general history and theoretical framework for the design and applications of spectrum analyzers in engineering. The same chapter details the previous techniques for converting the output of a \acrshort{sa} to digital values that can be manipulated by a processor. Finally, designs of displays are explored in literature to establish an approach to representing the processor output on a \acrshort{lcd} screen. 
 % ----------------------------------------------------
 \ifstandalone
 \bibliography{../Bibliography/References.bib}

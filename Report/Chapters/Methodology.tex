@@ -6,30 +6,97 @@
 \input{../FrontMatter/Glossary.tex}
 \begin{document}
 	% ----------------------------------------------------
-	\chapter{Methodology}
+	\chapter{Methodology \label{ch:meth}}
 	%\epigraph{Philosophers have hitherto only interpreted the world in various ways; the point is to change it.}%
 	%    {\emph{---Karl Marx}}
 	%\vspace{0.5cm}
 	% ----------------------------------------------------
 	
 	%\lipsum[1]
+	\section{Methodology Outline}
+	
+	This chapter details the design process and approach employed in achieving the aim of the project which is to  digitize and modernize the HP141T display by replacing the \acrshort{crt} monitor with a \acrshort{lcd} touchscreen display that offers different functions and modes of operation. Design decision are also documented here, showing the considerations that were made based on the operation and outputs of the HP141T spectrum analyzer and ensuring that the newly integrated display is compatible with the device's hardware. For example, the design required selection of the digital hardware for processing the analog voltage signals from the \acrshort{sa}. The selection of the digital processor made from single-board computers such as the Raspberry Pi 4 Model B, microcontrollers like the STM32F4 boards, \acrshort{fpga} such as the Artix-7 from Xilinix, or a heterogeneous digital processor which consists of a combination of these options. 
+	
+	Other considerations were made regarding the electronic circuits for converting the auxiliary output voltages from the HP141T to the appropriate voltage level for the operation of \acrshort{adc}. This chapter describes how together, the \acrshort{adc} and digital processor form a crucial part of the system. Additionally, the chapter details the software development kit (\acrshort{sdk}) and associated coding language that was used. The selection of the development framework depended on the choice of processor and digital processing algorithms that were required to fulfil the project requirements. For example, assuming that a \acrshort{fpga} is the chosen digital processor, the  \acrshort{sdk} would include tools such as the AMD Vivado and electronic design automation (\acrshort{eda}) software and the choice of coding language between Verilog, VHDL, and SystemVerilog would depend on how comfortable the developer is in representing digital processing algorithms, such the \acrshort{dft}, using the chosen language. 
+	
+	Overall, this chapter documents an overview of the design methodology and different phases in the design process. The design process followed a variation of V-Model in which a series of iterative phases was implemented with a process checking mechanism. The chapter begins by highlighting the design stages and modularization of the system. Thereafter, the chapter includes an assessment of the project requirements detailed in introductory section. Finally, the chapter describes the use of findings from the review of requirements in informing the design decisions and specifications.  
+	
+	\section{Phases in the Design Process}
+	
+	The design process was decomposed into four iterative stages as illustrated in Figure \ref{fig:design-stages-diagram} below. The first stage documented the digitization requirements and listed examples of modern \acrshort{sa}s in order to define the requirements for modernization. As shown in the methodology overview diagram, the first stage also included thorough investigation into methods that have been implemented in literature for upgrading the functions and performance of \acrshort{sa}s. A theoretical framework for relevant information about signal processing was also formulated based on the literature to ensure that the display modes and functions were consistent with the mathematically derived expected outputs in the system. 
+	
+	\begin{figure}[!ht]
+		\centering
+		\label{fig:design-stages-diagram}
+		\includegraphics[width=1.0\linewidth]{Figures/Methodology/design-stages-diagram.png}
+		\caption{Methodology overview showing different stages in the iterative design process that was applied as a variation of the V-Model.}
+	\end{figure}
+	
+	The second stage in the design process involved a review of the user requirements specifications detailed in chapter \ref{ch:intro}. The aim of this step in the methodology was to clarify the desired functions of the upgraded spectrum analyzer and to inform the design decisions with respect to the digital hardware and software development for digital signal processing. Additionally, the requirements review was employed in modularizing the design into four subsystems including, the Analog-to-Digital Conversion, Digital Processing, Screen and User Interface subsystems. 
+		
+	Stage 3 of the design process dealt with the design specifications of each of these subsystems by further decomposing each module into smaller hardware and software components. Each function is tested against a requirement in Stage 4 where each design specification was verified and the operation of the integrated system was tested to ensure that the interfaces between the subsystems was configured correctly. 
+	
+	In general, implementation of the design process adhered to the following design steps detailed in the project brief and are associated with the user requirement specifications:
+	
+	\begin{enumerate}
+		\item 
+		Surveying the HP141T display and other outputs.
+		\item 
+		Surveying single-board computers and touchscreen options.
+		\item 
+		Phase One: establish a basic XYZ replica or HP141T emulator.
+		\item 
+		Phase Two: implement averaging and peak hold options.
+		\item 
+		Phase Three: annotate display axes.
+		\item 
+		Phase Four: determine the appropriate instrument settings. 
+		\item 
+		Phase Five: design new annotations for display taking instrument or operator manual inputs into account.
+		\item 
+		Phase Six: include more tutorial and operational instructions using.
+	\end{enumerate}
+	
+	In finalizing the design process of the upgraded \acrshort{sa}, results from acceptance tests were assimilated and a conclusion was drawn. Then, based on the outcomes of the project, future recommendations were made for future iterations of the upgrade \acrshort{sa} system. Overall, the stages of the methodology included:
+	
+	\begin{itemize}
+		\item 
+		Stage 1: Defining Requirements
+		\item 
+		Stage 2: Requirements Review and System Overview
+		\item 
+		Stage 3: Modelling and Design
+		\item 
+		Stage 4: Implementation and Results
+		\item 
+		Stage 5: Analysis and Conclusion 
+	\end{itemize}
 
+	The first four stages of the design process were performed iteratively as a variation of the V-Model in which risk analysis was performed at each step, similar to the Spiral Model for design processes. Each iteration aimed at producing a new version of the upgraded HP141T display and a single conclusion was made when a satisfactory prototype was established.
+
+	\section{Requirements Review}
 	
-	\section{System Overview}
-	\lipsum[1]
+	This section aims to clarify the scope and formalization of the user requirements specifications of the project. 
+		
+	\subsection{Characteristics of Modern Spectrum Analyzer Displays}
 	
-	\section{Design Implementation}
-	\lipsum[1]
+	\subsection{Representation of Signals in Frequency Domain}
 	
-	\section{System Requirements}
-	\lipsum[1]
+	\subsection{Spectrum Analyzer Modes of Operation}
 	
-	\section{Scope \& Limitations}
-	\lipsum[1]
+	\subsection{Display Resolution in the Logarithmic Scale}
 	
-	\section{Report Outline}
-	\lipsum[1]
+	\subsection{Components of the Software Development Kit}
 	
+	\subsection{Display Power Source}
+	
+	\subsection{Equipment for Debugging and Testing}
+		
+	\section{System Design}
+	
+	\subsection{System Modularization}
+	
+	\subsection{System Block Diagrams}
 	% ----------------------------------------------------
 	\ifstandalone
 	\bibliography{../Bibliography/References.bib}
