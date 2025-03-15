@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.15)  13 MAR 2025 03:21
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.15)  15 MAR 2025 02:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1213,7 +1213,13 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 \tf@toc=\write4
 \openout4 = `Main.toc'.
 
- [6] (./Main.lof)
+ [6] (./Main.lof
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+7.
+
+)
 \tf@lof=\write5
 \openout5 = `Main.lof'.
 
@@ -1507,7 +1513,7 @@ used with new abbreviation definitions. Use \glsxtrshort instead on input line
 [7
 
 ]
-<Figures/Methodology/design-stages-diagram.png, id=371, 1739.49875pt x 744.7825
+<Figures/Methodology/design-stages-diagram.png, id=380, 1739.49875pt x 744.7825
 pt>
 File: Figures/Methodology/design-stages-diagram.png Graphic file (type png)
 <use Figures/Methodology/design-stages-diagram.png>
@@ -1525,21 +1531,134 @@ Package glossaries-extra Warning: Base acronym command \acrshort should not be
 used with new abbreviation definitions. Use \glsxtrshort instead on input line 
 60.
 
-) (./Chapters/Results.tex [9] [10]
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+83.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+83.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+85.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+85.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+85.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+85.
+
+[9]
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+87.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+87.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+87.
+
+
+Package caption Warning: \label without proper reference on input line 91.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `fig:heterodyne-rauscher' on page 10 undefined on inpu
+t line 87.
+
+<Figures/Methodology/empty-image.png, id=415, 254.9525pt x 244.915pt>
+File: Figures/Methodology/empty-image.png Graphic file (type png)
+<use Figures/Methodology/empty-image.png>
+Package pdftex.def Info: Figures/Methodology/empty-image.png  used on input lin
+e 92.
+(pdftex.def)             Requested size: 145.11053pt x 139.40492pt.
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+96.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+96.
+
+
+Package caption Warning: \label without proper reference on input line 100.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `fig:vector-analyzer-rover' on page 10 undefined on in
+put line 96.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+96.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+96.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+96.
+
+File: Figures/Methodology/empty-image.png Graphic file (type png)
+<use Figures/Methodology/empty-image.png>
+Package pdftex.def Info: Figures/Methodology/empty-image.png  used on input lin
+e 101.
+(pdftex.def)             Requested size: 145.11053pt x 139.40492pt.
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+102.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+102.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+111.
+
+) (./Chapters/Results.tex [10 <./Figures/Methodology/empty-image.png>] [11]
 Chapter 4.
-) (./Chapters/Discussion.tex [11
+) (./Chapters/Discussion.tex [12
 
 ]
 Chapter 5.
-) (./Chapters/Conclusions.tex [12
+) (./Chapters/Conclusions.tex [13
 
 ]
 Chapter 6.
-) (./Chapters/Recommendations.tex [13
+) (./Chapters/Recommendations.tex [14
 
 ]
 Chapter 7.
-) [14
+) [15
 
 ] (./Main.bbl
 Underfull \hbox (badness 10000) in paragraph at lines 26--29
@@ -1559,21 +1678,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 26--29
  20as ,[] the % 20spectrum % 20analyzer % 20with %
  []
 
-) [15
+) [16
 
 ] (./Main.aux)
 
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `Main.out' has not changed.
-(rerunfilecheck)             Checksum: B0CC3A72C946D0BA1CD40CE141523ACF;8093.
+(rerunfilecheck)             Checksum: 3D27BB3CD9AFE3F55103AF3B95205D06;8162.
  ) 
 Here is how much of TeX's memory you used:
- 34639 strings out of 478287
- 656760 string characters out of 5849289
- 1172469 words of memory out of 5000000
- 51949 multiletter control sequences out of 15000+600000
- 562207 words of font info for 188 fonts, out of 8000000 for 9000
+ 34812 strings out of 478287
+ 659326 string characters out of 5849289
+ 1174899 words of memory out of 5000000
+ 52102 multiletter control sequences out of 15000+600000
+ 562586 words of font info for 192 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  111i,14n,108p,1205b,1150s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exi
@@ -1588,10 +1707,10 @@ ts/type1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb
 1/public/lm/lmr17.pfb></usr/share/texmf/fonts/type1/public/lm/lmr6.pfb></usr/sh
 are/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/l
 m/lmr9.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb>
-Output written on Main.pdf (23 pages, 589871 bytes).
+Output written on Main.pdf (24 pages, 603191 bytes).
 PDF statistics:
- 499 PDF objects out of 1000 (max. 8388607)
- 441 compressed objects within 5 object streams
- 103 named destinations out of 1000 (max. 500000)
- 51528 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 546 PDF objects out of 1000 (max. 8388607)
+ 484 compressed objects within 5 object streams
+ 114 named destinations out of 1000 (max. 500000)
+ 51533 words of extra memory for PDF output out of 51595 (max. 10000000)
 

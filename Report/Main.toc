@@ -23,18 +23,18 @@
 \contentsline {section}{\numberline {3.1}Methodology Outline}{7}{section.3.1}%
 \contentsline {section}{\numberline {3.2}Phases in the Design Process}{8}{section.3.2}%
 \contentsline {section}{\numberline {3.3}Requirements Review}{9}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}Characteristics of Modern Spectrum Analyzer Displays}{10}{subsection.3.3.1}%
-\contentsline {subsection}{\numberline {3.3.2}Representation of Signals in Frequency Domain}{10}{subsection.3.3.2}%
-\contentsline {subsection}{\numberline {3.3.3}Spectrum Analyzer Modes of Operation}{10}{subsection.3.3.3}%
-\contentsline {subsection}{\numberline {3.3.4}Display Resolution in the Logarithmic Scale}{10}{subsection.3.3.4}%
-\contentsline {subsection}{\numberline {3.3.5}Components of the Software Development Kit}{10}{subsection.3.3.5}%
-\contentsline {subsection}{\numberline {3.3.6}Display Power Source}{10}{subsection.3.3.6}%
-\contentsline {subsection}{\numberline {3.3.7}Equipment for Debugging and Testing}{10}{subsection.3.3.7}%
-\contentsline {section}{\numberline {3.4}System Design}{10}{section.3.4}%
-\contentsline {subsection}{\numberline {3.4.1}System Modularization}{10}{subsection.3.4.1}%
-\contentsline {subsection}{\numberline {3.4.2}System Block Diagrams}{10}{subsection.3.4.2}%
-\contentsline {chapter}{\numberline {4}Results}{11}{chapter.4}%
-\contentsline {chapter}{\numberline {5}Discussion }{12}{chapter.5}%
-\contentsline {chapter}{\numberline {6}Conclusions }{13}{chapter.6}%
-\contentsline {chapter}{\numberline {7}Recommendations }{14}{chapter.7}%
-\contentsline {chapter}{Bibliography}{15}{chapter*.11}%
+\contentsline {subsection}{\numberline {3.3.1}Comparing the HP141T System to Modern Spectrum Analyzer Displays}{9}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Representation of Signals in Frequency Domain}{11}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.3}Spectrum Analyzer Modes of Operation}{11}{subsection.3.3.3}%
+\contentsline {subsection}{\numberline {3.3.4}Display Resolution in the Logarithmic Scale}{11}{subsection.3.3.4}%
+\contentsline {subsection}{\numberline {3.3.5}Components of the Software Development Kit}{11}{subsection.3.3.5}%
+\contentsline {subsection}{\numberline {3.3.6}Display Power Source}{11}{subsection.3.3.6}%
+\contentsline {subsection}{\numberline {3.3.7}Equipment for Debugging and Testing}{11}{subsection.3.3.7}%
+\contentsline {section}{\numberline {3.4}System Design}{11}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}System Modularization}{11}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}System Block Diagrams}{11}{subsection.3.4.2}%
+\contentsline {chapter}{\numberline {4}Results}{12}{chapter.4}%
+\contentsline {chapter}{\numberline {5}Discussion }{13}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Conclusions }{14}{chapter.6}%
+\contentsline {chapter}{\numberline {7}Recommendations }{15}{chapter.7}%
+\contentsline {chapter}{Bibliography}{16}{chapter*.13}%

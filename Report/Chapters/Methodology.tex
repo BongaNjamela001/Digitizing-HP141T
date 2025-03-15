@@ -78,7 +78,43 @@
 	
 	This section aims to clarify the scope and formalization of the user requirements specifications of the project. 
 		
-	\subsection{Characteristics of Modern Spectrum Analyzer Displays}
+	\subsection{Comparing the HP141T System to Modern Spectrum Analyzer Displays}
+	
+	The first user requirement deals with the modernization of the HP141T system. The aim of this section is to review this requirement and to give clarification on the context of the use of "modernization" in this project. To achieve this objective, the section begins with a description of the HP141T system and the functions that differ from "modern" spectrum analyzers, such as the range of hand-held \acrshort{sa}s by FieldFox, and the N9000B CXA \acrshort{sa} manufactured by Keysight\textregistered. The section concludes with a summary table comparing the features of the HP141T system and modern spectrum analyzers. 
+	
+	The HP141T system is equipped with three plug-ins, namely the 8555A \acrshort{rf} section which operates in the microwave region of the electromagnetic spectrum, the 8552B \acrshort{if} section and the Model 141T display which includes the \acrshort{crt} monitor. The three plug-ins operate in unison to electronically scan signals in the time-domain and provide a visual representation of the input signal's amplitude in the frequency domain on the \acrshort{crt} monitor \cite{HP8555A}. Amplitude can be represented on a logarithmic ($\si{\decibel\meter}$) or linear scale ($\si{\milli\volt}$). 
+	
+	The 8555A and 8552B plug-ins apply principles of heterodyning spectroscopy, allows high frequency input signals with frequencies in the K-band of the microwave portion of the electromagnetic spectrum (i.e. $\SI{18}{\mega\hertz}$) \cite{harris2003}. Spectrum analyzers which rely on the \acrshort{fft} by sampling the continuous input signal and performing the Fourier transform on $N$ total samples typically deal with signals that have lower frequencies. This is because \acrshort{sa}s that employ the heterodyne principle like the HP141T determine the spectrum directly by analysis in the frequency domain and not from the time-dependent characteristics of the input signal. This is achieved by using a heterodyne receiver comprised of a mixer and tunable local oscillator (\acrshort{lo}) which convert the input signal to an intermediate frequency as illustrate in figure \ref{fig:heterodyne-rauscher} \cite{rauscher2007}. 
+	
+	\begin{figure}[!ht]
+		\centering
+		\label{fig:heterodyne-rauscher}
+		\includegraphics[width=0.3\linewidth]{Figures/Methodology/empty-image.png}
+		\caption{Heterodyne Spectrum Analyzer Block Diagram.}
+	\end{figure}
+	
+	In most cases, modern \acrshort{sa}s are real-time spectrum analyzers which are a special case of vector spectrum analyzers (\acrshort{vsa}) that use the heterodyne principle but digitize the input signal at the intermediate frequency, as shown in Figure \ref{fig:vector-analyzer-rover}, using a bandpass filter which can behave like a pre-select filter to limit distortions that arise from the mixer and shows the result in real-time. The advantage of digitizing the output of the \acrshort{if} section is that it enables large a input range of up to $\SI{50}{\mega\hertz}$ which can be analyzed in the time and frequency domain using digital signal processing techniques \cite{rovers2006}. Much like \acrshort{fft} analyzers, vector analyzers are limited by the minimum and maximum sampling rate at which the \acrshort{adc} can operate. Additionally, exceedingly high sampling rates can lead to aliasing which causes frequencies outside of the bandwidth to fold into the frequency band \cite{rovers2006}. 	
+
+	\begin{figure}[!ht]
+		\centering
+		\label{fig:vector-analyzer-rover}
+		\includegraphics[width=0.3\linewidth]{Figures/Methodology/empty-image.png}
+		\caption{Vector analyzer block diagram showing digitization of the \acrshort{if} frequency.}
+	\end{figure}
+
+	Examples of modern real-time analyzers include:
+	
+	\begin{itemize}
+		\item 
+		Tektronix RSA2208A which can scan input signals with frequencies of up to $\SI{8}{\giga\hertz}$.
+		\item 
+		Rohde \& Schwarz FSP13 which operates within a $\SI{9}{\giga\hertz}$ to $\SI{30}{\giga\hertz}$ \acrshort{rbw}.
+		\item
+		Agilent E4445A which offer frequency analysis up to $\SI{13.2}{\giga\hertz}$.
+		\item 
+		FieldFox RTSA which covers $\SI{5}{\kilo\hertz}$ up to $\SI{50}{\giga\hertz}$.
+	\end{itemize}
+
 	
 	\subsection{Representation of Signals in Frequency Domain}
 	

@@ -21,14 +21,35 @@
 \providecommand{\BIBdecl}{\relax}
 \BIBdecl
 
-\bibitem{HP}
+\bibitem{HPsiganalyzers}
 \BIBentryALTinterwordspacing
-HP. (1990) Signal analyzers. [Online]. Available:
+HP. (1972) Signal analyzers. [Online]. Available:
   \url{https://www.mikrocontroller.net/attachment/255249/HP141T.pdf#:~:text=The%20141T%20based%20spectrum%20analyzer%20features%20absolute,range%2C%20and%20simple%20to%20interpret%20display%20output.&text=Signals%20at%20as%20low%20a%20level%20as,the%20spectrum%20analyzer%20with%2010%20Hz%20bandwidth.}
 \BIBentrySTDinterwordspacing
 
 \bibitem{wolf1997}
 W.~Wolf and H.~Deubel, ``P31 {P}hosphor {P}ersistence at {P}hotopic {M}ean
   {L}uminance {L}evel.'' \emph{Spatial Vision}, no.~4, pp. 323--333, 1997.
+
+\bibitem{HP8555A}
+\BIBentryALTinterwordspacing
+H.-P. Company. (1972) Operating and {S}ervice {M}anual: {S}pectrum {A}nalyzer
+  {RF} {S}ection 8555{A}. [Online]. Available:
+  \url{https://www.arimi.it/wp-content/Strumenti/HP/Old/HP%208555a%20Operating%20and%20Service%20Manual.pdf}
+\BIBentrySTDinterwordspacing
+
+\bibitem{harris2003}
+A.~I. Harris, ``Heterodyne {S}pectrometers with {V}ery {W}ide {B}andwidths,''
+  in \emph{Millimeter and {S}ubmillimeter {D}etectors for {A}stronomy}, vol.
+  4855.\hskip 1em plus 0.5em minus 0.4em\relax SPIE, 2003, pp. 279--289.
+
+\bibitem{rauscher2007}
+C.~Rauscher, V.~Janssen, and R.~Minihold, \emph{Fundamentals of {S}pectrum
+  {A}nalysis}.\hskip 1em plus 0.5em minus 0.4em\relax Rohde \& Schwarz, 2007,
+  vol.~25.
+
+\bibitem{rovers2006}
+K.~Rovers, ``Front-{E}nd {R}esearch for a {L}ow-{C}ost {S}pectrum {A}nalyser,''
+  Ph.D. dissertation, University of Twente, 2006.
 
 \end{thebibliography}
