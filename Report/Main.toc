@@ -23,18 +23,24 @@
 \contentsline {section}{\numberline {3.1}Methodology Outline}{7}{section.3.1}%
 \contentsline {section}{\numberline {3.2}Phases in the Design Process}{8}{section.3.2}%
 \contentsline {section}{\numberline {3.3}Requirements Review}{9}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}Comparing the HP141T System to Modern Spectrum Analyzer Displays}{9}{subsection.3.3.1}%
-\contentsline {subsection}{\numberline {3.3.2}Representation of Signals in Frequency Domain}{11}{subsection.3.3.2}%
-\contentsline {subsection}{\numberline {3.3.3}Spectrum Analyzer Modes of Operation}{11}{subsection.3.3.3}%
-\contentsline {subsection}{\numberline {3.3.4}Display Resolution in the Logarithmic Scale}{11}{subsection.3.3.4}%
-\contentsline {subsection}{\numberline {3.3.5}Components of the Software Development Kit}{11}{subsection.3.3.5}%
-\contentsline {subsection}{\numberline {3.3.6}Display Power Source}{11}{subsection.3.3.6}%
-\contentsline {subsection}{\numberline {3.3.7}Equipment for Debugging and Testing}{11}{subsection.3.3.7}%
-\contentsline {section}{\numberline {3.4}System Design}{11}{section.3.4}%
-\contentsline {subsection}{\numberline {3.4.1}System Modularization}{11}{subsection.3.4.1}%
-\contentsline {subsection}{\numberline {3.4.2}System Block Diagrams}{11}{subsection.3.4.2}%
-\contentsline {chapter}{\numberline {4}Results}{12}{chapter.4}%
-\contentsline {chapter}{\numberline {5}Discussion }{13}{chapter.5}%
-\contentsline {chapter}{\numberline {6}Conclusions }{14}{chapter.6}%
-\contentsline {chapter}{\numberline {7}Recommendations }{15}{chapter.7}%
-\contentsline {chapter}{Bibliography}{16}{chapter*.13}%
+\contentsline {subsection}{\numberline {3.3.1}Comparing the HP141T System to Modern Spectrum Analyzers}{9}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Data Acquisition in Digitizing the HP141T}{12}{subsection.3.3.2}%
+\contentsline {subsubsection}{\acrshort {adc} Constraints}{13}{section*.14}%
+\contentsline {subsubsection}{Conditioning HP141T Output Voltages to Match the \acrshort {adc} Operating Voltages}{13}{section*.16}%
+\contentsline {subsubsection}{Sampling Limitations in the Data Acquisition and Data Processing Subsystems}{14}{section*.18}%
+\contentsline {subsubsection}{Further Design Considerations in Digital Processor Selection}{15}{section*.20}%
+\contentsline {subsection}{\numberline {3.3.3}Design Considerations in Satisfying Display Requirements}{16}{subsection.3.3.3}%
+\contentsline {subsubsection}{Display Hardware Considerations for a \acrshort {mcu}-Based System}{16}{section*.22}%
+\contentsline {subsubsection}{Display Hardware Considerations for a \acrshort {sbc}-Based System}{16}{section*.24}%
+\contentsline {subsubsection}{Display Hardware Considerations for a \acrshort {fpga}-Based System}{17}{section*.26}%
+\contentsline {subsubsection}{Display User Interface}{17}{section*.28}%
+\contentsline {subsection}{\numberline {3.3.4}Equipment for Debugging and Testing}{20}{subsection.3.3.4}%
+\contentsline {subsubsection}{Emulating HP141T Auxiliary Outputs}{20}{section*.30}%
+\contentsline {subsubsection}{Software-Based Simulation Tools}{20}{section*.31}%
+\contentsline {section}{\numberline {3.4}System Design}{21}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}System Block Diagram}{21}{subsection.3.4.1}%
+\contentsline {chapter}{\numberline {4}Results}{22}{chapter.4}%
+\contentsline {chapter}{\numberline {5}Discussion }{23}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Conclusions }{24}{chapter.6}%
+\contentsline {chapter}{\numberline {7}Recommendations }{25}{chapter.7}%
+\contentsline {chapter}{Bibliography}{26}{chapter*.33}%

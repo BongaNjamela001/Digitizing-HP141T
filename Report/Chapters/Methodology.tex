@@ -76,29 +76,29 @@
 
 	\section{Requirements Review}
 	
-	This section aims to clarify the scope and formalization of the user requirements specifications of the project. 
+	This section aims to clarify the scope of the project and produce a technical formalization of the user requirements specifications. The section begins by giving context to the term modernization by investigating the properties of modern \acrshort{sa}s. Then, the section breaks down the user requirements into categories relating data acquisition, processing and display. Finally, the section concludes with a review of the requirement for developing a HP141T emulator. 
 		
-	\subsection{Comparing the HP141T System to Modern Spectrum Analyzer Displays}
+	\subsection{Comparing the HP141T System to Modern Spectrum Analyzers}
 	
 	The first user requirement deals with the modernization of the HP141T system. The aim of this section is to review this requirement and to give clarification on the context of the use of "modernization" in this project. To achieve this objective, the section begins with a description of the HP141T system and the functions that differ from "modern" spectrum analyzers, such as the range of hand-held \acrshort{sa}s by FieldFox, and the N9000B CXA \acrshort{sa} manufactured by Keysight\textregistered. The section concludes with a summary table comparing the features of the HP141T system and modern spectrum analyzers. 
 	
 	The HP141T system is equipped with three plug-ins, namely the 8555A \acrshort{rf} section which operates in the microwave region of the electromagnetic spectrum, the 8552B \acrshort{if} section and the Model 141T display which includes the \acrshort{crt} monitor. The three plug-ins operate in unison to electronically scan signals in the time-domain and provide a visual representation of the input signal's amplitude in the frequency domain on the \acrshort{crt} monitor \cite{HP8555A}. Amplitude can be represented on a logarithmic ($\si{\decibel\meter}$) or linear scale ($\si{\milli\volt}$). 
 	
-	The 8555A and 8552B plug-ins apply principles of heterodyning spectroscopy, allows high frequency input signals with frequencies in the K-band of the microwave portion of the electromagnetic spectrum (i.e. $\SI{18}{\mega\hertz}$) \cite{harris2003}. Spectrum analyzers which rely on the \acrshort{fft} by sampling the continuous input signal and performing the Fourier transform on $N$ total samples typically deal with signals that have lower frequencies. This is because \acrshort{sa}s that employ the heterodyne principle like the HP141T determine the spectrum directly by analysis in the frequency domain and not from the time-dependent characteristics of the input signal. This is achieved by using a heterodyne receiver comprised of a mixer and tunable local oscillator (\acrshort{lo}) which convert the input signal to an intermediate frequency as illustrate in figure \ref{fig:heterodyne-rauscher} \cite{rauscher2007}. 
+	The 8555A and 8552B plug-ins apply principles of heterodyning spectroscopy, allows high frequency input signals with frequencies in the K-band of the microwave portion of the electromagnetic spectrum (i.e. $\SI{18}{\mega\hertz}$) \cite{harris2003}. As noted from literature in the previous chapter, spectrum analyzers which rely on the \acrshort{fft} by sampling the continuous input signal and performing the Fourier transform on $N$ total samples typically deal with signals that have lower frequencies. This is because \acrshort{sa}s that employ the super-heterodyne principle like the HP141T determine the spectrum directly by analysis in the frequency domain and not from the time-dependent characteristics of the input signal. This is achieved by using a super-heterodyne receiver comprised of a mixer and tunable local oscillator (\acrshort{lo}) which convert the input signal to an intermediate frequency as illustrated in figure \ref{fig:heterodyne-rauscher} \cite{rauscher2007}. 
 	
 	\begin{figure}[!ht]
 		\centering
 		\label{fig:heterodyne-rauscher}
-		\includegraphics[width=0.3\linewidth]{Figures/Methodology/empty-image.png}
+		\includegraphics[width=1.0\linewidth]{Figures/Methodology/heterodyne-rauscher.png}
 		\caption{Heterodyne Spectrum Analyzer Block Diagram.}
 	\end{figure}
 	
-	In most cases, modern \acrshort{sa}s are real-time spectrum analyzers which are a special case of vector spectrum analyzers (\acrshort{vsa}) that use the heterodyne principle but digitize the input signal at the intermediate frequency, as shown in Figure \ref{fig:vector-analyzer-rover}, using a bandpass filter which can behave like a pre-select filter to limit distortions that arise from the mixer and shows the result in real-time. The advantage of digitizing the output of the \acrshort{if} section is that it enables large a input range of up to $\SI{50}{\mega\hertz}$ which can be analyzed in the time and frequency domain using digital signal processing techniques \cite{rovers2006}. Much like \acrshort{fft} analyzers, vector analyzers are limited by the minimum and maximum sampling rate at which the \acrshort{adc} can operate. Additionally, exceedingly high sampling rates can lead to aliasing which causes frequencies outside of the bandwidth to fold into the frequency band \cite{rovers2006}. 	
+	As noted in the literature review, most modern \acrshort{sa}s are real-time spectrum analyzers \acrshort{rtsa} which are a special case of vector spectrum analyzers (\acrshort{vsa}) that use the super-heterodyne principle but digitize the input signal at the intermediate frequency, as shown in Figure \ref{fig:vector-analyzer-rover}, using a bandpass filter which can behave like a pre-select filter to limit distortions that arise from the mixer and shows the result in real-time. The advantage of digitizing the output of the \acrshort{if} section is that it enables large a input range of up to $\SI{50}{\mega\hertz}$ which can be analyzed in the time and frequency domain using digital signal processing techniques \cite{rovers2006}. Much like \acrshort{fft} analyzers, vector analyzers are limited by the minimum and maximum sampling rate at which the \acrshort{adc} can operate. Additionally, exceedingly high sampling rates can lead to aliasing which causes frequencies outside of the bandwidth to fold into the frequency band \cite{rovers2006}. 	
 
 	\begin{figure}[!ht]
 		\centering
 		\label{fig:vector-analyzer-rover}
-		\includegraphics[width=0.3\linewidth]{Figures/Methodology/empty-image.png}
+		\includegraphics[width=1.0\linewidth]{Figures/Methodology/real-time-analyzer-rover.png}
 		\caption{Vector analyzer block diagram showing digitization of the \acrshort{if} frequency.}
 	\end{figure}
 
@@ -115,24 +115,413 @@
 		FieldFox RTSA which covers $\SI{5}{\kilo\hertz}$ up to $\SI{50}{\giga\hertz}$.
 	\end{itemize}
 
+	In modern \acrshort{rtsa}s, \acrshort{if} analog output is transferred to the \acrshort{adc} through an anti-aliasing filter before being stored in memory \cite{tektronixRSA2208A}. This is in contrast to older heterodyne \acrshort{sa}s such as the HP141T which takes the \acrshort{if} output through a video filter is essentially an averaging low-pass filter which smooths the \acrshort{if} output and reduces the effects of internal noise before the signal is channelled to the display \cite{rauscher2007}. HP141T video filters may select $\SI{10}{\hertz}$, $\SI{100}{\hertz}$, $\SI{10}{\kilo\hertz}$ or OFF section of the low-pass filter for the detected video. 
 	
-	\subsection{Representation of Signals in Frequency Domain}
+	In the HP141T, the output of the video filter is transmitted to the vertical deflection of the \acrshort{crt} display \cite{HPsiganalyzers}. For the horizontal deflection of the electron beam in the \acrshort{crt} display, a sawtooth signal from the sweep generator governs the horizontal scaling of the output frequency as electrons impinge on the phosphorescent screen. Modern \acrshort{sa}s retrieve data from memory through high speed data lines to display information about the digital signal from the \acrshort{adc}. Digital display technologies include:
 	
-	\subsection{Spectrum Analyzer Modes of Operation}
+	\begin{itemize}
+		\item 
+		\acrshort{lcd} - most commonly used digital display which represents signal data with a sharp image and has low power consumption
+		\item 
+		\acrshort{oled} - typically used in high performance \acrshort{sa}s for displaying color coded spectrograms
+		\item 
+		\acrshort{tft} - offer good visual quality and response time for sharper imagery when analyzing high frequency signals.
+	\end{itemize}
+
+	Displays in modern \acrshort{sa} architectures offer more options for displaying frequency domain data. This is enabled by the processor, which is typically hosted on microcontroller board with high clock speed for performing digital signal processing algorithms. For example, \acrshort{rtsa}s display the spectrogram as a color coded function of the amplitude of the signal \cite{al2013}. In addition, digital displays generally consume less physical space compared to \acrshort{crt} displays with the same screen dimensions. This has allowed spectrum analyzers to become smaller as they entire system can fit into smaller packaging. For example, the FieldFox is an hand-held \acrshort{rtsa} which despite its size, offers improved performance over the HP141T.
 	
-	\subsection{Display Resolution in the Logarithmic Scale}
+	The comparison table in \ref{tab:comparing-old-to-modern} below summarizes the differences between the HP141T analyzer (equipped with the 8555A and 8552B plug-ins) and modern \acrshort{rtsa}s.
 	
-	\subsection{Components of the Software Development Kit}
+	 \begin{table}[ht!]
+	 	\centering
+	 	\begin{tabular}{|m{8em}|m{15em}|m{15em}|}
+	 		\hline
+	 		\cellcolor{cyan!25}\textbf{Feature}	& \cellcolor{cyan!25}\textbf{HP141T}	& \cellcolor{cyan!25}\textbf{Real-Time Spectrum Analyzer}\\
+	 		\hline
+	 		Operation &	Heterodyne	&	\acrshort{fft}-based real-time processing\\
+	 		\hline
+	 		Frequency Range &	$\SI{10}{\giga\hertz}$	- $\SI{40}{\giga\hertz}$	&	DC to $\SI{54}{\giga\hertz}$\\
+	 		\hline
+	 		Scan Speed &	$\SI{0.1}{\milli\second}/\text{div}$ - $\SI{10}{\second}/\text{div}$	&		Real-time GHz bandwidth capture with no losses\\
+	 		\hline
+	 		Dynamic Range	&	High but limited by analog filters	& Very high due to digital signal processing\\
+	 		\hline
+	 		Resolution Bandwidth	&	Adjustable limited by analog filters	&	As low as $\SI{1}{\hertz}$\\
+	 		\hline
+	 		Real-time Capture	&	No. Displays active signals and struggles with pulsed signals &	Yes. Captures transient and pulsed signals with ease\\
+	 		\hline
+	 		Signal Processing	&	Analog signal processing with IF filters and logarithmic amplifiers	& Digital signal processing from \acrshort{adc}-sampled signal\\
+	 		\hline
+	 		FFT Capability	&	- &	Built-in FFT \\
+	 		\hline
+	 		Display Type	&	\acrshort{crt}	&	\acrshort{lcd}/\acrshort{oled}/\acrshort{tft}\\
+	 		\hline
+	 		Trace Storage	&	No memory. &	Digital data storage\\
+	 		\hline
+	 		Connectivity	&	None &	\acrshort{usb}, Wi-Fi, Bluetooth, \acrshort{ble}\\
+	 		\hline
+	 		Size \& Portability	&	Large and mountable on a rack &	Compact and portable\\
+	 		\hline
+	 		Settings \& Configuration	&	Manual tuning and calibration	&	Automated measurements, presets, user-friendly\\
+	 		\hline
+	 	\end{tabular}
+ 		\caption{Comparing the features of the HP141T system to the modern \acrshort{rtsa}s.}
+ 		\label{tab:comparing-old-to-modern}
+	 \end{table}
 	
-	\subsection{Display Power Source}
+	Table \ref{tab:comparing-old-to-modern} shows that \acrshort{rtsa}s also have connectivity abilities. For example, data can be transferred serially from on-board memory to an external device through the \acrshort{usb} transfer protocol or through the \acrshort{ble} transfer protocol. 
+	
+	Features shown in the comparison formulated the modernization criteria to give context to the user requirement specification. Following sections expand on the features which can provide the functionality for associated requirements. 
+	
+	\subsection{Data Acquisition in Digitizing the HP141T}
+	
+	As seen in the previous section, a primary criteria for modernizing HP141T is the translation of continuous analog input signals from the time domain to a digital signal that can be assessed using a digital processor such as a single-board computer, \acrshort{fpga}, or microcontroller. Selecting the point at which the conversion occurs in the pipeline of the HP141T super-heterodyne system plays a crucial role in the performance of the modernized system. The following project aimed to fulfil the signal conversion criteria by sampling the input signal at the intermediate frequency in a similar manner to the technique implemented by a modern \acrshort{rtsa} and vector analyzers. In addition, user requirement UR01 states that the system needs to sample 801 points which is a standard for modern signal analyzers.
+	
+	The following section reviews the user requirements to inform decisions about the data acquisition subsystem of the digitized HP141T subsystem. One of the most crucial parts in the design of the data acquisition subsystem is the selection of the \acrshort{adc} which samples signals and transmits them to the digital processor to store or manipulate signals in real-time. The section describes the limitations of this central part of the system and proposes solutions that can be implemented to fulfil the user requirements.
+			
+	\subsubsection{\acrshort{adc} Constraints}
+	
+	Table \ref{tab:adc-constraints} shows constraints that influence the selection of the \acrshort{adc} and a solution for circumventing the limitation. For example, the operating voltage range of the \acrshort{adc} is a constraint which can be circumvented by including a signal conditioning circuit.
+	
+	\begin{table}[!ht]
+		\centering
+		\begin{tabular}{|m{8em}|m{15em}|m{15em}|}
+			\hline
+			\cellcolor{cyan!25}\textbf{Constraint}	& \cellcolor{cyan!25}\textbf{Problem}	& \cellcolor{cyan!25}\textbf{Solution}\\
+			\hline
+			Operating Voltage	& Limited input voltage range of $\SI{0}{\volt}$ to $\SI{3.3}{\volt}$ or $\SI{5.0}{\volt}$. The HP141T produces incompatible auxiliary output voltages	& Signal conditioning circuit for scaling and shifting signals for compatibility with \acrshort{adc} operating voltages\\
+			\hline
+			Sample Rate			& Required minimum of 801 points & Select an \acrshort{adc} with a high sampling rate (at 1 \acrshort{msps}) \\
+			\hline
+			Resolution			& Higher resolution is required for finer amplitude accuracy	& Use an \acrshort{adc} with a minimum resolution of 16-bits\\
+			\hline
+			Number of Channels	& The HP141T has 3 auxiliary outputs that are related to the frequency vs amplitude plot 	& Use an \acrshort{adc} with at least 3 channels\\
+			\hline
+			Latency				& High latency can introduce delays in rendering signal data in real-time	& Choose an \acrshort{adc} with \acrshort{spi} for low latency\\
+			\hline
+			\acrshort{snr}	& \acrshort{adc} with a low \acrshort{snr} are more susceptible to noise and fluctuations in the amplitude 	&	Use an \acrshort{adc} with a high \acrshort{snr}\\
+			\hline
+		\end{tabular}
+		\label{tab:adc-constraints}
+		\caption{\acrshort{adc} selection constraints and solutions.}
+	\end{table}
+
+	\subsubsection{Conditioning HP141T Output Voltages to Match the \acrshort{adc} Operating Voltages}
+	
+	To satisfy the modernization requirement, an \acrshort{adc} with at least three channels is required to sample the three auxiliary analog output signals from the HP141T system that are shown in Table \ref{tab:hp141t-output-voltages} below.
+	
+	\begin{table}[!ht]
+		\centering
+		\begin{tabular}{|m{3em}|m{5em}|m{8em}|m{25em}|}
+			\hline
+			\cellcolor{cyan!25}\textbf{Label} & \cellcolor{cyan!25}\textbf{Name} & \cellcolor{cyan!25}\textbf{Range} & \cellcolor{cyan!25}\textbf{Description}\\
+			\hline
+			$\nu_{pen}$	& Pen-Lift	&$\SI{0}{\volt}$ to $\SI{14}{\volt}$ & Triggers the \acrshort{crt} display. The pen-lift output is $\SI{0}{\volt}$ during scanning\\
+			\hline
+			$\nu_{v}$	& Vertical Output	& $\SI{0}{\volt}$ to -$\SI{0.8}{\volt}$	& Detected video output proportional to the vertical deflection on the \acrshort{crt}, corresponding to the amplitude of the signal in the frequency domain. Voltage range is scaled for full vertical deflection of the electron beam in 8 divisions of the \acrshort{crt} display \\
+			\hline
+			$\nu_{h}$	& Horizontal Output	& -$\SI{5}{\volt}$ to $\SI{5}{\volt}$ & Sawtooth signal for representing scaling frequency across 10 divisions of the horizontal deflection on the \acrshort{crt} display. The HP141T uses this output to control the trace of the spectrum across the screen. \\
+			\hline
+		\end{tabular}
+		\label{tab:hp141t-output-voltages}
+		\caption{Auxiliary voltages of the HP141T that must be sampled to digitize the system.}
+	\end{table}
+
+	Since the operating voltage of most \acrshort{adc}s is in the range between $\SI{0}{\volt}$ and $\SI{3.3}{\volt}$ or $\pm\SI{5}{\volt}$, the auxiliary outputs listed in table \ref{tab:hp141t-output-voltages} need to be scaled and shift to be within the operating voltage range. To scale the signal, an op-amp with appropriate gain $A$ can be used between the auxiliary outputs of the HP141T and the input channels of the \acrshort{adc}. To shift the output voltages, a logic level-shifter can be used to translate the signals to be within the operating voltage domain. 
+
+	\subsubsection{Sampling Limitations in the Data Acquisition and Data Processing Subsystems}
+		
+	Among the constraints in the selection of the \acrshort{adc} is the requirement of the data acquisition subsystem to sample 801 points. Given that the 8552B has 16 internal scan rates from $\SI{0.1}{\milli\second}/\text{div}$ to $\SI{10}{\second}/\text{div}$ in a 1, 2, 5 sequence and given that the data acquisition subsystem needs to store 801 points per scan, the fastest scan rate, corresponding to $\SI{0.1}{\milli\second}/\text{div}$, can be achieved using an \acrshort{adc} with a sampling rate of 
+	\begin{align}
+		\frac{801\text{samples}}{\SI{0.1}{\milli\second}}	& = 8.01~\textbf{\acrshort{msps}}\nonumber
+	\end{align}
+	Similarly, for the slowest scan rate corresponding to $\SI{10}{\second}/\text{div}$, the required minimum sampling rate of the \acrshort{adc} is 80.1 \acrshort{sps}.
+	
+	In addition to the sample rate of the \acrshort{adc}, the design must take several factors into account regarding the integration of the \acrshort{adc} with a digital processor such as a \acrshort{sbc}, \acrshort{mcu}, or \acrshort{fpga}. Table \ref{tab:digital-processor-considerations} shows the considerations that need to be made in selecting a digital processor that is compatible with the operation of the \acrshort{adc} and high sampling rate.
+	
+	\begin{table}[!ht]
+		\centering
+		\begin{tabular}{|m{5em}|m{15em}|m{20em}|}
+			\hline
+			\cellcolor{cyan!25}\textbf{Digital Processor Type}	& \cellcolor{cyan!25}\textbf{Consideration}	&	\cellcolor{cyan!25}\textbf{Feature}\\
+			\hline
+			\multirow{3}*{\acrshort{mcu}}	& Communication Interface &	Supports $\text{I}^2\text{C}$ and \acrshort{spi} \\
+			\cline{2-3}
+			& Data Transfer Rate & Up to hundreds of $\si{\mega\hertz}$\\
+			\cline{2-3}
+			& Synchronization and Timing &	Can use interrupts and \acrshort{fifo} buffers \\
+			\hline
+			\multirow{3}*{\acrshort{sbc}}	& Communication interface	& Supports $\text{I}^2\text{C}$ and \acrshort{spi}	\\
+			\cline{2-3}
+			& Data Transfer Rate & Suited for low sampling rates\\
+			\cline{2-3}
+			& Synchronization and Timing & Requires buffering and introduces operating system relating delays\\ 
+			\hline
+			\multirow{3}*{\acrshort{fpga}}	&	Communication Interface & Supports \acrshort{spi} and high-speed parallel interfaces\\
+			\cline{2-3}
+			& Data Transfer Rate & Can handle sampling rates at hundreds of $\si{\mega\hertz}$ to $\si{\giga\hertz}$ speeds.\\
+			\cline{2-3}
+			& Synchronization and Timing &	Uses parallel data pipelines suitable for high-speed sampling rates for real-time spectral analysis applications.\\
+			\hline
+		\end{tabular}
+		\caption{Digital processor selection based on \acrshort{adc} interface considerations.}
+		\label{tab:digital-processor-considerations}
+	\end{table}
+		 
+	Table \ref{tab:digital-processor-considerations} indicates that to fulfil the requirement for sampling 801 points per scan, the design that can deliver the highest performance in real-time data acquisition should include an \acrshort{adc} which can perform 8.01 \acrshort{msps} and a \acrshort{fpga} with multiple pipelines for storing and processing rapidly sampled data in parallel. Alternatively, a heterogeneous digital processor can be implemented using a suitable combination of the available options listed in the table. For example, a Xilinx Artix-7 \acrshort{fpga} can be used for high-speed data acquisition while a Raspberry Pi \acrshort{sbc} is used to process and display data. \acrshort{mcu}s can also be daisy-chained to perform different tasks in the data acquisition subsystem. 
+	
+	\subsubsection{Further Design Considerations in Digital Processor Selection}
+	
+	While \acrshort{fpga}s offer superior speeds in data acquisition and processing, one of the shortcomings of selecting it as the primary digital processor is that the overall development time is typically longer than the design time for \acrshort{mcu}s and \acrshort{sbc}s. This is because \acrshort{fpga} development has a structured design flow which includes details of the register-transfer level (\acrshort{rtl}) using a hardware description language (\acrshort{hdl}), validation, synthesis and implementation. Although tools like AMD Vivado exist to significantly reduce \acrshort{fpga} development times, the other available options offer significantly shorter development times. 
+	
+	Table \ref{tab:digital-processor-comparison} gives a comparison between the available digital processor options to highlight the most suitable option for fulfilling the requirements of this project. 
+	
+	\begin{table}[ht!]
+		\centering
+		\label{tab:digital-processor-comparison}
+		\begin{tabular}{|m{8em}|m{10em}|m{10em}|m{10em}|}
+			\hline
+			\cellcolor{cyan!25}\textbf{Design Aspect}	&	\cellcolor{cyan!25}\textbf{\acrshort{mcu}}	&	\cellcolor{cyan!25}\textbf{\acrshort{sbc}}	&	\cellcolor{cyan!25}\textbf{\acrshort{fpga}}\\
+			\hline
+			Development Time	&	Short	&	Moderate	& 	Long\\
+			\hline
+			Processing Speed	& 	Medium	&	Moderate to High	& 	High\\
+			\hline
+			Programming Language	& C/C++ &	Python or C/C++	 & VHDL or Verilog\\
+			\hline
+			On-board Memory and \acrshort{ram}	& Very Low & High	& Low\\
+			\hline
+			Power consumption	& Low	& High	& Moderate to High\\
+			\hline
+			Scalability		& High	& Moderate	& High \\
+			\hline
+			Cost	& Low	& Moderate to High	& High\\
+			\hline	
+		\end{tabular}
+		\caption{A structure comparison of the available digital processor options.}
+	\end{table}
+
+	The different benefits of choosing a certain digital processor can be deduced from Table \ref{tab:digital-processor-considerations} and \ref{tab:digital-processor-comparison}. Other considerations need to made regarding the memory capacity of the chosen processor, however, the primary objective is to satisfy UR06 which requires the data acquisition subsystem to be capable of storing and recalling traces. Due to the high sampling rate, the device must have a sufficient large memory capacity for storing signal frequency and amplitude related information at high-speeds. Specifically, given that a minimum sampling rate of 8.01 \acrshort{msps} is required and supposing that the resolution of the \acrshort{adc} is 16-bit, the device must be able to store
+	\begin{align}
+		8.01 \text{MSPS} \times \SI{16}{\bit} & = \SI{128160000}{\bit\per\second}\nonumber
+	\end{align}
+	In other words, the device must be able to store $\SI{16.02}{\mega\byte\per\second}$, which equates to approximately $\SI{1}{\giga\byte}$ per minutes. Thus, the selected digital processor must include efficient memory management algorithms to ensure that data is not lost or corrupted. The table indicates that the \acrshort{mcu} has the most limited capability with respect to memory. This is because \acrshort{mcu}s typically have few KB to MB of \acrshort{ram} and require external memory. Similarly, \acrshort{fpga}s offer limited memory capabilities since they typically use a small embedded \acrshort{ram} and require external memory for large data buffers. 
+	
+	In summary, the \acrshort{mcu} is most suitable for its low cost, low power consumption, good real-time capabilities and short development time. However, the \acrshort{mcu} is only suitable for moderate-speed sampling, which is not ideal for the high sampling rates that are needed to fulfil the requirements. While \acrshort{sbc}s offer intermediate performs and features that combine the moderate capabilities of \acrshort{mcu}s and \acrshort{fpga}s, their primary shortcoming is poor real-time capabilities due to \acrshort{os} delays and overall low latency. Finally, the best option for this application is the \acrshort{fpga} due to its ability to perform real-time high-speed data processing and \acrshort{adc} synchronization, however, the biggest shortcomings are the development time and high cost. 
+	
+	\subsection{Design Considerations in Satisfying Display Requirements}
+	
+	The choice of display depends on the selected processor type. The display hardware must satisfy multiple user requirements including UR03, UR07 and UR09 which are related to resolution, functionality and power. Further considerations have to be made for the display to satisfy requirements relating to the user interface (\acrshort{ui}). The following section breaks down these requirements separately to evaluate the design choices that need to be made in modernizing the HP141T display.
+	
+	\subsubsection{Display Hardware Considerations for a \acrshort{mcu}-Based System}
+	
+	Table \ref{tab:mcu-display-options} assimilates the design considerations for a \acrshort{mcu}-based system. Overall, the design needs to consider factors such as clock and I/O speed, memory, power consumption and the display interface.
+	
+	\begin{table}[ht!]
+		\centering
+		\begin{tabular}{|m{5em}|m{10em}|m{24em}|}
+			\hline
+			\cellcolor{cyan!25}\textbf{Key Consideration}	&	\cellcolor{cyan!25}\textbf{Aspects}	& \cellcolor{cyan!25}\textbf{Description}\\
+			\hline
+			\multirow{3}{*}{Processor}	& Clock Speed	& Clock speed of at least $\SI{100}{\mega\hertz}$ for rendering 801 points per scan to the display\\
+			\cline{2-3}
+			&	Architecture &	A 32-bit ARM Cortex-M series \acrshort{mcu} is preferred for good balance between power efficiency and speed\\
+			\cline{2-3}
+			&	I/O Speed & \acrshort{adc} waveform samples need to be rendered at high speeds. \acrshort{spi} is recommended for improving latency\\
+			\hline
+			\multirow{2}{*}{Memory}	& 	\acrshort{ram}	& At least $\SI{128}{\kilo\byte}$ of \acrshort{ram} required for real-time display rendering\\
+			\cline{2-3}
+			&	Flash Memory	&	Required for storing firmware and display configurations which need to be loaded during power-up.\\
+			\hline
+			\multirow{2}{*}{Interface}	&	Compatibility	& Should support the same communication interfaces as the display screen.\\
+			\cline{2-3}
+			&	Resources &	Modern displays include internal frame buffers which can reduce the effect of memory and data transfer bottlenecks.\\
+			\hline
+			\multirow{2}{*}{Power}	&	Compatibility & System must be powered by a single wall wart power supply.\\
+			\cline{2-3}
+			&	Efficiency	&	Low-power and standby modes can reduce energy consumption when the display is idle.\\
+			\hline
+		\end{tabular}
+		\caption{Key considerations for the display subsystem for a \acrshort{mcu}-based system.}
+		\label{tab:mcu-display-options}
+	\end{table}
+	
+	\subsubsection{Display Hardware Considerations for a \acrshort{sbc}-Based System}
+	
+	If the chosen digital processor is a single-board computer such as the Raspberry Pi 4B, similar considerations need to be made regarding its compatibility of the display unit. Differences arise from the hardware capabilities that the \acrshort{sbc} offers. Table \ref{tab:sbc-display-options} summarizes the design considerations that need to be made for the interface between \acrshort{sbc} and the display unit.
+	
+	\begin{table}[ht!]
+		\centering
+		\begin{tabular}{|m{5em}|m{10em}|m{24em}|}
+			\hline
+			\cellcolor{cyan!25}\textbf{Key Consideration}	&	\cellcolor{cyan!25}\textbf{Aspects}	& \cellcolor{cyan!25}\textbf{Description}\\
+			\hline
+			\multirow{2}{*}{Resolution} 
+			& 1080p at 60Hz & Recommended for smooth spectrum rendering; higher resolutions. \\
+			\cline{2-3}
+			& HDMI 2.0 & A high-speed \acrshort{hdmi} 2.0-compatible display is required for the best display quality. \\
+			\hline
+			
+			\multirow{3}{*}{\acrshort{hdmi}} 
+			& \acrshort{hdmi} Version Support & Older monitors may only support HDMI 1.2, which could limit resolution and refresh rates \\
+			\cline{2-3}
+			& Data Handling & Improper extended display identification data detection may require manual configuration \\
+			\cline{2-3}
+			& Adapter	& Micro-\acrshort{hdmi} to \acrshort{hdmi} adapters are required. Faulty adapters may introduce noise\\
+			\hline
+			
+			\multirow{3}{*}{Touch} 
+			& Touch Display & Dedicated \acrshort{sbc} touchscreens can be used \\
+			\cline{2-3}
+			& \acrshort{dsi} & Raspberry Pi touchscreen connect via the \acrshort{dsi} (Display Serial Interface) without required \acrshort{hdmi}\\
+			\cline{2-3}
+			& Power & Dedicated screen can be powered by the \acrshort{sbc}\\
+			\hline
+			
+			\multirow{2}{*}{Monitor} 
+			& Compatibility & Selected display must support the required resolution and refresh rate for clear visualization of digitized spectra. \\
+			\cline{2-3}
+			& Over-scanning & Display adjustments may be required for screens that crop spectrum visualizations. \\
+			\hline
+						
+			\multirow{2}{*}{Software} 
+			& OS Support & Dedicated \acrshort{os} recommended for compatibility with built-in display drivers and utilities. \\
+			\cline{2-3}
+			& Settings & Used to adjust display resolution, rotation, and other settings for the most suitable spectrum visualization. \\
+			\hline
+		\end{tabular}
+		\caption{Display considerations for screen integration with a \acrshort{sbc}-based system.}
+		\label{tab:sbc-display-options}
+	\end{table}
+	
+	\subsubsection{Display Hardware Considerations for a \acrshort{fpga}-Based System}
+	
+	Although \acrshort{fpga}s offer the best performance with respect to sampling rates and data processing speeds, they are not as suitable for processing display data compared to \acrshort{sbc}s. However, the real-time capabilities of the \acrshort{fpga}-based system can provide a seamless user experience by rendering spectrum displays at a high frame rate. Table \ref{tab:fpga-display-options} lists the design considerations for the display of a \acrshort{fpga}-based system.
+	
+	\begin{table}[ht!]
+		\centering
+		\begin{tabular}{|m{8em}|m{10em}|m{22em}|}
+			\hline
+			\cellcolor{cyan!25}\textbf{Key Consideration} & \cellcolor{cyan!25}\textbf{Aspects} & \cellcolor{cyan!25}\textbf{Description} \\
+			\hline
+			\multirow{3}{*}{Video Output} 
+			& \acrshort{hdmi} Support & Different FPGAs feature built-in \acrshort{hdmi}, \acrshort{dvi} transmitters or external serializer chips. The chosen FPGA must support high-speed video output \\
+			\cline{2-3}
+			& Parallel & For parallel \acrshort{rgb} inputs, the FPGA must generate compatible timing signals for proper synchronization \\
+			\cline{2-3}
+			& Buffering & Additional external memory may be required for storing video frames before display \\
+			\hline
+			
+			\multirow{2}{*}{Synchronization} 
+			& Pixel Clock & Display’s resolution and refresh rate requirements must be compatible with a stable \acrshort{fpga} pixel clock \\
+			\cline{2-3}
+			& Fabric Speed & Spectrum updates can be rendered rapidly using the high-speed fabric which ensure low-latency \\
+			\hline
+			
+			\multirow{3}{*}{Interface} 
+			& Protocols & The display must be able to interface with the available hardware on the \acrshort{fpga} \\
+			\cline{2-3}
+			& Controller & Display must be compatible with \acrshort{fpga} IP cores for developing display functionality more easily\\
+			\cline{2-3}
+			& Resources & Optimization is needed to balance consumption of \acrshort{fpga} logic, memory block and I/O pins by the display unit \\
+			\hline
+			
+			\multirow{2}{*}{Memory} 
+			& \acrshort{ram} & External DDR memory may be necessary for extending limited on-chip RAM capacity \\
+			\cline{2-3}
+			& Storage & Efficient memory management is essential to prevent bottlenecks \\
+			\hline
+			
+			\multirow{2}{*}{Power} 
+			& Delivery & Some high-speed video interfaces require additional power regulators\\
+			\cline{2-3}
+			& Heating & FPGA video processing generates heat which may require cooling to prevent damage to components of the \acrshort{fpga} \\
+			\hline
+			
+			\multirow{2}{*}{Software} 
+			& Drivers & Display drivers must be implemented using \acrshort{hdl} or software cores\\
+			\cline{2-3}
+			& Updates & Updates must occur in real-time and support different display modes \\
+			\hline
+		\end{tabular}
+		\caption{Display considerations for an FPGA-based HP141T modernization system.}
+		\label{tab:fpga-display-options}
+	\end{table}
+	
+	\subsubsection{Display User Interface}
+
+	User requirements relating to the aspects of the display that the user can interact with include UR02, UR04, UR05 and UR07. The primary objective of the project is to display a plot of the amplitude vs frequency for the input signal, in real-time. To achieve this objective, spectrum data needs to be organized and easily accessible from \acrshort{ram} or flash memory, depending on the architecture of the system that is centred around the \acrshort{adc} and digital processor. For example, STM microcontrollers have a dedicated \acrshort{lcd}-\acrshort{tft} display controller with a frame buffer that can be located either in on-chip memory or in an external memory, depending on the resolution. Using external memory can increase latency which decreases the real-time performance of the system. 
+	
+	In addition, data needs to be scaled while considering the effects of windowing, so that all spectrum data can be translated to a grid with 8 divisions of the amplitude, on the vertical axis, and 10 divisions of the frequency, on the horizontal axis. This is also to ensure that the appearance of the \acrshort{crt} display, as shown in Figure \ref{fig:display-section}, is maintained.
+	 
+	\begin{figure}[ht!]
+		\centering
+		\includegraphics[width=0.87\textwidth]{Figures/Methodology/HP-Display-Section}
+		\caption{HP141T \acrshort{crt} display section.}
+		\label{fig:display-section}
+	\end{figure}
+	
+	Secondary objectives include digitizing the operations that were previously executed by physical knobs such as horizontal and vertical scaling of the waveform. This objective can be  as functions in a program that can be called to perform similar task. The choice of coding language and available development tools for the program that runs the display is a critical part of the \acrshort{ui} subsystem. 
+	
+	An alternative approach to handling data acquisition and display functions on the same board would be to use a single-board computer for the display. Spectrum data can be retrieved from memory and displayed to the user in a Python, C/C++ or Java program. Knobs can be replaced by programmatic buttons with functions that users can access by touching the screen. This can allow other features such as averaging and displaying maxima and minima to be easily accessible to the user. For this project, \acrshort{ui} must enable users to select between different display modes, including the \acrshort{phm}, \acrshort{avm} and \acrshort{rwm}. The \acrshort{ui} must enable users to switch between these modes seamlessly and allow for back them to return to previous screens using a back button in the program.
+	
+	Overall, the project aims to adhere to Nielsen's heuristic design principles which includes:
+	\begin{enumerate}
+		\item
+		Match between the system and the HP141T -  the program should use the language and current features of the HP141T that users are familiar with
+		\item 
+		User control and freedom - the \acrshort{ui} must support undo, redo and exit points
+		\item 
+		Aesthetics and minimalist design - the most relevant information that must be displayed is related to the frequency plot of the input signals as well as configurations and settings of the data acquisition and digital processing units that give context to the current display
+		\item 
+		Flexibility and efficiency of use - the \acrshort{ui} interface of the modernized HP141T must be optimized for difference experience levels through suitable shortcuts and frequent actions such as averaging and showing maxima and minima of the input signal.
+		\item 
+		Help and documentation - documentation of the modernized HP141T display must correspond to current documentations of the entire system and must be easy to read
+		\item 
+		Error prevention - the \acrshort{ui} must protect users from deleting stored traces and signal information
+		\item 
+		Visibility - a user must always know what is happening within the program and current state of their actions
+		\item 
+		Consistency and standards - the appearance of the \acrshort{ui} must follow the conventions of modern spectrum analyzer displays through consistent words, situations and actions.
+		\item 
+		Help user to recognize, diagnose and recover from errors such as closing windows with information about pulses or signal noise
+		\item 
+		Recognition rather than recall - minimize users' memory load by making program features that are related to the most accessed signal data easy to access
+	\end{enumerate}
 	
 	\subsection{Equipment for Debugging and Testing}
-		
+	
+	The following section gives a review of the project requirement which necessitates the development of an HP141T display emulator of the three auxiliary outputs as shown in \ref{tab:hp141t-output-voltages}. Additionally, the section describes software-based simulation tools that can be used in the development for debugging and obtaining an idea about the expected behaviour individual hardware components and overall system.
+	
+	\subsubsection{Emulating HP141T Auxiliary Outputs}
+	
+	The sawtooth signal can be generated using a 555-timer circuit which produces a ramp voltage with adjustable frequency to mimic the adjustable scan time, and a fixed peak-to-peak voltage of $\SI{10}{\volt}$ with no \acrshort{dc} offset. This is to ensure that the horizontal sawtooth output range between $-\SI{5}{\volt}$ and $+\SI{5}{\volt}$ is maintained. 
+	
+	To emulate the vertical output which swings between $\SI{0}{\volt}$ and $-\SI{0.8}{\volt}$, a simple voltage biasing circuit can be built with appropriate resistor values and input voltage. To control this level, a potentiometer can be used to manually adjust the voltage level within that range. Similarly, the pen-lift output can be produced using a biasing circuit with a potentiometer that allows the voltage to swing between $\SI{0}{\volt}$ and $\SI{14}{\volt}$. 
+	
+	Lastly, the HP141T display emulator circuit needs to interface with the signal conditioning circuit that prepares the signal voltages to match the operating range of the \acrshort{adc}. Therefore, to avoid the development of multiple circuits, the output cables of the display emulator must be the same as the output cables that take the auxiliary outputs from the HP141T to the signal conditioning circuit.
+	
+	\subsubsection{Software-Based Simulation Tools}
+	
+	To optimize the selection and configuration of the data acquisition subsystem, \acrshort{adc}s can be simulated in MATLAB using Simulink to understand the behaviour of the sawtooth input from the HP141T or emulating hardware. Additionally, Simulink provides visualizations of the spectrum of the \acrshort{adc} output which can be used to determine the expected values from sampling signals. Simulink also allows users to add impairments to the \acrshort{adc} for introducing a layer of non-linearity that may be seen for signals with frequencies that are close the edges of the \acrshort{rbw} or intermediate frequency. 
+	
+	Electronic circuits, such as the signal conditioning circuits with op-amps and level-shifters, can be simulated using LTSpice to predict the expected behaviour. Output values from LTSpice simulations can be used to simulate the behaviour of the system using Simulink with MATLAB.
+			
 	\section{System Design}
 	
-	\subsection{System Modularization}
+	Design decisions in formulating the specifications were informed by the requirement review in the previous section. This section aims to give a full description of the system and the interfaces between the different subsystems. The section begins with a visual representation of the system using a block diagram. Following the visual representation of the design, the section includes specifications and concludes with acceptance and integration tests. 
 	
-	\subsection{System Block Diagrams}
+	\subsection{System Block Diagram}
+	
+	The system block diagram is shown in Figure \ref{fig:system-block-diagram} below. The diagram shows that the modernized HP141T maintains the basic analog signal processing functionality, similar to modern \acrshort{rtsa}s. The main difference between the architecture of vector analyzers and the proposed system is that this system includes a signal conditioning circuit and memory to store \acrshort{adc} values during each scan.
+	
+	\begin{figure}[ht!]
+	 	\centering
+	 	\includegraphics[width=1.0\textwidth]{Figures/Methodology/system-block-diagram}
+	 	\caption{Proposed system diagram which includes the HP141T plugin sections.}
+	 	\label{fig:system-block-diagram}
+	 \end{figure}
+	
 	% ----------------------------------------------------
 	\ifstandalone
 	\bibliography{../Bibliography/References.bib}

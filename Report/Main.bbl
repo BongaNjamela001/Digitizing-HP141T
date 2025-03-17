@@ -52,4 +52,15 @@ C.~Rauscher, V.~Janssen, and R.~Minihold, \emph{Fundamentals of {S}pectrum
 K.~Rovers, ``Front-{E}nd {R}esearch for a {L}ow-{C}ost {S}pectrum {A}nalyser,''
   Ph.D. dissertation, University of Twente, 2006.
 
+\bibitem{tektronixRSA2208A}
+\emph{RSA2203A \& RSA2208A 3 GHz \& 8 GHz Real-Time Spectrum Analyzers},
+  Tektronix, March 2006,
+  \href{https://download.tek.com/manual/071133403.pdf}{User Manual}.
+
+\bibitem{al2013}
+A.~Al~Adnani, J.~Duplicy, and L.~Philips, ``Spectrum {A}nalyzers {T}oday and
+  {T}omorrow: {P}art 1 {T}owards {F}ilterbanks-{E}nabled {R}eal-{T}ime
+  {S}pectrum {A}nalysis,'' \emph{IEEE Instrumentation \& Measurement Magazine},
+  vol.~16, no.~5, pp. 6--11, 2013.
+
 \end{thebibliography}
