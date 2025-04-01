@@ -1,12 +1,16 @@
 \babel@toc {english}{}\relax 
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces The Z-G Diagraph by developed by Rohde \& Schwarz with a Schmidt chart for measuring complex parameters \cite {rytting2008arftg}.\relax }}{6}{figure.caption.10}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces The HP8568A spectrum analyzer which was the first spectrum analyzer from Hewlett-Packard Company to include a microprocessor in the 1970s.\relax }}{7}{figure.caption.11}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Illustrating the size of early spectrum analyzer setups. Digitization and modernization of these devices was also focused on reducing their size in order to improve portability.\relax }}{7}{figure.caption.12}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces The Agilent 8560EC is shown with a \acrshort {lcd} display. This was an improvement over the 8560E model which had a \acrshort {crt} display.\relax }}{8}{figure.caption.13}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Methodology overview showing different stages in the iterative design process that was applied as a variation of the V-Model.\relax }}{8}{figure.caption.10}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Heterodyne Spectrum Analyzer Block Diagram.\relax }}{10}{figure.caption.11}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Vector analyzer block diagram showing digitization of the \acrshort {if} frequency.\relax }}{11}{figure.caption.12}%
-\contentsline {figure}{\numberline {3.4}{\ignorespaces HP141T \acrshort {crt} display section.\relax }}{19}{figure.caption.29}%
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Proposed system diagram which includes the HP141T plugin sections.\relax }}{21}{figure.caption.32}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Methodology overview showing different stages in the iterative design process that was applied as a variation of the V-Model.\relax }}{12}{figure.caption.14}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Heterodyne Spectrum Analyzer Block Diagram.\relax }}{14}{figure.caption.15}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Vector analyzer block diagram showing digitization of the \acrshort {if} frequency.\relax }}{15}{figure.caption.16}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces HP141T \acrshort {crt} display section.\relax }}{23}{figure.caption.33}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Proposed system diagram which includes the HP141T plugin sections.\relax }}{25}{figure.caption.36}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

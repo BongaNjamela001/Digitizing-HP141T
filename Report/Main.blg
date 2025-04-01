@@ -13,50 +13,66 @@ I was expecting a `,' or a `}'---line 138 of file Bibliography/References.bib
  :  url     = "https://download.tek.com/manual/071133403.pdf"
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 297 of file Bibliography/References.bib
+ :  
+ :  author={Damerau, H and Kowina, P and V{\"o}llinger, C and Wendt, M},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 327 of file Bibliography/References.bib
+ :  
+ :  url     = "https://xdevs.com/doc/HP_Agilent_Keysight/HP%208566B%20Data%20Sheet.pdf"
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 359 of file Bibliography/References.bib
+ :  
+ :  url     = "https://testworld.com/wp-content/uploads/user-guide-keysight-agilent-8561e-8562e-8563e-8564e-8565e-8561ec-8562ec-8563ec-8564ec-8565ec-spectrum-analyzers.pdf"
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
 -- IEEEtran.bst version 1.14 (2015/08/26) by Michael Shell.
 -- http://www.michaelshell.org/tex/ieeetran/bibtex/
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
+Warning--empty journal in vollinger2023
 
 Done.
-You've used 8 entries,
+You've used 23 entries,
             4087 wiz_defined-function locations,
-            874 strings with 8862 characters,
-and the built_in function-call counts, 4460 in all, are:
-= -- 367
-> -- 73
-< -- 29
-+ -- 40
-- -- 12
-* -- 200
-:= -- 749
-add.period$ -- 16
-call.type$ -- 8
-change.case$ -- 7
-chr.to.int$ -- 63
-cite$ -- 8
-duplicate$ -- 322
-empty$ -- 373
-format.name$ -- 15
-if$ -- 1006
+            963 strings with 11347 characters,
+and the built_in function-call counts, 13549 in all, are:
+= -- 1126
+> -- 216
+< -- 102
++ -- 120
+- -- 32
+* -- 594
+:= -- 2193
+add.period$ -- 47
+call.type$ -- 23
+change.case$ -- 21
+chr.to.int$ -- 231
+cite$ -- 24
+duplicate$ -- 1010
+empty$ -- 1163
+format.name$ -- 40
+if$ -- 3128
 int.to.chr$ -- 0
-int.to.str$ -- 8
-missing$ -- 62
-newline$ -- 51
-num.names$ -- 7
-pop$ -- 142
+int.to.str$ -- 23
+missing$ -- 173
+newline$ -- 96
+num.names$ -- 20
+pop$ -- 384
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 351
+skip$ -- 1074
 stack$ -- 0
-substring$ -- 152
-swap$ -- 249
-text.length$ -- 8
+substring$ -- 558
+swap$ -- 768
+text.length$ -- 25
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 8
-warning$ -- 0
-while$ -- 19
-width$ -- 9
-write$ -- 98
-(There was 1 error message)
+type$ -- 23
+warning$ -- 1
+while$ -- 68
+width$ -- 25
+write$ -- 233
+(There were 4 error messages)

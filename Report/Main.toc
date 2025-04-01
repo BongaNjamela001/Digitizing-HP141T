@@ -8,39 +8,44 @@
 \contentsline {section}{\numberline {1.4}Scope \& Limitations}{4}{section.1.4}%
 \contentsline {section}{\numberline {1.5}Report Outline}{4}{section.1.5}%
 \contentsline {chapter}{\numberline {2}Literature Review }{5}{chapter.2}%
-\contentsline {section}{\numberline {2.1}History and Fundamentals of Spectrum Analysis}{6}{section.2.1}%
-\contentsline {subsection}{\numberline {2.1.1}Brief History of Spectrum Analyzers}{6}{subsection.2.1.1}%
-\contentsline {subsection}{\numberline {2.1.2}Frequency Domain Analysis of Signals}{6}{subsection.2.1.2}%
-\contentsline {subsection}{\numberline {2.1.3}Classifications of Spectrum Analyzers}{6}{subsection.2.1.3}%
-\contentsline {section}{\numberline {2.2}Digitizing Spectrum Analyzer Outputs}{6}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}Output Voltage Regulation and Preparation for Frequency Analysis}{6}{subsection.2.2.1}%
-\contentsline {subsection}{\numberline {2.2.2}Transforming Spectrum Analyzer Output Signals to Digital Frequency Domain}{6}{subsection.2.2.2}%
-\contentsline {subsection}{\numberline {2.2.3}Interfacing Computers with Spectrum Analyzers}{6}{subsection.2.2.3}%
-\contentsline {section}{\numberline {2.3}Modern Spectrum Analyzer Displays}{6}{section.2.3}%
-\contentsline {subsection}{\numberline {2.3.1}Configurations and Displayed Data in Modern Spectrum Analyzer Displays}{6}{subsection.2.3.1}%
-\contentsline {subsection}{\numberline {2.3.2}Technological Developments in Signal Analyzer Displays}{6}{subsection.2.3.2}%
-\contentsline {chapter}{\numberline {3}Methodology }{7}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Methodology Outline}{7}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Phases in the Design Process}{8}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Requirements Review}{9}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}Comparing the HP141T System to Modern Spectrum Analyzers}{9}{subsection.3.3.1}%
-\contentsline {subsection}{\numberline {3.3.2}Data Acquisition in Digitizing the HP141T}{12}{subsection.3.3.2}%
-\contentsline {subsubsection}{\acrshort {adc} Constraints}{13}{section*.14}%
-\contentsline {subsubsection}{Conditioning HP141T Output Voltages to Match the \acrshort {adc} Operating Voltages}{13}{section*.16}%
-\contentsline {subsubsection}{Sampling Limitations in the Data Acquisition and Data Processing Subsystems}{14}{section*.18}%
-\contentsline {subsubsection}{Further Design Considerations in Digital Processor Selection}{15}{section*.20}%
-\contentsline {subsection}{\numberline {3.3.3}Design Considerations in Satisfying Display Requirements}{16}{subsection.3.3.3}%
-\contentsline {subsubsection}{Display Hardware Considerations for a \acrshort {mcu}-Based System}{16}{section*.22}%
-\contentsline {subsubsection}{Display Hardware Considerations for a \acrshort {sbc}-Based System}{16}{section*.24}%
-\contentsline {subsubsection}{Display Hardware Considerations for a \acrshort {fpga}-Based System}{17}{section*.26}%
-\contentsline {subsubsection}{Display User Interface}{17}{section*.28}%
-\contentsline {subsection}{\numberline {3.3.4}Equipment for Debugging and Testing}{20}{subsection.3.3.4}%
-\contentsline {subsubsection}{Emulating HP141T Auxiliary Outputs}{20}{section*.30}%
-\contentsline {subsubsection}{Software-Based Simulation Tools}{20}{section*.31}%
-\contentsline {section}{\numberline {3.4}System Design}{21}{section.3.4}%
-\contentsline {subsection}{\numberline {3.4.1}System Block Diagram}{21}{subsection.3.4.1}%
-\contentsline {chapter}{\numberline {4}Results}{22}{chapter.4}%
-\contentsline {chapter}{\numberline {5}Discussion }{23}{chapter.5}%
-\contentsline {chapter}{\numberline {6}Conclusions }{24}{chapter.6}%
-\contentsline {chapter}{\numberline {7}Recommendations }{25}{chapter.7}%
-\contentsline {chapter}{Bibliography}{26}{chapter*.33}%
+\contentsline {section}{\numberline {2.1}History and Fundamentals of Spectrum Analysis}{5}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Introduction to Spectrum Analysis}{5}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}Early Developments in Waveform Analysis}{6}{subsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.1.3}Advancements in Spectrum Analysis Technology}{6}{subsection.2.1.3}%
+\contentsline {subsection}{\numberline {2.1.4}Early Modifications to Spectrum Analyzers (1960s - 1980s)}{7}{subsection.2.1.4}%
+\contentsline {subsection}{\numberline {2.1.5}Commercial Digitization of Spectrum Analyzers}{8}{subsection.2.1.5}%
+\contentsline {subsection}{\numberline {2.1.6}Obsolescence and Modernization Strategies}{8}{subsection.2.1.6}%
+\contentsline {subsection}{\numberline {2.1.7}Conclusion}{9}{subsection.2.1.7}%
+\contentsline {section}{\numberline {2.2}Principles of Spectrum Analysis}{10}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Classifications of Spectrum Analyzers}{10}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Primary Components of Spectrum Analyzers}{10}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}Features of Modern Spectrum Analyzer Displays}{10}{subsection.2.2.3}%
+\contentsline {section}{\numberline {2.3}Digitizing Spectrum Analyzer Outputs}{10}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Output Voltage Regulation and Preparation for Frequency Analysis}{10}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}Transforming Spectrum Analyzer Output Signals to Digital Frequency Domain}{10}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}Interfacing Computers with Spectrum Analyzers}{10}{subsection.2.3.3}%
+\contentsline {chapter}{\numberline {3}Methodology }{11}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Methodology Outline}{11}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Phases in the Design Process}{12}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Requirements Review}{13}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Comparing the HP141T System to Modern Spectrum Analyzers}{13}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Data Acquisition in Digitizing the HP141T}{16}{subsection.3.3.2}%
+\contentsline {subsubsection}{\acrshort {adc} Constraints}{17}{section*.18}%
+\contentsline {subsubsection}{Conditioning HP141T Output Voltages to Match the \acrshort {adc} Operating Voltages}{17}{section*.20}%
+\contentsline {subsubsection}{Sampling Limitations in the Data Acquisition and Data Processing Subsystems}{18}{section*.22}%
+\contentsline {subsubsection}{Further Design Considerations in Digital Processor Selection}{19}{section*.24}%
+\contentsline {subsection}{\numberline {3.3.3}Design Considerations in Satisfying Display Requirements}{20}{subsection.3.3.3}%
+\contentsline {subsubsection}{Display Hardware Considerations for a \acrshort {mcu}-Based System}{20}{section*.26}%
+\contentsline {subsubsection}{Display Hardware Considerations for a \acrshort {sbc}-Based System}{20}{section*.28}%
+\contentsline {subsubsection}{Display Hardware Considerations for a \acrshort {fpga}-Based System}{21}{section*.30}%
+\contentsline {subsubsection}{Display User Interface}{21}{section*.32}%
+\contentsline {subsection}{\numberline {3.3.4}Equipment for Debugging and Testing}{24}{subsection.3.3.4}%
+\contentsline {subsubsection}{Emulating HP141T Auxiliary Outputs}{24}{section*.34}%
+\contentsline {subsubsection}{Software-Based Simulation Tools}{24}{section*.35}%
+\contentsline {section}{\numberline {3.4}System Design}{24}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}System Block Diagram}{25}{subsection.3.4.1}%
+\contentsline {chapter}{\numberline {4}Results}{26}{chapter.4}%
+\contentsline {chapter}{\numberline {5}Discussion }{27}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Conclusions }{28}{chapter.6}%
+\contentsline {chapter}{\numberline {7}Recommendations }{29}{chapter.7}%
+\contentsline {chapter}{Bibliography}{30}{chapter*.37}%
