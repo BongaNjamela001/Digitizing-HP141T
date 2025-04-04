@@ -1,0 +1,4 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "digikey-footprints")(type "KiCad")(uri "/home/bonga/Documents/EEE4022F/EEE4022F_Design_Elements/digikey-kicad-library/digikey-footprints.pretty")(options "")(descr ""))
+)

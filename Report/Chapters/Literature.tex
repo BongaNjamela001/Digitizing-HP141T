@@ -18,7 +18,7 @@ In circumventing design limitations of spectrum analyzer displays, it is prudent
 
 The chapter begins with an evaluation of the frequency domain analysis theory that is applied in the operation of signal analyzers. Then, the different principles that distinguish different types of analyzers are explored to form the basis understanding the expected behaviour of a spectrum analyzer with specific settings. Following descriptions of the operation of spectrum analyzers from literature, the chapter includes a review of the investigation into different techniques for digitizing analyzer displays. This also includes a review of the different electronic components and techniques for digitizing frequency information in order to survey available hardware options that can be selected for a cost effective implementation. Finally, a broad discussion is included on different types of displays for analyzers in literature and a critique of the literature is provided to outline the purpose of the proposed design. 
 
-\section{History and Fundamentals of Spectrum Analysis}
+\section{Mitigating Spectrum Analyzer Obsolescence: A Historical Perspective}
 
 \subsection{Introduction to Spectrum Analysis}
 
@@ -80,7 +80,7 @@ HP85XX spectrum analyzers replaced the HP84XX analyzer series as the first \acrs
 
 In the 2000s, Agilent Technologies mordenized the front and rear panels of HP8560E Model spectrum analyzers,  by introducing \acrshort{lcd} color display interfaced with a \acrshort{lcd} driver board and \acrshort{vga} port located that did not require a user interface \cite{hp8560ec}. Further additions included \acrshort{adc} circuitry integrated into the controller board \cite{hp8560ec}. These improvements also translated into better portability of the system as shown in \ref{fig:agilent-hp8560e}. 
 
-\subsection{Obsolescence and Modernization Strategies}
+\subsection{Obsolescence Mitigation and Modernization Strategies}
 
 Overtime as prices of new spectrum analyzers increased rapidly, researchers opted to use older \acrshort{sa}s instead of replacing them. Research into strategies for mitigating risks related to the obsolescence of older \acrshort{sa} models was conducted by Hoppin in 2002, where particular focus was allocated to HP8566/68 \acrshort{sa}s in automated test equipment \cite{hoppin2002}. Hoppin stated that dependence on obsolete and unsupported equipment increased the risk of system and that as \acrshort{sa}s aged, the time required for repair and the cost of replacement increases rapidly \cite{hoppin2002}. As a result of the inevitable obsolescence, Hopping proposed three strategies for dealing with the aged devices, namely, the \textit{stockpile}; the \textit{redesign}; and \textit{migration} strategies. The stockpile strategies requires industry organizations to identify sources of spare replacement components and instruments, and offer repair and calibration services \cite{hoppin2002}. 
 
@@ -98,8 +98,13 @@ A primary conclusion that can be drawn from the historical review of \acrshort{s
 
 In this project, the digitization of the HP141T spectrum analyzer builds on the primary ideas presented in history on the modernization of spectrum analyzers. Similar to implementations in history, the design proposed in this paper leverages modern single-board computing, digital displays, and software-based signal processing techniques for implementing the redesign strategy for circumventing the obsolescence of the \acrshort{sa}. Furthermore, this project aims to retain the core measurement functionalities of the original device while introducing intuitive graphical interfaces and improved data handling capabilities. The following sections discuss similar works and the challenges that researchers overcame in digitizing and modernizing spectrum analyzers.
 
-\section{Principles of Spectrum Analysis}
+\section{A Preview of the Operation of Spectrum Analyzers to Establish the Context for Digitization and Modernization}
 
+Formulating an understanding of the internal operation of the HP141T system is critical for extending functionality through digitization and modernization. In this regard, this project establishes the context of the term digitization as the development of a system which converts the analog signals from the \acrshort{sa} into digital values that are processed on a computer. The context for the term \texttt{digitization} and its usage were explored through literature as described in this section. Key related works were collated and focus is placed on detailing the internal path of an analog signal through the major components of \acrshort{sa}s in general.
+
+The term \textit{modernization} is also clarified through collated literature. In particular, this section details features of modern \acrshort{sa}s and their user interfaces which largely depend on the employed display type. By redesigning the display of the HP141T, the project aims to improve the overall performance of the system with respect to power consumption, ease-of-use, portability, and signal processing features. Changing the display from \acrshort{crt} to \acrshort{lcd} can be considered as a partial fulfilment of modernization, while ensuring that analog outputs from the HP141T can be stored and retrieved for processing at a later time is forms part of the digitization of the system.
+
+To establish a context for these terms, this section begins by differentiation between the different types of \acrshort{sa}s while focusing on the key operational principles that govern the behaviour of the HP141T. Then, the section details the purpose of primary components in spectrum analyzers to formulate a steps for digitizing the system from literature. The section concludes with findings on features of modern spectrum analyzers that differentiate them from older models, and challenges that related works overcame during the modernization process.  
 
 \subsection{Classifications of Spectrum Analyzers}
 
