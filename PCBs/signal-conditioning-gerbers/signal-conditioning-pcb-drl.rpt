@@ -1,0 +1,29 @@
+Drill report for signal-conditioning-pcb.kicad_pcb
+Created on Fri 04 Apr 2025 19:33:36
+
+Copper Layer Stackup:
+    =============================================================
+    L1 :  F.Cu                      front
+    L2 :  B.Cu                      back
+
+
+Drill file 'signal-conditioning-pcb-PTH.drl' contains
+    plated through holes:
+    =============================================================
+    T1  0.660mm  0.0260"  (2 holes)  (with 2 slots)
+    T2  0.800mm  0.0315"  (34 holes)
+    T3  0.890mm  0.0350"  (6 holes)
+    T4  0.900mm  0.0354"  (5 holes)
+    T5  0.950mm  0.0374"  (4 holes)
+    T6  2.010mm  0.0791"  (6 holes)
+    T7  3.200mm  0.1260"  (4 holes)
+
+    Total plated holes count 61
+
+
+Drill file 'signal-conditioning-pcb-NPTH.drl' contains
+    unplated through holes:
+    =============================================================
+    T1  2.290mm  0.0902"  (3 holes)
+
+    Total unplated holes count 3

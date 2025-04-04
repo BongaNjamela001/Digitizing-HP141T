@@ -1,0 +1,12 @@
+Plotted to '/home/bonga/Documents/EEE4022F/EEE4022F_Design_Elements/EEE4022F_Circuit_Designs/Signal-Conditioning-Circuitry/PCB/signal-conditioning-gerbers/signal-conditioning-pcb-F_Cu.gtl'.
+Plotted to '/home/bonga/Documents/EEE4022F/EEE4022F_Design_Elements/EEE4022F_Circuit_Designs/Signal-Conditioning-Circuitry/PCB/signal-conditioning-gerbers/signal-conditioning-pcb-B_Cu.gbl'.
+Plotted to '/home/bonga/Documents/EEE4022F/EEE4022F_Design_Elements/EEE4022F_Circuit_Designs/Signal-Conditioning-Circuitry/PCB/signal-conditioning-gerbers/signal-conditioning-pcb-F_Paste.gtp'.
+Plotted to '/home/bonga/Documents/EEE4022F/EEE4022F_Design_Elements/EEE4022F_Circuit_Designs/Signal-Conditioning-Circuitry/PCB/signal-conditioning-gerbers/signal-conditioning-pcb-B_Paste.gbp'.
+Plotted to '/home/bonga/Documents/EEE4022F/EEE4022F_Design_Elements/EEE4022F_Circuit_Designs/Signal-Conditioning-Circuitry/PCB/signal-conditioning-gerbers/signal-conditioning-pcb-F_Silkscreen.gto'.
+Plotted to '/home/bonga/Documents/EEE4022F/EEE4022F_Design_Elements/EEE4022F_Circuit_Designs/Signal-Conditioning-Circuitry/PCB/signal-conditioning-gerbers/signal-conditioning-pcb-B_Silkscreen.gbo'.
+Plotted to '/home/bonga/Documents/EEE4022F/EEE4022F_Design_Elements/EEE4022F_Circuit_Designs/Signal-Conditioning-Circuitry/PCB/signal-conditioning-gerbers/signal-conditioning-pcb-F_Mask.gts'.
+Plotted to '/home/bonga/Documents/EEE4022F/EEE4022F_Design_Elements/EEE4022F_Circuit_Designs/Signal-Conditioning-Circuitry/PCB/signal-conditioning-gerbers/signal-conditioning-pcb-B_Mask.gbs'.
+Plotted to '/home/bonga/Documents/EEE4022F/EEE4022F_Design_Elements/EEE4022F_Circuit_Designs/Signal-Conditioning-Circuitry/PCB/signal-conditioning-gerbers/signal-conditioning-pcb-Edge_Cuts.gm1'.
+Created Gerber job file '/home/bonga/Documents/EEE4022F/EEE4022F_Design_Elements/EEE4022F_Circuit_Designs/Signal-Conditioning-Circuitry/PCB/signal-conditioning-gerbers/signal-conditioning-pcb-job.gbrjob'.
+Warning: Width correction constrained.  The width correction value must be in the range of [0.000001 mm; 0.199999 mm] for the current design rules.
+Info: Done.
