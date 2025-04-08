@@ -1,0 +1,5 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "bourns")(type "KiCad")(uri "/home/bonga/Documents/EEE4022F/EEE4022F_Design_Elements/bourns-kicad-library/kicad-lib/footprints/bourns.pretty")(options "")(descr ""))
+  (lib (name "myrra_ul")(type "KiCad")(uri "/home/bonga/Documents/EEE4022F/EEE4022F_Design_Elements/ul_44202/KiCADv6/myrra_ul.pretty")(options "")(descr ""))
+)
