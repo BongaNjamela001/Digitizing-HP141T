@@ -1,0 +1,31 @@
+Drill report for emulator-pcb.kicad_pcb
+Created on Thu 10 Apr 2025 12:24:55
+
+Copper Layer Stackup:
+    =============================================================
+    L1 :  F.Cu                      front
+    L2 :  B.Cu                      back
+
+
+Drill file 'emulator-pcb-PTH.drl' contains
+    plated through holes:
+    =============================================================
+    T1  0.600mm  0.0236"  (4 holes)
+    T2  0.700mm  0.0276"  (6 holes)
+    T3  0.750mm  0.0295"  (3 holes)
+    T4  0.762mm  0.0300"  (37 holes)
+    T5  0.800mm  0.0315"  (78 holes)
+    T6  0.890mm  0.0350"  (6 holes)
+    T7  0.900mm  0.0354"  (5 holes)
+    T8  2.010mm  0.0791"  (6 holes)
+    T9  4.300mm  0.1693"  (4 holes)
+
+    Total plated holes count 149
+
+
+Drill file 'emulator-pcb-NPTH.drl' contains
+    unplated through holes:
+    =============================================================
+    T1  0.762mm  0.0300"  (2 holes)
+
+    Total unplated holes count 2

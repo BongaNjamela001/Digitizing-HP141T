@@ -1,0 +1,38 @@
+** Drc report for /home/bonga/Documents/EEE4022F/EEE4022F_Design_Elements/EEE4022F_Circuit_Designs/HP141T-Emulator/emulator-pcb/v02/emulator-pcb/emulator-pcb.kicad_pcb **
+** Created on 2025-04-10 12:23:22 **
+
+** Found 9 DRC violations **
+[silk_overlap]: Silkscreen overlap
+    Rule: board setup constraints silk; Severity: warning
+    @(113.8980 mm, 104.2700 mm): Reference 'RV1'
+    @(112.5200 mm, 105.3780 mm): Line on F.Silkscreen
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; Severity: warning
+    @(117.6000 mm, 112.4900 mm): PTH pad 1 [Net-(U2-MO)] of RV1
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; Severity: warning
+    @(115.0600 mm, 109.9500 mm): PTH pad 2 [Net-(C4-Pad1)] of RV1
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; Severity: warning
+    @(117.6000 mm, 107.4100 mm): PTH pad 3 [Net-(C4-Pad1)] of RV1
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; Severity: warning
+    @(120.0130 mm, 89.0690 mm): PTH pad 1 [Net-(U3-MO)] of RV2
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; Severity: warning
+    @(117.4730 mm, 91.6090 mm): PTH pad 2 [Net-(C8-Pad1)] of RV2
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; Severity: warning
+    @(114.9330 mm, 89.0690 mm): PTH pad 3 [Net-(C8-Pad1)] of RV2
+[text_height]: Text height out of range (board setup constraints silk text height min height 0.8000 mm; actual 0.7620 mm)
+    Rule: board setup constraints silk text height; Severity: warning
+    @(113.8980 mm, 104.2700 mm): Reference 'RV1'
+[text_height]: Text height out of range (board setup constraints silk text height min height 0.8000 mm; actual 0.7620 mm)
+    Rule: board setup constraints silk text height; Severity: warning
+    @(117.4730 mm, 83.4810 mm): Reference 'RV2'
+
+** Found 0 unconnected pads **
+
+** Found 0 Footprint errors **
+
+** End of Report **

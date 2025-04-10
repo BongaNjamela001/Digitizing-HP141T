@@ -1,0 +1,6 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "din41524")(type "KiCad")(uri "/home/bonga/Documents/EEE4022F/EEE4022F_Design_Elements/EEE4022F_Circuit_Designs/HP141T-Emulator/emulator-pcb/din41524.pretty")(options "")(descr ""))
+  (lib (name "Conn_DIN_round")(type "KiCad")(uri "/home/bonga/Documents/EEE4022F/EEE4022F_Design_Elements/Conn_DIN_round.pretty/Conn_DIN_round.pretty")(options "")(descr ""))
+  (lib (name "bourns")(type "KiCad")(uri "/home/bonga/Documents/EEE4022F/EEE4022F_Design_Elements/bourns-kicad-library/kicad-lib/footprints/bourns.pretty")(options "")(descr ""))
+)

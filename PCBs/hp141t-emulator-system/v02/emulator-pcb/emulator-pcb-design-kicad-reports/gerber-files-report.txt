@@ -1,0 +1,11 @@
+Plotted to '/home/bonga/Documents/EEE4022F/EEE4022F_Design_Elements/EEE4022F_Circuit_Designs/HP141T-Emulator/emulator-pcb/v02/emulator-pcb/emulator-pcb-F_Cu.gtl'.
+Plotted to '/home/bonga/Documents/EEE4022F/EEE4022F_Design_Elements/EEE4022F_Circuit_Designs/HP141T-Emulator/emulator-pcb/v02/emulator-pcb/emulator-pcb-B_Cu.gbl'.
+Plotted to '/home/bonga/Documents/EEE4022F/EEE4022F_Design_Elements/EEE4022F_Circuit_Designs/HP141T-Emulator/emulator-pcb/v02/emulator-pcb/emulator-pcb-F_Paste.gtp'.
+Plotted to '/home/bonga/Documents/EEE4022F/EEE4022F_Design_Elements/EEE4022F_Circuit_Designs/HP141T-Emulator/emulator-pcb/v02/emulator-pcb/emulator-pcb-B_Paste.gbp'.
+Plotted to '/home/bonga/Documents/EEE4022F/EEE4022F_Design_Elements/EEE4022F_Circuit_Designs/HP141T-Emulator/emulator-pcb/v02/emulator-pcb/emulator-pcb-F_Silkscreen.gto'.
+Plotted to '/home/bonga/Documents/EEE4022F/EEE4022F_Design_Elements/EEE4022F_Circuit_Designs/HP141T-Emulator/emulator-pcb/v02/emulator-pcb/emulator-pcb-B_Silkscreen.gbo'.
+Plotted to '/home/bonga/Documents/EEE4022F/EEE4022F_Design_Elements/EEE4022F_Circuit_Designs/HP141T-Emulator/emulator-pcb/v02/emulator-pcb/emulator-pcb-F_Mask.gts'.
+Plotted to '/home/bonga/Documents/EEE4022F/EEE4022F_Design_Elements/EEE4022F_Circuit_Designs/HP141T-Emulator/emulator-pcb/v02/emulator-pcb/emulator-pcb-B_Mask.gbs'.
+Plotted to '/home/bonga/Documents/EEE4022F/EEE4022F_Design_Elements/EEE4022F_Circuit_Designs/HP141T-Emulator/emulator-pcb/v02/emulator-pcb/emulator-pcb-Edge_Cuts.gm1'.
+Created Gerber job file '/home/bonga/Documents/EEE4022F/EEE4022F_Design_Elements/EEE4022F_Circuit_Designs/HP141T-Emulator/emulator-pcb/v02/emulator-pcb/emulator-pcb-job.gbrjob'.
+Info: Done.
