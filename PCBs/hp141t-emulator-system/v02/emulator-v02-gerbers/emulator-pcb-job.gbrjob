@@ -5,13 +5,13 @@
       "Application": "Pcbnew",
       "Version": "7.0.11-7.0.11~ubuntu22.04.1"
     },
-    "CreationDate": "2025-04-10T12:25:00+02:00"
+    "CreationDate": "2025-04-10T17:26:18+02:00"
   },
   "GeneralSpecs": {
     "ProjectId": {
       "Name": "emulator-pcb",
       "GUID": "656d756c-6174-46f7-922d-7063622e6b69",
-      "Revision": "rev?"
+      "Revision": "v02"
     },
     "Size": {
       "X": 136.375,
