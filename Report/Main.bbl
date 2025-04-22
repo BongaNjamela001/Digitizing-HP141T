@@ -109,11 +109,10 @@ V.~Iglesias, J.~Grajal, M.~A. S{\'a}nchez, and M.~L{\'o}pez-Vallejo,
   vol.~64, no.~2, pp. 338--355, 2014.
 
 \bibitem{HP8555A}
-\BIBentryALTinterwordspacing
-H.-P. Company. (1972) Operating and {S}ervice {M}anual: {S}pectrum {A}nalyzer
-  {RF} {S}ection 8555{A}. [Online]. Available:
-  \url{https://www.arimi.it/wp-content/Strumenti/HP/Old/HP%208555a%20Operating%20and%20Service%20Manual.pdf}
-\BIBentrySTDinterwordspacing
+\emph{Spectrum {A}nalyzer {RF} {S}ection}, Hewlett-Packard Company, August
+  1974,
+  \href{https://www.arimi.it/wp-content/Strumenti/HP/Old/HP%208555a%20Operating%20and%20Service%20Manual.pdf}{Operating
+  and Service Manual}.
 
 \bibitem{harris2003}
 A.~I. Harris, ``Heterodyne {S}pectrometers with {V}ery {W}ide {B}andwidths,''
@@ -139,5 +138,12 @@ A.~Al~Adnani, J.~Duplicy, and L.~Philips, ``Spectrum {A}nalyzers {T}oday and
   {T}omorrow: {P}art 1 {T}owards {F}ilterbanks-{E}nabled {R}eal-{T}ime
   {S}pectrum {A}nalysis,'' \emph{IEEE Instrumentation \& Measurement Magazine},
   vol.~16, no.~5, pp. 6--11, 2013.
+
+\bibitem{hp8552b}
+\emph{Technical {M}anual: {P}lug-in {U}nit, {E}lectronic {T}est {E}quipment
+  {PL}1388/{U} ({H}ewlett-{P}ackard {M}odel 8552{B})}, Hewlett-Packard Company,
+  September 1978,
+  \href{https://www.arimi.it/wp-content/Strumenti/HP/Analizzatori%20spettro/HP_8552B_Spectrum_Analyzer_IF_Sectionx.pdf}{Technical
+  Manual}.
 
 \end{thebibliography}

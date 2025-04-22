@@ -10,7 +10,10 @@
 \contentsline {figure}{\numberline {3.2}{\ignorespaces Heterodyne Spectrum Analyzer Block Diagram.\relax }}{15}{figure.caption.15}%
 \contentsline {figure}{\numberline {3.3}{\ignorespaces Vector analyzer block diagram showing digitization of the \acrshort {if} frequency.\relax }}{16}{figure.caption.16}%
 \contentsline {figure}{\numberline {3.4}{\ignorespaces HP141T \acrshort {crt} display section.\relax }}{24}{figure.caption.33}%
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Proposed system diagram which includes the HP141T plugin sections.\relax }}{26}{figure.caption.36}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Overview system block diagram for the modernized HP141T which employs the HP8555A and HP8552B plug-in sections.\relax }}{26}{figure.caption.36}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Calibration system diagram where the HP141T Emulator is used to configure the primary subsystems such as the \acrshort {scs}, \acrshort {das}, etc.\relax }}{27}{figure.caption.37}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Expansion of the overall system diagram showing the primary components and functions in each subsystem.\relax }}{27}{figure.caption.38}%
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Circuit diagram for simulating the vertical output of the HP8552B \acrshort {if} section.\relax }}{30}{figure.caption.45}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
