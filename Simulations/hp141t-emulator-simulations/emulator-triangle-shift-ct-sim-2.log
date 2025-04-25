@@ -1,0 +1,202 @@
+Circuit: * C:\users\bonga\My Documents\EEE4022F\EEE4022F_Design_Elements\Spice_Models\LM358_Texas_Intstruments\emulator-triangle-shift-ct-sim-2.asc
+
+Direct Newton iteration failed to find .op point.  (Use ".option noopiter" to skip.)
+Starting Gmin stepping
+Gmin = 10
+Gmin = 1.07374
+Gmin = 0.115292
+Gmin = 0.0123794
+Gmin = 0.00132923
+vernier = 0.5
+vernier = 0.25
+vernier = 0.125
+Gmin = 0.000544452
+vernier = 0.0625
+vernier = 0.03125
+vernier = 0.015625
+Gmin = 0.000521814
+vernier = 0.0208333
+vernier = 0.0277778
+Gmin = 0.000494974
+vernier = 0.037037
+Gmin = 0.000455558
+vernier = 0.0493827
+vernier = 0.0658435
+Gmin = 0.000396468
+vernier = 0.0877914
+vernier = 0.117055
+Gmin = 0.000317981
+vernier = 0.156073
+Gmin = 0.000225193
+vernier = 0.208098
+vernier = 0.277464
+vernier = 0.138732
+Gmin = 0.00015013
+vernier = 0.184976
+Gmin = 9.98709e-005
+vernier = 0.246634
+vernier = 0.328846
+Gmin = 5.08489e-005
+vernier = 0.438461
+vernier = 0.584614
+Gmin = 1.77067e-005
+vernier = 0.779486
+Gmin = 3.52565e-006
+vernier = 1
+Gmin = 3.78564e-007
+Gmin = 4.0648e-008
+Gmin = 4.36454e-009
+Gmin = 4.68639e-010
+Gmin = 5.03197e-011
+Gmin = 5.40304e-012
+Gmin = 5.80147e-013
+Gmin = 0
+Gmin stepping succeeded in finding the operating point.
+
+Direct Newton iteration failed to find .op point.  (Use ".option noopiter" to skip.)
+Starting Gmin stepping
+Gmin = 10
+Gmin = 1.07374
+Gmin = 0.115292
+Gmin = 0.0123794
+Gmin = 0.00132923
+vernier = 0.5
+vernier = 0.25
+vernier = 0.125
+Gmin = 0.000544452
+vernier = 0.0625
+vernier = 0.03125
+vernier = 0.015625
+Gmin = 0.000521814
+vernier = 0.0208333
+vernier = 0.0277778
+Gmin = 0.000494974
+vernier = 0.037037
+Gmin = 0.000455558
+vernier = 0.0493827
+vernier = 0.0658435
+Gmin = 0.000396468
+vernier = 0.0877914
+vernier = 0.117055
+Gmin = 0.000317981
+vernier = 0.156073
+Gmin = 0.000225193
+vernier = 0.208098
+vernier = 0.277464
+vernier = 0.138732
+Gmin = 0.00014526
+vernier = 0.0693659
+vernier = 0.034683
+Gmin = 0.000136752
+vernier = 0.046244
+vernier = 0.0616586
+Gmin = 0.000120062
+vernier = 0.0822114
+vernier = 0.109615
+Gmin = 9.76394e-005
+vernier = 0.146154
+Gmin = 7.06558e-005
+vernier = 0.194871
+vernier = 0.259828
+Gmin = 4.12921e-005
+vernier = 0.346438
+vernier = 0.461917
+Gmin = 1.77762e-005
+vernier = 0.615889
+Gmin = 4.86207e-006
+vernier = 0.821185
+vernier = 1
+Gmin = 6.49558e-007
+Gmin = 6.97457e-008
+Gmin = 7.48889e-009
+Gmin = 8.04114e-010
+Gmin = 8.63411e-011
+Gmin = 9.2708e-012
+Gmin = 9.95445e-013
+Gmin = 1.06885e-013
+Gmin = 0
+Gmin stepping succeeded in finding the operating point.
+
+Direct Newton iteration failed to find .op point.  (Use ".option noopiter" to skip.)
+Starting Gmin stepping
+Gmin = 10
+Gmin = 1.07374
+Gmin = 0.115292
+Gmin = 0.0123794
+Gmin = 0.00132923
+vernier = 0.5
+vernier = 0.25
+vernier = 0.125
+Gmin = 0.000544452
+vernier = 0.0625
+vernier = 0.03125
+vernier = 0.015625
+Gmin = 0.000521814
+vernier = 0.0208333
+vernier = 0.0277778
+Gmin = 0.000494974
+vernier = 0.037037
+Gmin = 0.000455558
+vernier = 0.0493827
+vernier = 0.0658435
+Gmin = 0.000396468
+vernier = 0.0877914
+vernier = 0.117055
+Gmin = 0.000317981
+vernier = 0.156073
+Gmin = 0.000225193
+vernier = 0.208098
+vernier = 0.277464
+Gmin = 0.000127027
+vernier = 0.138732
+vernier = 0.0693659
+vernier = 0.034683
+Gmin = 0.000125747
+vernier = 0.046244
+vernier = 0.0616586
+Gmin = 0.000111882
+vernier = 0.0822114
+Gmin = 9.3148e-005
+vernier = 0.109615
+vernier = 0.146154
+Gmin = 6.86096e-005
+vernier = 0.194871
+vernier = 0.259828
+Gmin = 4.23251e-005
+vernier = 0.346438
+Gmin = 1.99907e-005
+vernier = 0.461917
+vernier = 0.615889
+Gmin = 5.85165e-006
+vernier = 0.821185
+vernier = 1
+Gmin = 9.17285e-007
+Gmin = 9.84927e-008
+Gmin = 1.05756e-008
+Gmin = 1.13554e-009
+Gmin = 1.21928e-010
+Gmin = 1.30919e-011
+Gmin = 1.40573e-012
+Gmin = 1.5094e-013
+Gmin = 0
+Gmin stepping succeeded in finding the operating point.
+
+
+Date: Mon Apr 07 17:36:11 2025
+Total elapsed time: 1.456 seconds.
+
+tnom = 27
+temp = 27
+method = trap
+totiter = 4804
+traniter = 0
+tranpoints = 0
+accept = 0
+rejected = 0
+matrix size = 276
+fillins = 315
+solver = Normal
+Thread vector: 11.9/6.6[6] 0.0/0.0[0] 6.3/2.8[6] 1.4/3.4[1]  2592/500
+Matrix Compiler1: 31.91 KB object code size  8.9/4.4/[1.8]
+Matrix Compiler2: 28.07 KB object code size  3.6/5.0/[1.1]
+

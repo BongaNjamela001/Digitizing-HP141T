@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.15)  20 APR 2025 14:47
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.15)  24 APR 2025 19:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -3688,6 +3688,51 @@ Underfull \hbox (badness 10000) in paragraph at lines 698--698
 []|\T1/lmr/bx/n/10.95 (+20) Pin
  []
 
+! Misplaced \noalign.
+\hline ->\noalign 
+                  {\ifnum 0=`}\fi \let \hskip \vskip \let \vrule \hrule \let...
+l.754 			\hline
+               
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+! You can't use `\hrule' here except with leaders.
+\vline ->\vrule 
+                \@width \arrayrulewidth 
+l.754 			\hline
+               
+To put a horizontal rule in an hbox or an alignment,
+you should use \leaders or \hrulefill (see The TeXbook).
+
+! Missing number, treated as zero.
+<to be read again> 
+                   }
+l.754 			\hline
+               
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   }
+l.754 			\hline
+               
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Misplaced \omit.
+\multispan ->\omit 
+                   \@multispan 
+l.755 			\multicolumn{5}{c}{\textbf{Outputs}}
+                                             \\
+I expect to see \omit only after tab marks or the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
 ) (./Chapters/Results.tex [29]
 
 LaTeX Warning: Text page 30 contains only floats.
@@ -3758,7 +3803,7 @@ e/texmf/fonts/type1/public/lm/lmr6.pfb></usr/share/texmf/fonts/type1/public/lm/
 lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr9.pfb></usr/share/texmf/fon
 ts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pf
 b></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb>
-Output written on Main.pdf (47 pages, 5659846 bytes).
+Output written on Main.pdf (47 pages, 5660510 bytes).
 PDF statistics:
  1233 PDF objects out of 1440 (max. 8388607)
  1098 compressed objects within 11 object streams
