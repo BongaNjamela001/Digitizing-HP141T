@@ -47,9 +47,9 @@
 \contentsline {subsection}{\numberline {3.4.2}System Modularization}{27}{subsection.3.4.2}%
 \contentsline {subsubsection}{HP141T Subsystem Specifications}{28}{section*.40}%
 \contentsline {subsubsection}{HP141T Emulator Subsystem Design}{28}{section*.44}%
-\contentsline {subsubsection}{Signal Condition Subsystem Design}{31}{section*.48}%
-\contentsline {chapter}{\numberline {4}Results}{32}{chapter.4}%
-\contentsline {chapter}{\numberline {5}Discussion }{33}{chapter.5}%
-\contentsline {chapter}{\numberline {6}Conclusions }{34}{chapter.6}%
-\contentsline {chapter}{\numberline {7}Recommendations }{35}{chapter.7}%
-\contentsline {chapter}{Bibliography}{36}{chapter*.49}%
+\contentsline {subsubsection}{Signal Condition Subsystem Design}{32}{section*.52}%
+\contentsline {chapter}{\numberline {4}Results}{34}{chapter.4}%
+\contentsline {chapter}{\numberline {5}Discussion }{35}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Conclusions }{36}{chapter.6}%
+\contentsline {chapter}{\numberline {7}Recommendations }{37}{chapter.7}%
+\contentsline {chapter}{Bibliography}{38}{chapter*.53}%

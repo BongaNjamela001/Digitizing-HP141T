@@ -13,7 +13,11 @@
 \contentsline {figure}{\numberline {3.5}{\ignorespaces Overview system block diagram for the modernized HP141T which employs the HP8555A and HP8552B plug-in sections.\relax }}{26}{figure.caption.36}%
 \contentsline {figure}{\numberline {3.6}{\ignorespaces Calibration system diagram where the HP141T Emulator is used to configure the primary subsystems such as the \acrshort {scs}, \acrshort {das}, etc.\relax }}{27}{figure.caption.37}%
 \contentsline {figure}{\numberline {3.7}{\ignorespaces Expansion of the overall system diagram showing the primary components and functions in each subsystem.\relax }}{27}{figure.caption.38}%
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Circuit diagram for simulating the vertical output of the HP8552B \acrshort {if} section.\relax }}{30}{figure.caption.45}%
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Emulator circuits for vertical and horizontal outputs of the HP8552B \acrshort {if} section.\relax }}{29}{figure.caption.45}%
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Illustration of the duty cycle and rise time of sawtooth function corresponding to the horizontal output, $\texttt {V}_\texttt {x}$, of the HP8552B.\relax }}{31}{figure.caption.48}%
+\contentsline {figure}{\numberline {3.10}{\ignorespaces XR2206 sawtooth output level shifter for achieving the appropriate voltage range.\relax }}{32}{figure.caption.49}%
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Simulated level shift circuit.\relax }}{32}{figure.caption.50}%
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Showing simulated scan output of the emulator.\relax }}{33}{figure.caption.51}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
