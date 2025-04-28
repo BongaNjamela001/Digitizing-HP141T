@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.15)  28 APR 2025 01:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.15)  28 APR 2025 22:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1519,17 +1519,23 @@ used with new abbreviation definitions. Use \glsxtrshort instead on input line
 16.
 
 LaTeX Font Info:    Trying to load font information for T1+DejaVuSansMono-TLF o
-n input line 17.
+n input line 18.
 (/usr/share/texlive/texmf-dist/tex/latex/dejavu/T1DejaVuSansMono-TLF.fd
 File: T1DejaVuSansMono-TLF.fd 2011/06/01 Font definitions for T1/DejaVuSansMono
 -TLF.
 )
 LaTeX Font Info:    Font shape `T1/DejaVuSansMono-TLF/m/n' will be
-(Font)              scaled to size 8.76003pt on input line 17.
+(Font)              scaled to size 8.76003pt on input line 18.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `DejaVuSansMono-TLF' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+24.
+
 )
 \tf@lof=\write6
 \openout6 = `Main.lof'.
@@ -1757,7 +1763,7 @@ Package glossaries-extra Warning: Base acronym command \acrshort should not be
 used with new abbreviation definitions. Use \glsxtrshort instead on input line 
 31.
 
-<Figures/Literature_Review/zg-diagraph.png, id=464, 601.4972pt x 308.65312pt>
+<Figures/Literature_Review/zg-diagraph.png, id=479, 601.4972pt x 308.65312pt>
 File: Figures/Literature_Review/zg-diagraph.png Graphic file (type png)
 <use Figures/Literature_Review/zg-diagraph.png>
 Package pdftex.def Info: Figures/Literature_Review/zg-diagraph.png  used on inp
@@ -1799,7 +1805,7 @@ used with new abbreviation definitions. Use \glsxtrshort instead on input line
 46.
 
 [6 <./Figures/Literature_Review/zg-diagraph.png (PNG copy)>]
-<Figures/Literature_Review/hp8568a.png, id=489, 438.13687pt x 188.20313pt>
+<Figures/Literature_Review/hp8568a.png, id=504, 438.13687pt x 188.20313pt>
 File: Figures/Literature_Review/hp8568a.png Graphic file (type png)
 <use Figures/Literature_Review/hp8568a.png>
 Package pdftex.def Info: Figures/Literature_Review/hp8568a.png  used on input l
@@ -1821,7 +1827,7 @@ Package glossaries-extra Warning: Base acronym command \acrshort should not be
 used with new abbreviation definitions. Use \glsxtrshort instead on input line 
 57.
 
-<Figures/Literature_Review/hp8566-large.png, id=495, 277.035pt x 295.1025pt>
+<Figures/Literature_Review/hp8566-large.png, id=510, 277.035pt x 295.1025pt>
 File: Figures/Literature_Review/hp8566-large.png Graphic file (type png)
 <use Figures/Literature_Review/hp8566-large.png>
 Package pdftex.def Info: Figures/Literature_Review/hp8566-large.png  used on in
@@ -1874,7 +1880,7 @@ used with new abbreviation definitions. Use \glsxtrshort instead on input line
 
 [7 <./Figures/Literature_Review/hp8568a.png (PNG copy)> <./Figures/Literature_R
 eview/hp8566-large.png (PNG copy)>]
-<Figures/Literature_Review/agilent-hp8566EC.png, id=520, 1610.26593pt x 1015.54
+<Figures/Literature_Review/agilent-hp8566EC.png, id=535, 1610.26593pt x 1015.54
 407pt>
 File: Figures/Literature_Review/agilent-hp8566EC.png Graphic file (type png)
 <use Figures/Literature_Review/agilent-hp8566EC.png>
@@ -2220,7 +2226,7 @@ used with new abbreviation definitions. Use \glsxtrshort instead on input line
 [12
 
 ]
-<Figures/Methodology/design-stages-diagram.png, id=631, 1739.49875pt x 744.7825
+<Figures/Methodology/design-stages-diagram.png, id=646, 1739.49875pt x 744.7825
 pt>
 File: Figures/Methodology/design-stages-diagram.png Graphic file (type png)
 <use Figures/Methodology/design-stages-diagram.png>
@@ -2297,7 +2303,7 @@ See the caption package documentation for explanation.
 LaTeX Warning: Reference `fig:heterodyne-rauscher' on page 15 undefined on inpu
 t line 87.
 
-<Figures/Methodology/heterodyne-rauscher.png, id=667, 1223.57124pt x 366.36874p
+<Figures/Methodology/heterodyne-rauscher.png, id=682, 1223.57124pt x 366.36874p
 t>
 File: Figures/Methodology/heterodyne-rauscher.png Graphic file (type png)
 <use Figures/Methodology/heterodyne-rauscher.png>
@@ -2342,7 +2348,7 @@ Package glossaries-extra Warning: Base acronym command \acrshort should not be
 used with new abbreviation definitions. Use \glsxtrshort instead on input line 
 96.
 
-<Figures/Methodology/real-time-analyzer-rover.png, id=677, 1444.39626pt x 361.3
+<Figures/Methodology/real-time-analyzer-rover.png, id=692, 1444.39626pt x 361.3
 5pt>
 File: Figures/Methodology/real-time-analyzer-rover.png Graphic file (type png)
 <use Figures/Methodology/real-time-analyzer-rover.png>
@@ -3251,7 +3257,7 @@ Package glossaries-extra Warning: Base acronym command \acrshort should not be
 used with new abbreviation definitions. Use \glsxtrshort instead on input line 
 455.
 
-<Figures/Methodology/HP-Display-Section.jpg, id=921, 610.28pt x 457.71pt>
+<Figures/Methodology/HP-Display-Section.jpg, id=936, 610.28pt x 457.71pt>
 File: Figures/Methodology/HP-Display-Section.jpg Graphic file (type jpg)
 <use Figures/Methodology/HP-Display-Section.jpg>
 Package pdftex.def Info: Figures/Methodology/HP-Display-Section.jpg  used on in
@@ -3384,371 +3390,452 @@ Package glossaries-extra Warning: Base acronym command \acrshort should not be
 used with new abbreviation definitions. Use \glsxtrshort instead on input line 
 516.
 
-<Figures/Methodology/overall-system-diagram.png, id=978, 829.0975pt x 356.33125
+<Figures/Methodology/overall-system-diagram.png, id=993, 829.0975pt x 356.33125
 pt>
 File: Figures/Methodology/overall-system-diagram.png Graphic file (type png)
 <use Figures/Methodology/overall-system-diagram.png>
 Package pdftex.def Info: Figures/Methodology/overall-system-diagram.png  used o
 n input line 520.
-(pdftex.def)             Requested size: 386.95897pt x 166.3067pt.
+(pdftex.def)             Requested size: 314.40001pt x 135.1191pt.
 
 Package glossaries-extra Warning: Base acronym command \acrshort should not be 
 used with new abbreviation definitions. Use \glsxtrshort instead on input line 
-524.
-
-
-Package glossaries-extra Warning: Base acronym command \acrshort should not be 
-used with new abbreviation definitions. Use \glsxtrshort instead on input line 
-524.
+525.
 
 
 Package glossaries-extra Warning: Base acronym command \acrshort should not be 
 used with new abbreviation definitions. Use \glsxtrshort instead on input line 
-524.
+525.
 
 
 Package glossaries-extra Warning: Base acronym command \acrshort should not be 
 used with new abbreviation definitions. Use \glsxtrshort instead on input line 
-524.
+525.
 
 
 Package glossaries-extra Warning: Base acronym command \acrshort should not be 
 used with new abbreviation definitions. Use \glsxtrshort instead on input line 
-524.
+525.
 
 
 Package glossaries-extra Warning: Base acronym command \acrshort should not be 
 used with new abbreviation definitions. Use \glsxtrshort instead on input line 
-531.
+525.
 
 
 Package glossaries-extra Warning: Base acronym command \acrshort should not be 
 used with new abbreviation definitions. Use \glsxtrshort instead on input line 
-533.
+532.
 
 
 Package glossaries-extra Warning: Base acronym command \acrshort should not be 
 used with new abbreviation definitions. Use \glsxtrshort instead on input line 
-535.
+534.
 
 
 Package glossaries-extra Warning: Base acronym command \acrshort should not be 
 used with new abbreviation definitions. Use \glsxtrshort instead on input line 
-537.
+536.
 
 
 Package glossaries-extra Warning: Base acronym command \acrshort should not be 
 used with new abbreviation definitions. Use \glsxtrshort instead on input line 
-540.
+538.
 
 
 Package glossaries-extra Warning: Base acronym command \acrshort should not be 
 used with new abbreviation definitions. Use \glsxtrshort instead on input line 
-540.
+541.
 
 
-Package caption Warning: \label without proper reference on input line 611.
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+541.
+
+
+Package caption Warning: \label without proper reference on input line 612.
 See the caption package documentation for explanation.
 
 
 LaTeX Warning: Reference `tab:hp8552b-output-vals' on page 26 undefined on inpu
-t line 540.
+t line 541.
 
-[26 <./Figures/Methodology/overall-system-diagram.png>]
-<Figures/Methodology/emulated-system-diagram.png, id=1003, 830.10126pt x 366.36
+[26
+
+ <./Figures/Methodology/overall-system-diagram.png>]
+<Figures/Methodology/emulated-system-diagram.png, id=1018, 830.10126pt x 366.36
 874pt>
 File: Figures/Methodology/emulated-system-diagram.png Graphic file (type png)
 <use Figures/Methodology/emulated-system-diagram.png>
 Package pdftex.def Info: Figures/Methodology/emulated-system-diagram.png  used 
-on input line 544.
-(pdftex.def)             Requested size: 386.95897pt x 170.78456pt.
+on input line 545.
+(pdftex.def)             Requested size: 314.40001pt x 138.75757pt.
 
 
 Package glossaries-extra Warning: Base acronym command \acrshort should not be 
 used with new abbreviation definitions. Use \glsxtrshort instead on input line 
-545.
+546.
 
 
 Package glossaries-extra Warning: Base acronym command \acrshort should not be 
 used with new abbreviation definitions. Use \glsxtrshort instead on input line 
-545.
+546.
 
 
 Package glossaries-extra Warning: Base acronym command \acrshort should not be 
 used with new abbreviation definitions. Use \glsxtrshort instead on input line 
-545.
+546.
 
 
 Package glossaries-extra Warning: Base acronym command \acrshort should not be 
 used with new abbreviation definitions. Use \glsxtrshort instead on input line 
-545.
+546.
 
 
 Package glossaries-extra Warning: Base acronym command \acrshort should not be 
 used with new abbreviation definitions. Use \glsxtrshort instead on input line 
-549.
+550.
 
-<Figures/Methodology/system-block-diagram.png, id=1010, 1671.24374pt x 552.0625
+<Figures/Methodology/system-block-diagram.png, id=1025, 1671.24374pt x 552.0625
 pt>
 File: Figures/Methodology/system-block-diagram.png Graphic file (type png)
 <use Figures/Methodology/system-block-diagram.png>
 Package pdftex.def Info: Figures/Methodology/system-block-diagram.png  used on 
-input line 556.
+input line 557.
 (pdftex.def)             Requested size: 435.32422pt x 143.80241pt.
-[27 <./Figures/Methodology/emulated-system-diagram.png> <./Figures/Methodology/
-system-block-diagram.png>]
 
 Package glossaries-extra Warning: Base acronym command \acrlong should not be u
 sed with new abbreviation definitions. Use \glsxtrlong instead on input line 57
-8.
+9.
 
 
 Package glossaries-extra Warning: Base acronym command \acrlong should not be u
 sed with new abbreviation definitions. Use \glsxtrlong instead on input line 58
-4.
+5.
 
 
 Package glossaries-extra Warning: Base acronym command \acrshort should not be 
 used with new abbreviation definitions. Use \glsxtrshort instead on input line 
-584.
+585.
 
 
 Package glossaries-extra Warning: Base acronym command \acrshort should not be 
 used with new abbreviation definitions. Use \glsxtrshort instead on input line 
-586.
+587.
 
 
 Package glossaries-extra Warning: Base acronym command \acrlong should not be u
 sed with new abbreviation definitions. Use \glsxtrlong instead on input line 59
-0.
+1.
 
 
 Package glossaries-extra Warning: Base acronym command \acrshort should not be 
 used with new abbreviation definitions. Use \glsxtrshort instead on input line 
-590.
+591.
 
 
 Package glossaries-extra Warning: Base acronym command \acrshort should not be 
 used with new abbreviation definitions. Use \glsxtrshort instead on input line 
-592.
+593.
 
 
 Package glossaries-extra Warning: Base acronym command \acrlong should not be u
 sed with new abbreviation definitions. Use \glsxtrlong instead on input line 59
-4.
+5.
 
 
-Overfull \hbox (2.36063pt too wide) in paragraph at lines 594--594
+Overfull \hbox (2.36063pt too wide) in paragraph at lines 595--595
 []|[]| 
  []
 
 
 Package glossaries-extra Warning: Base acronym command \acrshort should not be 
 used with new abbreviation definitions. Use \glsxtrshort instead on input line 
-594.
+595.
 
 
-Overfull \hbox (2.85298pt too wide) in paragraph at lines 564--601
+Overfull \hbox (2.85298pt too wide) in paragraph at lines 565--602
  [][] 
  []
 
 
-Package caption Warning: \label without proper reference on input line 563.
+Package caption Warning: \label without proper reference on input line 564.
 See the caption package documentation for explanation.
 
 
-LaTeX Warning: Reference `tab:subsystem-components' on page 28 undefined on inp
-ut line 604.
+LaTeX Warning: Reference `tab:subsystem-components' on page 27 undefined on inp
+ut line 605.
 
 
-Package caption Warning: \label without proper reference on input line 563.
+Package caption Warning: \label without proper reference on input line 564.
 See the caption package documentation for explanation.
 
 
-LaTeX Warning: Reference `tab:subsystem-components' on page 28 undefined on inp
-ut line 604.
+LaTeX Warning: Reference `tab:subsystem-components' on page 27 undefined on inp
+ut line 605.
 
+[27 <./Figures/Methodology/emulated-system-diagram.png> <./Figures/Methodology/
+system-block-diagram.png>]
 
-Package caption Warning: \label without proper reference on input line 611.
+Package caption Warning: \label without proper reference on input line 612.
 See the caption package documentation for explanation.
 
 
 LaTeX Warning: Reference `tab:hp8552b-output-vals' on page 28 undefined on inpu
-t line 608.
+t line 609.
 
 
 Package glossaries-extra Warning: Base acronym command \acrshort should not be 
 used with new abbreviation definitions. Use \glsxtrshort instead on input line 
-623.
+624.
 
 
 Package glossaries-extra Warning: Base acronym command \acrshort should not be 
 used with new abbreviation definitions. Use \glsxtrshort instead on input line 
-623.
+624.
 
 
-Package caption Warning: \label without proper reference on input line 630.
+Package caption Warning: \label without proper reference on input line 631.
 See the caption package documentation for explanation.
 
 
 LaTeX Warning: Reference `tab:hp8552b-amplitude-specs' on page 28 undefined on 
-input line 626.
+input line 627.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 633--633
+Underfull \hbox (badness 10000) in paragraph at lines 634--634
 []|\T1/lmr/bx/n/10.95 (+20) Operation
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 633--633
+Underfull \hbox (badness 10000) in paragraph at lines 634--634
 []|\T1/lmr/bx/n/10.95 (+20) Amplitude
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 633--633
+Underfull \hbox (badness 10000) in paragraph at lines 634--634
 \T1/lmr/bx/n/10.95 (+20) per Di-vi-sion
  []
 
 
-Underfull \hbox (badness 2600) in paragraph at lines 633--634
+Underfull \hbox (badness 2600) in paragraph at lines 634--635
 []|\T1/lmr/bx/n/10.95 (+20) Display Range
  []
 
 
-Package caption Warning: \label without proper reference on input line 647.
+Package caption Warning: \label without proper reference on input line 648.
 See the caption package documentation for explanation.
 
 
 LaTeX Warning: Reference `tab:scan-specifications' on page 28 undefined on inpu
-t line 643.
+t line 644.
 
 
 Package glossaries-extra Warning: Base acronym command \acrshort should not be 
 used with new abbreviation definitions. Use \glsxtrshort instead on input line 
-672.
+673.
 
 
-Overfull \hbox (2.97816pt too wide) in paragraph at lines 648--675
+Overfull \hbox (2.97816pt too wide) in paragraph at lines 649--676
  [][] 
  []
 
+[28]
 
 Package glossaries-extra Warning: Base acronym command \acrshort should not be 
 used with new abbreviation definitions. Use \glsxtrshort instead on input line 
-680.
+681.
 
 
-Package caption Warning: \label without proper reference on input line 611.
+Package caption Warning: \label without proper reference on input line 612.
 See the caption package documentation for explanation.
 
 
-LaTeX Warning: Reference `tab:hp8552b-output-vals' on page 28 undefined on inpu
-t line 680.
+LaTeX Warning: Reference `tab:hp8552b-output-vals' on page 29 undefined on inpu
+t line 681.
 
 
 Package glossaries-extra Warning: Base acronym command \acrshort should not be 
 used with new abbreviation definitions. Use \glsxtrshort instead on input line 
-680.
+681.
 
 
 Package glossaries-extra Warning: Base acronym command \acrshort should not be 
 used with new abbreviation definitions. Use \glsxtrshort instead on input line 
-680.
+681.
 
 
 Package glossaries-extra Warning: Base acronym command \acrshort should not be 
 used with new abbreviation definitions. Use \glsxtrshort instead on input line 
-680.
+681.
 
-[28
-
-]
-<Figures/Methodology/hp8552b-vertical-output-emulator-3.png, id=1060, 421.575pt
+<Figures/Methodology/hp8552b-vertical-output-emulator-3.png, id=1073, 421.575pt
  x 532.23843pt>
 File: Figures/Methodology/hp8552b-vertical-output-emulator-3.png Graphic file (
 type png)
 <use Figures/Methodology/hp8552b-vertical-output-emulator-3.png>
 Package pdftex.def Info: Figures/Methodology/hp8552b-vertical-output-emulator-3
-.png  used on input line 686.
+.png  used on input line 687.
 (pdftex.def)             Requested size: 193.47948pt x 244.27228pt.
-<Figures/Methodology/hp8552b-horizontal-output-emulator-3.png, id=1061, 478.035
+<Figures/Methodology/hp8552b-horizontal-output-emulator-3.png, id=1074, 478.035
 93pt x 493.845pt>
 File: Figures/Methodology/hp8552b-horizontal-output-emulator-3.png Graphic file
  (type png)
 <use Figures/Methodology/hp8552b-horizontal-output-emulator-3.png>
 Package pdftex.def Info: Figures/Methodology/hp8552b-horizontal-output-emulator
--3.png  used on input line 692.
+-3.png  used on input line 693.
 (pdftex.def)             Requested size: 193.47948pt x 199.87802pt.
 
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+697.
+
 
 Package glossaries-extra Warning: Base acronym command \acrshort should not be 
 used with new abbreviation definitions. Use \glsxtrshort instead on input line 
-696.
-
-
-Package glossaries-extra Warning: Base acronym command \acrshort should not be 
-used with new abbreviation definitions. Use \glsxtrshort instead on input line 
-696.
+697.
 
 [29 <./Figures/Methodology/hp8552b-vertical-output-emulator-3.png (PNG copy)> <
 ./Figures/Methodology/hp8552b-horizontal-output-emulator-3.png (PNG copy)>]
-Underfull \hbox (badness 10000) in paragraph at lines 754--754
+Underfull \hbox (badness 10000) in paragraph at lines 756--756
 []|\T1/lmr/bx/n/10.95 (+20) Pin
  []
 
+<Figures/Methodology/emulator-vertical-output-sinewave.png, id=1088, 1444.64719
+pt x 690.32906pt>
+File: Figures/Methodology/emulator-vertical-output-sinewave.png Graphic file (t
+ype png)
+<use Figures/Methodology/emulator-vertical-output-sinewave.png>
+Package pdftex.def Info: Figures/Methodology/emulator-vertical-output-sinewave.
+png  used on input line 796.
+(pdftex.def)             Requested size: 241.84843pt x 115.56367pt.
 [30]
-Overfull \hbox (15.48923pt too wide) in paragraph at lines 808--835
+Overfull \hbox (15.48923pt too wide) in paragraph at lines 817--846
  [][] 
  []
 
-<Figures/Methodology/hp8552b-sawtooth.png, id=1083, 442.65375pt x 387.4475pt>
+<Figures/Methodology/hp8552b-sawtooth.png, id=1100, 443.6575pt x 387.4475pt>
 File: Figures/Methodology/hp8552b-sawtooth.png Graphic file (type png)
 <use Figures/Methodology/hp8552b-sawtooth.png>
 Package pdftex.def Info: Figures/Methodology/hp8552b-sawtooth.png  used on inpu
-t line 838.
-(pdftex.def)             Requested size: 164.45515pt x 143.94452pt.
-<Figures/Methodology/hp8552b-horizontal-output-level-shifter-3.png, id=1085, 59
+t line 849.
+(pdftex.def)             Requested size: 164.45515pt x 143.61345pt.
+[31 <./Figures/Methodology/emulator-vertical-output-sinewave.png (PNG copy)>]
+<Figures/Methodology/hp8552b-horizontal-output-level-shifter-3.png, id=1110, 59
 0.205pt x 334.24875pt>
 File: Figures/Methodology/hp8552b-horizontal-output-level-shifter-3.png Graphic
  file (type png)
 <use Figures/Methodology/hp8552b-horizontal-output-level-shifter-3.png>
 Package pdftex.def Info: Figures/Methodology/hp8552b-horizontal-output-level-sh
-ifter-3.png  used on input line 847.
+ifter-3.png  used on input line 858.
 (pdftex.def)             Requested size: 241.84843pt x 136.96126pt.
-[31 <./Figures/Methodology/hp8552b-sawtooth.png>]
-<Figures/Methodology/emulator-triangle-shift-ct-sim.png, id=1094, 861.6993pt x 
-370.7451pt>
-File: Figures/Methodology/emulator-triangle-shift-ct-sim.png Graphic file (type
- png)
-<use Figures/Methodology/emulator-triangle-shift-ct-sim.png>
-Package pdftex.def Info: Figures/Methodology/emulator-triangle-shift-ct-sim.png
-  used on input line 855.
-(pdftex.def)             Requested size: 266.03474pt x 114.46025pt.
-<Figures/Methodology/emulator-sawtooth-output.png, id=1095, 1442.5092pt x 692.3
-466pt>
-File: Figures/Methodology/emulator-sawtooth-output.png Graphic file (type png)
-<use Figures/Methodology/emulator-sawtooth-output.png>
-Package pdftex.def Info: Figures/Methodology/emulator-sawtooth-output.png  used
- on input line 862.
-(pdftex.def)             Requested size: 338.58632pt x 162.50075pt.
-) (./Chapters/Results.tex
-[32 <./Figures/Methodology/hp8552b-horizontal-output-level-shifter-3.png (PNG c
-opy)> <./Figures/Methodology/emulator-triangle-shift-ct-sim.png>] [33 <./Figure
-s/Methodology/emulator-sawtooth-output.png>]
+<Figures/Methodology/emulator-triangle-shift-ct-sim-1.png, id=1113, 1121.69063p
+t x 483.30562pt>
+File: Figures/Methodology/emulator-triangle-shift-ct-sim-1.png Graphic file (ty
+pe png)
+<use Figures/Methodology/emulator-triangle-shift-ct-sim-1.png>
+Package pdftex.def Info: Figures/Methodology/emulator-triangle-shift-ct-sim-1.p
+ng  used on input line 866.
+(pdftex.def)             Requested size: 314.40001pt x 135.46477pt.
+<Figures/Methodology/emulator-sawtooth-output-1.png, id=1116, 1432.60219pt x 69
+1.83469pt>
+File: Figures/Methodology/emulator-sawtooth-output-1.png Graphic file (type png
+)
+<use Figures/Methodology/emulator-sawtooth-output-1.png>
+Package pdftex.def Info: Figures/Methodology/emulator-sawtooth-output-1.png  us
+ed on input line 875.
+(pdftex.def)             Requested size: 338.58632pt x 163.51015pt.
+
+[32 <./Figures/Methodology/hp8552b-sawtooth.png> <./Figures/Methodology/hp8552b
+-horizontal-output-level-shifter-3.png (PNG copy)>]
+<Figures/Methodology/emulator-pen-lift-ct-sim.png, id=1123, 821.31844pt x 445.6
+65pt>
+File: Figures/Methodology/emulator-pen-lift-ct-sim.png Graphic file (type png)
+<use Figures/Methodology/emulator-pen-lift-ct-sim.png>
+Package pdftex.def Info: Figures/Methodology/emulator-pen-lift-ct-sim.png  used
+ on input line 884.
+(pdftex.def)             Requested size: 217.66211pt x 118.10745pt.
+<Figures/Methodology/emulator-pen-lift-ct-sim-output.png, id=1124, 1436.36626pt
+ x 690.32906pt>
+File: Figures/Methodology/emulator-pen-lift-ct-sim-output.png Graphic file (typ
+e png)
+<use Figures/Methodology/emulator-pen-lift-ct-sim-output.png>
+Package pdftex.def Info: Figures/Methodology/emulator-pen-lift-ct-sim-output.pn
+g  used on input line 891.
+(pdftex.def)             Requested size: 338.58632pt x 162.72243pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Package caption Warning: \label without proper reference on input line 900.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `tab:emulator-pen-lift-specs' on page 33 undefined on 
+input line 915.
+
+[33 <./Figures/Methodology/emulator-triangle-shift-ct-sim-1.png (PNG copy)> <./
+Figures/Methodology/emulator-sawtooth-output-1.png (PNG copy)> <./Figures/Metho
+dology/emulator-pen-lift-ct-sim.png (PNG copy)>]
+<Figures/Methodology/emulator-pcb-3d-front-v03.png, id=1133, 755.07094pt x 477.
+28313pt>
+File: Figures/Methodology/emulator-pcb-3d-front-v03.png Graphic file (type png)
+
+<use Figures/Methodology/emulator-pcb-3d-front-v03.png>
+Package pdftex.def Info: Figures/Methodology/emulator-pcb-3d-front-v03.png  use
+d on input line 919.
+(pdftex.def)             Requested size: 241.84843pt x 152.87209pt.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+920.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+920.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+924.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+924.
+
+<Figures/Methodology/emulator-power-supply.png, id=1139, 643.40375pt x 230.8625
+pt>
+File: Figures/Methodology/emulator-power-supply.png Graphic file (type png)
+<use Figures/Methodology/emulator-power-supply.png>
+Package pdftex.def Info: Figures/Methodology/emulator-power-supply.png  used on
+ input line 928.
+(pdftex.def)             Requested size: 266.03474pt x 95.46092pt.
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+933.
+
+[34 <./Figures/Methodology/emulator-pen-lift-ct-sim-output.png (PNG copy)> <./F
+igures/Methodology/emulator-pcb-3d-front-v03.png (PNG copy)>])
+(./Chapters/Results.tex [35 <./Figures/Methodology/emulator-power-supply.png>]
 Chapter 4.
-) (./Chapters/Discussion.tex [34
+) (./Chapters/Discussion.tex [36
 
 ]
 Chapter 5.
-) (./Chapters/Conclusions.tex [35
+) (./Chapters/Conclusions.tex [37
 
 ]
 Chapter 6.
-) (./Chapters/Recommendations.tex [36
+) (./Chapters/Recommendations.tex [38
 
 ]
 Chapter 7.
-) [37
+) [39
 
 ] (./Main.bbl
 Underfull \hbox (badness 10000) in paragraph at lines 31--34
@@ -3762,23 +3849,23 @@ Underfull \hbox (badness 10000) in paragraph at lines 31--34
 le % 20to % 20interpret % 20display % 20output .
  []
 
-[38
+[40
 
-]) [39] (./Main.aux)
+]) [41] (./Main.aux)
 
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `Main.out' has not changed.
-(rerunfilecheck)             Checksum: 473D2FA8FC5A9054EAD4BA97E109A170;9230.
+(rerunfilecheck)             Checksum: 4D0B056E79038AC5250BC852B220B40F;9230.
  ) 
 Here is how much of TeX's memory you used:
- 46243 strings out of 478287
- 905512 string characters out of 5849289
- 1384557 words of memory out of 5000000
- 63086 multiletter control sequences out of 15000+600000
- 573611 words of font info for 230 fonts, out of 8000000 for 9000
+ 46356 strings out of 478287
+ 909362 string characters out of 5849289
+ 1385862 words of memory out of 5000000
+ 63178 multiletter control sequences out of 15000+600000
+ 573860 words of font info for 233 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 111i,17n,108p,1341b,1318s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 111i,17n,108p,1341b,1322s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exi
 st, replaced by a fixed one
 
@@ -3796,10 +3883,10 @@ e/texmf/fonts/type1/public/lm/lmr17.pfb></usr/share/texmf/fonts/type1/public/lm
 nts/type1/public/lm/lmr9.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb
 ></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/typ
 e1/public/lm/lmsy8.pfb>
-Output written on Main.pdf (49 pages, 6065670 bytes).
+Output written on Main.pdf (51 pages, 6099693 bytes).
 PDF statistics:
- 1274 PDF objects out of 1440 (max. 8388607)
- 1126 compressed objects within 12 object streams
- 251 named destinations out of 1000 (max. 500000)
- 61364 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 1322 PDF objects out of 1440 (max. 8388607)
+ 1167 compressed objects within 12 object streams
+ 261 named destinations out of 1000 (max. 500000)
+ 61389 words of extra memory for PDF output out of 61914 (max. 10000000)
 

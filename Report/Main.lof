@@ -14,10 +14,15 @@
 \contentsline {figure}{\numberline {3.6}{\ignorespaces Calibration system diagram where the HP141T Emulator is used to configure the primary subsystems such as the \acrshort {scs}, \acrshort {das}, etc.\relax }}{27}{figure.caption.37}%
 \contentsline {figure}{\numberline {3.7}{\ignorespaces Expansion of the overall system diagram showing the primary components and functions in each subsystem.\relax }}{27}{figure.caption.38}%
 \contentsline {figure}{\numberline {3.8}{\ignorespaces Emulator circuits for vertical and horizontal outputs of the HP8552B \acrshort {if} section.\relax }}{29}{figure.caption.45}%
-\contentsline {figure}{\numberline {3.9}{\ignorespaces Illustration of the duty cycle and rise time of sawtooth function corresponding to the horizontal output, $\texttt {V}_\texttt {x}$, of the HP8552B.\relax }}{31}{figure.caption.48}%
-\contentsline {figure}{\numberline {3.10}{\ignorespaces XR2206 sawtooth output level shifter for achieving the appropriate voltage range.\relax }}{32}{figure.caption.49}%
-\contentsline {figure}{\numberline {3.11}{\ignorespaces Simulated level shift circuit.\relax }}{32}{figure.caption.50}%
-\contentsline {figure}{\numberline {3.12}{\ignorespaces Showing simulated scan output of the emulator.\relax }}{33}{figure.caption.51}%
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Simulated output at the STO pin of the XR2206 chip for emulating the vertical output of as a $3~\text {V}_\text {pp}$ sinusoidal wave.\relax }}{31}{figure.caption.47}%
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Illustration of the duty cycle and rise time of sawtooth function corresponding to the horizontal output, $\texttt {V}_\texttt {x}$, of the HP8552B.\relax }}{32}{figure.caption.49}%
+\contentsline {figure}{\numberline {3.11}{\ignorespaces XR2206 sawtooth output level shifter for achieving the appropriate voltage range.\relax }}{32}{figure.caption.50}%
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Simulated level shift circuit.\relax }}{33}{figure.caption.51}%
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Showing simulated scan output of the emulator.\relax }}{33}{figure.caption.52}%
+\contentsline {figure}{\numberline {3.14}{\ignorespaces Simulation of the pen lift output using the XR2206 SYNCO pulse output.\relax }}{33}{figure.caption.53}%
+\contentsline {figure}{\numberline {3.15}{\ignorespaces Pen lift output simulation with the XR2206 SYNCO pulse in green and the pulse at the collector of the NPN transistor in red.\relax }}{34}{figure.caption.54}%
+\contentsline {figure}{\numberline {3.16}{\ignorespaces 3D view of the HP141T Emulator subsystem's \acrshort {pcb}.\relax }}{34}{figure.caption.56}%
+\contentsline {figure}{\numberline {3.17}{\ignorespaces HP141T Emulator power supply circuit with decoupling capacitors to reduce high frequency noise.\relax }}{35}{figure.caption.57}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

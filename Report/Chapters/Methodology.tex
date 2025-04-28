@@ -506,7 +506,7 @@
 	To optimize the selection and configuration of the data acquisition subsystem, \acrshort{adc}s can be simulated in MATLAB using Simulink to understand the behaviour of the sawtooth input from the HP141T or emulating hardware. Additionally, Simulink provides visualizations of the spectrum of the \acrshort{adc} output which can be used to determine the expected values from sampling signals. Simulink also allows users to add impairments to the \acrshort{adc} for introducing a layer of non-linearity that may be seen for signals with frequencies that are close the edges of the \acrshort{rbw} or intermediate frequency. 
 	
 	Electronic circuits, such as the signal conditioning circuits with op-amps and level-shifters, can be simulated using LTSpice to predict the expected behaviour. Output values from LTSpice simulations can be used to simulate the behaviour of the system using Simulink with MATLAB.
-			
+	\clearpage		
 	\section{System Design}
 	
 	Design decisions in formulating the specifications were informed by the requirement review in the previous section. This section aims to give a full description of the system and the interfaces between the different subsystems. The section begins with a visual representation of the system using a block diagram. Following the visual representation of the design, the section includes specifications and concludes with acceptance and integration tests. 
@@ -515,12 +515,13 @@
 	
 	The system block diagram shown in Figure \ref{fig:overall-system-block-diagram} below is a graphical overview of the different stages that an RF signal goes through before the amplitude vs frequency graph is displayed. The modernized HP141T maintains the basic analog signal processing functionality performed by the HP8555A \acrshort{rf} section and the HP8552B \acrshort{if} sections. The scope of the proposed design does not involve any changes to the signal processing components of the plug-in sections. However, the Signal Conditioning Subsystem (\acrshort{scs}) prepares the three auxiliary outputs from the HP552B \acrshort{if} section for the Data Acquisition Subsystem (\acrshort{das}) which requires input voltages in the range between $\SI{0}{\volt}$ and $\SI{3.3}{\volt}$. 	
 	
-	\begin{figure}[ht!]
+	\begin{figure}
 	 	\centering
-	 	\includegraphics[width=0.80\textwidth]{Figures/Methodology/overall-system-diagram}
+	 	\includegraphics[width=0.65\textwidth]{Figures/Methodology/overall-system-diagram}
 	 	\caption{Overview system block diagram for the modernized HP141T which employs the HP8555A and HP8552B plug-in sections.}
 	 	\label{fig:overall-system-block-diagram}
 	 \end{figure}
+ 
 	\acrshort{adc}s in the \acrshort{das} play a primary role in digitizing the HP141T system by converting the conditioned analog signals into digital values which can be processed in the Digital Processing Subsystem (\acrshort{dps}) which enables manipulation of the digital values. This is particularly necessary for averaging and executing other arithmetic operations in order to satisfy the needs of the user. The Graphical User Interface Subsystem (\acrshort{guis}) manages the display and user preferences for displaying the amplitude vs frequency information of the input \acrshort{rf} signal.
 		
 	Overall, the can be modularized into five primary subsystems, including:
@@ -541,7 +542,7 @@
 	
 	\begin{figure}[ht!]
 		\centering
-		\includegraphics[width=0.80\textwidth]{Figures/Methodology/emulated-system-diagram}
+		\includegraphics[width=0.65\textwidth]{Figures/Methodology/emulated-system-diagram}
 		\caption{Calibration system diagram where the HP141T Emulator is used to configure the primary subsystems such as the \acrshort{scs}, \acrshort{das}, etc.}
 		\label{fig:emulated-system-diagram}
 	\end{figure}
@@ -551,13 +552,13 @@
 	\subsection{System Modularization}
 	
 	The system block diagram is expanded as illustrated in figure \ref{fig:system-block-diagram} where the primary components of each of the subsystems are shown. In the diagram, arrows with a solid line illustrate interfaces between subsystems, while arrows with dotted lines describes the flow of analog or digital signals within each subsystem.  
-	\begin{figure}[ht!]
+	\begin{figure}
 		\centering
 		\includegraphics[width=0.90\textwidth]{Figures/Methodology/system-block-diagram}
 		\caption{Expansion of the overall system diagram showing the primary components and functions in each subsystem.}
 		\label{fig:system-block-diagram}
 	\end{figure}
-	\clearpage
+
 	\begin{table}[ht!]
 		\centering
 		\label{tab:subsystem-components}
@@ -697,7 +698,8 @@
 		\label{fig:hp8552B-vh-emulator}
 	\end{figure}
 	
-	The XR2206 functional generator chip was selected for simulating the vertical and horizontal outputs, $\texttt{V}_\texttt{y}$ and $\texttt{V}_\texttt{x}$, respectively. For $\texttt{V}_\texttt{y}$, the circuit components were selected to simulate the video filter during the configuration procedure described in the chip's datasheet with a calibration frequency of $\SI{30}{\mega\hertz}$. The frequency was set to $\SI{10}{\kilo\hertz}$ using an capacitors and resistors. The full vertical output simulator circuit is illustrated in figure \ref{fig:vertical-output-emulator-ct-a}, adopted from the recommended configuration. 
+	Two XR2206 functional generator chips are implemented for emulating the HP8552B outputs, $\texttt{V}_\texttt{y}$ and $\texttt{V}_\texttt{x}$. For $\texttt{V}_\texttt{y}$, timing resistors and capacitors are employed to emulate video filter output during the configuration procedure described in the chip's datasheet which implements a sinusoidal wave with a calibration frequency of $\SI{10}{\kilo\hertz}$, corresponding to a $\SI{30}{\mega\hertz}$ RF signal at the input of the HP8555A plug-in. The full vertical output simulator circuit is illustrated in figure \ref{fig:vertical-output-emulator-ct-a}, adopted from the recommended configuration \cite{xr2206}. The expected shape and time domain characteristics of the $3~\text{V}_\text{pp}$ sinusoidal wave are shown in figure \ref{fig:emulator-vertical-output-sinewave}. 
+	
 		
 	The required frequency is produced by an internal voltage-controlled oscillator that is set by a timing resistor at pin 7 and 8. Pin descriptions and the values of the capacitors and resistors that are connected to them are recorded in table \ref{tab:voec-pin-description} and \ref{tab:vertical-output-emulator-ct-specifications}.
 	
@@ -745,7 +747,7 @@
 %		\end{tabular}
 %	\end{table}
 
-		\begin{table}[ht!]
+	\begin{table}[ht!]
 		\caption{Pin connection description for the XR2206-based vertical output simulation circuit.}
 		\label{tab:voec-pin-description}
 		\centering
@@ -788,19 +790,26 @@
 			\hline
 		\end{tabular}
 	\end{table}
-	The amplitude of $\texttt{V}_\texttt{y}$ and $\texttt{V}_\texttt{x}$ is controlled by adjusting the variable resistors $\text{RV1}$ and $\text{RV2}$, respectively.	To generate a sinusoid with a constant peak-to-peak voltage and constant frequency for the vertical output, an external capacitance of $\text{C} = \text{C}_1$ is connected across pin 5 and 6, and a timing resistance $\text{R} = \text{R}_1 + \text{R}_2$ across pin 7, such that the operational frequency $\texttt{f}_\texttt{y}$ of the XR2206 is 
+	The amplitude of $\texttt{V}_\texttt{y}$ and $\texttt{V}_\texttt{x}$ at the output of the XR2206 chips is controlled by adjusting the variable resistors $\text{RV1}$ and $\text{RV2}$ and limited to $0$.
+	\begin{figure}[ht!]
+		\centering
+		\includegraphics[width=0.50\textwidth]{Figures/Methodology/emulator-vertical-output-sinewave}
+		\caption{Simulated output at the STO pin of the XR2206 chip for emulating the vertical output of as a $3~\text{V}_\text{pp}$ sinusoidal wave.}
+		\label{fig:emulator-vertical-output-sinewave}
+	\end{figure}
+	To generate a sinusoid with a constant peak-to-peak voltage and constant frequency for the vertical output, an external capacitance of $\text{C} = \text{C}_1$ is connected across pin 5 and 6, and a timing resistance $\text{R} = \text{R}_1 + \text{R}_2$ across pin 7, such that the operational frequency $\texttt{f}_\texttt{y}$ of the XR2206 is 
 	\begin{align}\label{eqn:xr2206-sinewave-frequency}
-		\text{f}_y	& = \frac{1}{\text{R}\text{C}} ~ [\si{\hertz}]
+		\text{f}_\texttt{y}	& = \frac{1}{\text{R}\text{C}} ~ [\si{\hertz}]
 	\end{align}
 	Similarly, the characteristics of the horizontal sawtooth output depend on the timing components at pin 5, 6, and 7, as illustrated in figure \ref{fig:horizontal-output-emulator-ct-a}. However, when operating as a sawtooth function generator as in the case of the horizontal output emulator circuit, the frequency $\texttt{f}_y$ is given by,
 	\begin{align}\label{eqn:xr2206-sawtooth-frequency}
-		\text{f}_x	& = \frac{2}{\text{C}(\text{R}_a + \text{R}_b)} ~ [\si{\hertz}]
+		\text{f}_\texttt{x}	& = \frac{2}{\text{C}(\text{R}_a + \text{R}_b)} ~ [\si{\hertz}]
 	\end{align}
 	where $\text{R}_a$ and $\text{R}_b$ correspond to the timing resistors connected to pin 7 and pin 8, and $\text{C}$ is the timing capacitor connected to pin 5 and pin 6, respectively. The duty cycle of the output sawtooth function is given by the parallel combination of $\text{R}_a$ and $\text{R}_b$, such that 
 	\begin{align}\label{eqn:xr2206-duty-cycle}
 		\text{Duty Cycle}	& = \frac{\text{R}_a}{\text{R}_a + \text{R}_b}
 	\end{align}
-	The duty cycle is associated with the rise time, $\text{T}_\text{rise}$, of the sawtooth function in the output of the emulator as the scan voltage $\texttt{V}_\texttt{y}$ increases from the $\SI{0}{\volt}$ to $\SI{3}{\volt}$. The design approximates the rise time and duty cycle of this output found in the manual of the HP8552B and illustrated in figure \ref{fig:hp8552b-sawtooth} \cite{hp8552b}. Using $\text{R}_a = \text{R}_3 = \SI{1.1}{\kilo\ohm}$ and $\text{R}_b = \text{R}_4 = \SI{1.2}{\kilo\ohm}$, the duty cycle is approximated to $52.2\%$ and the rise time to $\SI{54}{\milli\second}$ of the XR2206 sawtooth output. The time domain characteristics corresponding to a horizontal oscillation frequency of $\SI{18.52}{\second}$, given that the timing capacitance is $\SI{47}{\micro\farad}$. 
+	The design associates a duty cycle with the proportion of time that the signal spends rising from the minimum voltage to the maximum of the sawtooth function in the output of the emulator, i.e. as the XR2206 STO output voltage increases from the $\SI{0}{\volt}$ to $\SI{3}{\volt}$. The design approximates the rise time, $\text{t}_\text{rise}$, and duty cycle of this output from the manual of the HP8552B as illustrated in figure \ref{fig:hp8552b-sawtooth} \cite{hp8552b}. Using $\text{R}_a = \text{R}_3 = \SI{1.1}{\kilo\ohm}$ and $\text{R}_b = \text{R}_4 = \SI{1.2}{\kilo\ohm}$, the duty cycle is approximated to $52.2\%$ and the rise time to $\SI{54}{\milli\second}$. These time domain characteristics correspond to a horizontal oscillation frequency of $\SI{18.52}{\second}$, given that the timing capacitance is $\SI{47}{\micro\farad}$. 
 	\begin{table}[ht!]
 		\caption{H141T emulator electrical specifications.}
 		\label{tab:vertical-output-emulator-ct-specifications}
@@ -811,7 +820,7 @@
 			\hline
 			\multicolumn{6}{c}{\textbf{General Characteristics}}\\
 			\hline
-			$\text{V}_{\text{IN}}$ & Split Supply Voltage  & $10$ & $26$ & $\si{\volt}$ & \\
+			$\text{V}_{\text{IN}}$ & Split Supply Voltage  & $9$ & $12$ & $\si{\volt}$ & \\
 			\hline
 			$\text{I}_{\text{IN}}$ & Supply Current  & $12$ & $17$ & $\si{\milli\ampere}$ & \\
 			\hline
@@ -829,7 +838,9 @@
 			\hline
 			$\text{f}_\texttt{x}$	& Horizontal Output Frequency	& $17.24$ 	& $20$ & $\si{\hertz}$ & $\text{R}_3 = \SI{1.2}{\kilo\ohm}$, $\text{R}_4 = \SI{1.3}{\ohm}$, $\text{C}_2 = \SI{47}{\micro\farad}$\\
 			\hline
-			$\text{T}_\text{rise}$				& Horizontal Output Sawtooth Rise Time	& $50$	&	$58$ &	$\si{\milli\second}$	&	$\text{R}_3 = \SI{1.2}{\kilo\ohm}$, $\text{R}_4 = \SI{1.3}{\ohm}$, $\text{C}_2 = \SI{47}{\micro\farad}$\\
+			$\text{t}_\text{rise}$				& Horizontal Output Sawtooth Rise Time	& $50$	&	$58$ &	$\si{\milli\second}$	&	$\text{R}_3 = \SI{1.2}{\kilo\ohm}$, $\text{R}_4 = \SI{1.3}{\ohm}$, $\text{C}_2 = \SI{47}{\micro\farad}$\\
+			\hline
+			$\text{T}_\texttt{x}$	&	Sawtooth Period	& $95.6$	& $111$	& $\si{\milli\second}$	& \\
 			\hline
 		\end{tabular}
 	\end{table}
@@ -848,22 +859,78 @@
 		\caption{XR2206 sawtooth output level shifter for achieving the appropriate voltage range.}
 		\label{fig:emulator-circuit-level-shift}
 	\end{figure}
-	The circuit was simulated in LTSpice using the \texttt{PWL} command as shown in figure \ref{fig:sawtooth-sim-ltspice}, with the corresponding results of the simulation shown in the figure \ref{fig:sawtooth-sim-output}. The \texttt{PWL} command simulates a piecewise function from time t1 to time tn, $\text{n}\geq 2$. The simulation shows that the expected voltage range of the scan output lies between $-\SI{4.75}{\volt}$ and $\SI{4.76}{\volt}$ with a rapid rise time. This is due to the capacitors in the LM358 op-amp which introduce RC time constants during discharge. The steep rise time of the emulator is adjusted in software as specified in the following sections. 
+	The sawtooth output of the XR2206 circuit is simulated in LTSpice using the \texttt{PWL} command as shown in figure \ref{fig:sawtooth-sim-ltspice}, with the corresponding results of the simulation shown in the figure \ref{fig:sawtooth-sim-output}. The \texttt{PWL} command simulates a piecewise function between time $t_1$ and $t_n$, $\text{n}\geq 2$. The simulation shows that the expected voltage range of the scan output lies between $-\SI{4.75}{\volt}$ and $\SI{4.76}{\volt}$ with a steep rise time and a clipped voltage at $\SI{4.76}{\volt}$. The simulation also indicates a start time delay in the output. This is due to the capacitors in the LM358 op-amp which introduce RC time constants during discharge. This delay, steep rise time, and voltage clipping of the sawtooth is accounted for and adjustment are made in software, as specified in the following sections. 
 	
 	\begin{figure}[ht!]
 		\centering
-		\includegraphics[width=0.55\linewidth]{Figures/Methodology/emulator-triangle-shift-ct-sim}
+		\includegraphics[width=0.65\linewidth]{Figures/Methodology/emulator-triangle-shift-ct-sim-1}
 		\caption{Simulated level shift circuit.}
 		\label{fig:sawtooth-sim-ltspice}
 	\end{figure}
 
+	The first stage of the level shifting and scaling circuit in figure \ref{fig:emulator-circuit-level-shift} and \ref{fig:sawtooth-sim-ltspice} using an LM358 op-amp as a difference amplifier with a gain of $18$ to scale the sawtooth voltage, in the range between $\SI{0}{\volt}$ and $\SI{3}{\volt}$, to the desired range from $-\SI{5}{\volt}$ to $+\SI{5}{\volt}$. The second stage is an inverting buffer which serves to invert the output of the first stage such that the gradient of the sawtooth increases in the same direction. 
+
 	\begin{figure}
 		\centering
-		\includegraphics[width=0.7\linewidth]{Figures/Methodology/emulator-sawtooth-output}
+		\includegraphics[width=0.7\linewidth]{Figures/Methodology/emulator-sawtooth-output-1}
 		\caption{Showing simulated scan output of the emulator.}
 		\label{fig:sawtooth-sim-output}
 	\end{figure}
 
+	The period in the simulated sawtooth remains the same, however, the duty cycle decreases due to the delay and shorter rise time of the output, as seen in figure \ref{fig:sawtooth-sim-output}. The duty cycle is scaled from $52.2\%$ to $40.9\%$ while the start time of the output is delayed by $\SI{18}{\milli\second}$ and the rise time is scaled from $\SI{54}{\milli\second}$ to $\SI{10}{\milli\second}$, indicating a time scaling factor of 5.4. The start time of the output signal is delayed by $\SI{13}{\milli\second}$ from the start time of the XR2206 STO output. The software accounts for the time scaling, delay and change in the duty cycle to ensure accurate simulation of the rise time of $\SI{54}{\milli\second}$. 
+	
+	\begin{figure}
+		\centering
+		\includegraphics[width=0.45\linewidth]{Figures/Methodology/emulator-pen-lift-ct-sim}
+		\caption{Simulation of the pen lift output using the XR2206 SYNCO pulse output.}
+		\label{fig:emulator-pen-lift-ct-sim}
+	\end{figure}
+	
+	\begin{figure}
+		\centering
+		\includegraphics[width=0.7\linewidth]{Figures/Methodology/emulator-pen-lift-ct-sim-output}
+		\caption{Pen lift output simulation with the XR2206 SYNCO pulse in green and the pulse at the collector of the NPN transistor in red.}
+		\label{fig:emulator-pen-lift-ct-output}
+	\end{figure}
+
+	The pen-lift output is produced using the SYNCO pin output of the XR2206. The SYNCO is a pulse with the same duty cycle and period as the sawtooth output at the STO pin. This allows for the design to synchronise the pen-lift output with the scan time. A 2N2222 NPN transistors is employed as a switch such that the collector voltage goes high ($\SI{12}{\volt}$) when the SYNCO pulse is off, as shown in figure \ref{fig:emulator-pen-lift-ct-output}. This corresponds to the specifications of the HP8552B when the pen-lift output is used as a trigger. 	
+	
+	\begin{table}[h!]
+		\centering
+		\label{tab:emulator-pen-lift-specs}
+		\begin{tabular}{cccccc}
+			\hline
+			\cellcolor{cyan!25}\textbf{Designation} & \cellcolor{cyan!25}\textbf{Parameter} & \cellcolor{cyan!25}\textbf{Minimum} & \cellcolor{cyan!25}\textbf{Maximum} & \cellcolor{cyan!25}\textbf{Units} &  \cellcolor{cyan!25}\textbf{Condition}\\
+			\hline
+			$\text{V}_\text{B}$	& Base input voltage & $0$ & $3$ & $\si{\volt}$ & $\text{R}_\text{B} = \SI{1}{\kilo\ohm}$\\ 
+			\hline
+			$\text{V}_\text{C}$ & Collector output voltage & $0$ & $12$ & $\si{\volt}$ & $\text{R}_\text{C} = \SI{10}{\kilo\ohm}$\\
+			\hline
+			$\text{V}_\text{E}$ & Emitter voltage & $0$ &	& $\si{\volt}$ &  \\
+			\hline
+		\end{tabular}
+		\caption{Specifications of the pen lift circuit as part of the HP141T emulator subsystem based on the 2N2222 NPN transistor.}
+	\end{table}
+
+	A simulation of the XR2206 SYNCO square wave and pen-lift output is shown in figure \ref{fig:emulator-pen-lift-ct-sim} where the \texttt{PULSE} command is used in LTSpice. The base and collector boltages of the NPN transistor, and other specifications, are included in table \ref{tab:emulator-pen-lift-specs}. The table corresponds to the simulation output where the transistor turns on and pulls the collector voltage to $\SI{0}{\volt}$ when the SYNCO square wave is high ($\SI{3}{\volt}$). When the square wave is low ($\SI{0}{\volt}$), the transistor turns of and the collector output is pulled up to $\SI{12}{\volt}$ through the $\SI{10}{\kilo\ohm}$ resistor.  
+	
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[width=0.5\linewidth]{Figures/Methodology/emulator-pcb-3d-front-v03}
+		\caption{3D view of the HP141T Emulator subsystem's \acrshort{pcb}.}
+		\label{fig:emulator-pcb}
+	\end{figure}
+	
+	The full HP141T Emulator subsystem is implemented on a \acrshort{pcb} as illustrated in the 3D model in figure \ref{fig:emulator-pcb}. The output of the system is interfaced through a \acrshort{bnc} coaxial cable for its low loss capabilities for improved performance. 
+	
+	\begin{figure}
+		\centering
+		\includegraphics[width=0.55\linewidth]{Figures/Methodology/emulator-power-supply}
+		\caption{HP141T Emulator power supply circuit with decoupling capacitors to reduce high frequency noise.}
+		\label{fig:emulator-power-ct}
+	\end{figure}
+	
+	A $\SI{28}{\watt}$ power brick that converts $\SI{230}{\volt}$, $\SI{50}{\hertz}$ AC to $\pm\SI{12}{\volt}$ DC dual supply. The power supply is connected to the \acrshort{pcb} through a 5 pole din socket as illustrated in figure \ref{fig:emulator-power-ct}. Decoupling capacitors are used to blocks high frequency noise by creating a high-pass RC filter with the total impedance of the subsystem that smooths any fluctuations in the power supply. The subsystem can be switched on by setting the 3 pole switch to the left-hand position and switched off by setting it to the centre right-hand position. A power LED is used to indicate whether the subsystem is on or off. 
 	
 	\subsubsection{Signal Condition Subsystem Design}
 	

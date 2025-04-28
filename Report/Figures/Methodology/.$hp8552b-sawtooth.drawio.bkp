@@ -163,7 +163,7 @@
         <mxCell id="4kh1FGP8gizEruR-zwPr-62" value="$$-5\text{V}$$" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="605" y="485" width="30" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="4kh1FGP8gizEruR-zwPr-65" value="$$54\pm 4 ~\text{ms}$$" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+        <mxCell id="4kh1FGP8gizEruR-zwPr-65" value="$$54 ~\text{ms}$$" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="350" y="590" width="60" height="30" as="geometry" />
         </mxCell>
       </root>
