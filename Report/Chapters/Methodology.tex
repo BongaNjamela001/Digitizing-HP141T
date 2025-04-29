@@ -678,7 +678,16 @@
 		
 	\subsubsection{HP141T Emulator Subsystem Design}
 	
-	The outputs of the HP141T emulator must be the same as three outputs of the HP8552B \acrshort{if} plug-in section as described in table \ref{tab:hp8552b-output-vals} above. The frequency range of the $\SI{-0.8}{\volt}-\SI{0}{\volt}$ vertical output, $\texttt{V}_\texttt{y}$, is limited to the bandwidth of the video filter in the \acrshort{if} section, i.e. $\SI{10}{\hertz}$ to $\SI{300}{\kilo\hertz}$ \cite{hp8552b}. The front panel check procedure in the technical manual of the HP8552B \acrshort{if} section sets a frequency range of up to $\SI{10}{\kilo\hertz}$ in the video filter, corresponding to a $\SI{30}{\mega\hertz}$ fundamental signal at the input of the \acrshort{rf} section plug-in \cite{HP8555A}.  
+	According to UR10, the outputs of the HP141T emulator subsystem must simulate the three outputs of the HP8552B \acrshort{if} plug-in section as described in table \ref{tab:user-requirements}. To satisfy this requirement, the HP141T emulator subsystem follows the system diagram illustrated in figure \ref{fig:hp141t-emulator-subsystem-diagram} where a XR2206 is used as a function generator for producing the vertical output, sawtooth scan output corresponding to the horizontal output, and the \texttt{pen up} or \texttt{pen down} state of the pen-lift output. 
+	
+	\begin{figure}[ht!]
+		\centering
+		\includegraphics[width=0.60\textwidth]{Figures/Methodology/hp141t-emulator-subsystem-diagram}
+		\caption{The HP141T Emulator subsystem diagram showing the primary components powered by the same $\pm\SI{12}{\volt}$ DC dual rail supply.}
+		\label{fig:hp141t-emulator-subsystem-diagram}
+	\end{figure}
+	
+	The frequency range of the $\SI{-0.8}{\volt}-\SI{0}{\volt}$ vertical output, $\texttt{V}_\texttt{y}$, is limited to the bandwidth of the video filter in the \acrshort{if} section, i.e. $\SI{10}{\hertz}$ to $\SI{300}{\kilo\hertz}$ \cite{hp8552b}. The front panel check procedure in the technical manual of the HP8552B \acrshort{if} section sets a frequency range of up to $\SI{10}{\kilo\hertz}$ in the video filter, corresponding to a $\SI{30}{\mega\hertz}$ fundamental signal at the input of the \acrshort{rf} section plug-in \cite{HP8555A}.  
 	
 	\begin{figure}[h!]
 		\centering
@@ -893,7 +902,7 @@
 		\label{fig:emulator-pen-lift-ct-output}
 	\end{figure}
 
-	The pen-lift output is produced using the SYNCO pin output of the XR2206. The SYNCO is a pulse with the same duty cycle and period as the sawtooth output at the STO pin. This allows for the design to synchronise the pen-lift output with the scan time. A 2N2222 NPN transistors is employed as a switch such that the collector voltage goes high ($\SI{12}{\volt}$) when the SYNCO pulse is off, as shown in figure \ref{fig:emulator-pen-lift-ct-output}. This corresponds to the specifications of the HP8552B when the pen-lift output is used as a trigger. 	
+	The states of the pen-lift output are produced using a square wave pulse at the SYNCO pin output of the XR2206 chip. The SYNCO pulse has the same duty cycle and period as the sawtooth output at the STO pin. Ideally, this allows for the design to synchronise the pen-lift output states with the scan time. A 2N2222 NPN transistors is employed as a switch such that the collector voltage goes high ($\SI{12}{\volt}$) when the SYNCO pulse is off, as shown in figure \ref{fig:emulator-pen-lift-ct-output}. In other words, when the collector output is high, the pen-lift output is in the \texttt{pen down} state. Conversely, when the collector output is low, the pen-lift output is in the \texttt{pen up} state. The implications of these states on the display are discussed in detail in section \ref{subsec:display}. 
 	
 	\begin{table}[h!]
 		\centering
@@ -923,7 +932,7 @@
 	
 	The full HP141T Emulator subsystem is implemented on a \acrshort{pcb} as illustrated in the 3D model in figure \ref{fig:emulator-pcb}. The output of the system is interfaced through a \acrshort{bnc} coaxial cable for its low loss capabilities for improved performance. 
 	
-	\begin{figure}
+	\begin{figure}[h!]
 		\centering
 		\includegraphics[width=0.55\linewidth]{Figures/Methodology/emulator-power-supply}
 		\caption{HP141T Emulator power supply circuit with decoupling capacitors to reduce high frequency noise.}
@@ -932,8 +941,34 @@
 	
 	A $\SI{28}{\watt}$ power brick that converts $\SI{230}{\volt}$, $\SI{50}{\hertz}$ AC to $\pm\SI{12}{\volt}$ DC dual supply. The power supply is connected to the \acrshort{pcb} through a 5 pole din socket as illustrated in figure \ref{fig:emulator-power-ct}. Decoupling capacitors are used to blocks high frequency noise by creating a high-pass RC filter with the total impedance of the subsystem that smooths any fluctuations in the power supply. The subsystem can be switched on by setting the 3 pole switch to the left-hand position and switched off by setting it to the centre right-hand position. A power LED is used to indicate whether the subsystem is on or off. 
 	
-	\subsubsection{Signal Condition Subsystem Design}
+	\subsubsection{Signal Conditioning Subsystem Design}
 	
+	The \acrshort{scs} interfaces with the HP141T subsystem and HP141T Emulator subsystem through the \acrshort{bnc} coaxial cables and prepares the horizontal, vertical and pen-lift outputs to a suitable input voltage range for the unipolar operation STM32H723ZG board, i.e. $\SI{0}{\volt}$ to $\SI{3.3}{\volt}$ DC. Thus, the outputs of the HP8552B \acrshort{if} section or the outputs of the HP141T emulator are the inputs to the \acrshort{scs} as illustrated in figure \ref{fig:sig-cond-bnc-ct-schematic} showing the circuit schematic of the \acrshort{bnc} connector which takes in the vertical output $\texttt{V}_\texttt{y}$.
+	
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[width=0.35\linewidth]{Figures/Methodology/sig-cond-bnc-ct-schematic}
+		\caption{Schematic of the \acrshort{bnc} connector for receiving the vertical output signal $\texttt{V}_\texttt{y}$ ($\text{V}_\text{vin}$) from the HP8552B plug-in or HP141T Emulator subsystem.}
+		\label{fig:sig-cond-bnc-ct-schematic}
+	\end{figure}
+
+	Since the input voltage range is limited to $\SI{0}{\volt}$ to $\SI{3.3}{\volt}$, the outputs of the \acrshort{scs} are constrained to values within this range. The \acrshort{scs} implements jumper wires to transmit the signals to the \acrshort{adc}s on the STM32H723ZG board. Output connectors of the \acrshort{scs} are illustrated in \ref{fig:sig-cond-output-schematic}. An additional $\SI{3.3}{\volt}$ output is included for debugging and testing purposes. Table \ref{tab:sig-cond-in-out-specs} includes the input/output voltage and current range specifications for the \acrshort{scs}. 
+	
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[width=0.35\linewidth]{Figures/Methodology/sig-cond-output-ct-schematic}
+		\caption{Circuit schematic of the connectors with $\SI{0}{\volt}$ to $\SI{3.3}{\volt}$ outputs corresponding to the digitized values of the vertical, horizontal, and pen-lift outputs of the \acrshort{scs}.}
+		\label{fig:sig-cond-output-schematic}
+	\end{figure}
+
+	\begin{table}[ht!]
+		\centering
+		\caption{Input and output specifications of the \acrshort{scs}.}
+		\begin{tabular}{ccc}
+			
+		\end{tabular}
+	\end{table}
+	The \acrshort{scs} is relies on the LM358 op-amp, as shown in the circuit schematics in \ref{fig:signal-conditioning-a} to \ref{fig:signal-conditioning-c}, to scale small voltages and inverting negative voltages. 
 	
 	% ----------------------------------------------------
 	\ifstandalone

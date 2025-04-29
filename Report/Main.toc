@@ -1,6 +1,6 @@
 \babel@toc {english}{}\relax 
 \contentsline {chapter}{List of Figures}{vii}{chapter*.5}%
-\contentsline {chapter}{Abbreviations}{viii}{section*.6}%
+\contentsline {chapter}{Abbreviations}{ix}{section*.6}%
 \contentsline {chapter}{\numberline {1}Introduction }{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Background}{1}{section.1.1}%
 \contentsline {section}{\numberline {1.2}Objectives}{2}{section.1.2}%
@@ -47,9 +47,9 @@
 \contentsline {subsection}{\numberline {3.4.2}System Modularization}{27}{subsection.3.4.2}%
 \contentsline {subsubsection}{HP141T Subsystem Specifications}{28}{section*.40}%
 \contentsline {subsubsection}{HP141T Emulator Subsystem Design}{29}{section*.44}%
-\contentsline {subsubsection}{Signal Condition Subsystem Design}{35}{section*.58}%
-\contentsline {chapter}{\numberline {4}Results}{36}{chapter.4}%
-\contentsline {chapter}{\numberline {5}Discussion }{37}{chapter.5}%
-\contentsline {chapter}{\numberline {6}Conclusions }{38}{chapter.6}%
-\contentsline {chapter}{\numberline {7}Recommendations }{39}{chapter.7}%
-\contentsline {chapter}{Bibliography}{40}{chapter*.59}%
+\contentsline {subsubsection}{Signal Conditioning Subsystem Design}{35}{section*.59}%
+\contentsline {chapter}{\numberline {4}Results}{37}{chapter.4}%
+\contentsline {chapter}{\numberline {5}Discussion }{38}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Conclusions }{39}{chapter.6}%
+\contentsline {chapter}{\numberline {7}Recommendations }{40}{chapter.7}%
+\contentsline {chapter}{Bibliography}{41}{chapter*.63}%
