@@ -943,16 +943,55 @@
 	
 	\subsubsection{Signal Conditioning Subsystem Design}
 	
-	The \acrshort{scs} interfaces with the HP141T subsystem and HP141T Emulator subsystem through the \acrshort{bnc} coaxial cables and prepares the horizontal, vertical and pen-lift outputs to a suitable input voltage range for the unipolar operation STM32H723ZG board, i.e. $\SI{0}{\volt}$ to $\SI{3.3}{\volt}$ DC. Thus, the outputs of the HP8552B \acrshort{if} section or the outputs of the HP141T emulator are the inputs to the \acrshort{scs} as illustrated in figure \ref{fig:sig-cond-bnc-ct-schematic} showing the circuit schematic of the \acrshort{bnc} connector which takes in the vertical output $\texttt{V}_\texttt{y}$.
+	The \acrshort{scs} forms the central part in the digitization and modernization of the HP141T \acrshort{sa} as it interfaces with the HP141T subsystem and HP141T Emulator subsystem through three separate \acrshort{bnc} coaxial cables and prepares the horizontal, vertical and pen-lift outputs to a suitable input voltage range for the unipolar operation STM32H723ZG board, i.e. $\SI{0}{\volt}$ to $\SI{3.3}{\volt}$ DC. This implies that the outputs of the HP8552B \acrshort{if} section or HP141T Emulator are the inputs to the \acrshort{scs} at the \acrshort{bnc} ports  illustrated in figure \ref{fig:sig-cond-bnc-ct-schematic} showing the circuit schematic of the \acrshort{bnc} connector which takes in the vertical output $\texttt{V}_\texttt{y}$. 
 	
 	\begin{figure}[h!]
 		\centering
-		\includegraphics[width=0.35\linewidth]{Figures/Methodology/sig-cond-bnc-ct-schematic}
-		\caption{Schematic of the \acrshort{bnc} connector for receiving the vertical output signal $\texttt{V}_\texttt{y}$ ($\text{V}_\text{vin}$) from the HP8552B plug-in or HP141T Emulator subsystem.}
+		\begin{subfigure}{.33\textwidth}
+			\centering
+			\includegraphics[width=.8\linewidth]{Figures/Methodology/sig-cond-bnc-ct-schematic-j1}
+			\caption{Horizontal input $\texttt{V}_\texttt{hin}$.}
+			\label{fig:sig-cond-bnc-j1}
+		\end{subfigure}
+		\begin{subfigure}{.33\textwidth}
+			\centering
+			\includegraphics[width=.8\linewidth]{Figures/Methodology/sig-cond-bnc-ct-schematic-j2}
+			\caption{Vertical input $\texttt{V}_\texttt{vin}$.}
+			\label{fig:sig-cond-bnc-j2}
+		\end{subfigure}
+		\begin{subfigure}{.33\textwidth}
+			\centering
+			\includegraphics[width=.8\linewidth]{Figures/Methodology/sig-cond-bnc-ct-schematic-j3}
+			\caption{Pen-lift input $\texttt{V}_\texttt{penin}$.}
+			\label{fig:sig-cond-bnc-j3}
+		\end{subfigure}
+		\caption{Schematic of the input connectors that enable the \acrshort{scs} to interface with the outputs from the HP8552B plug-in or HP141T Emulator subsystem.}
 		\label{fig:sig-cond-bnc-ct-schematic}
 	\end{figure}
 
-	Since the input voltage range is limited to $\SI{0}{\volt}$ to $\SI{3.3}{\volt}$, the outputs of the \acrshort{scs} are constrained to values within this range. The \acrshort{scs} implements jumper wires to transmit the signals to the \acrshort{adc}s on the STM32H723ZG board. Output connectors of the \acrshort{scs} are illustrated in \ref{fig:sig-cond-output-schematic}. An additional $\SI{3.3}{\volt}$ output is included for debugging and testing purposes. Table \ref{tab:sig-cond-in-out-specs} includes the input/output voltage and current range specifications for the \acrshort{scs}. 
+	Conversion of the input voltages to the appropriate level of $\SI{3.3}{\volt}$ for the analog-to-digital interface employs three LM358 op-amps in different pipeline circuits that apply the required scaling and level shifting for each input. The flow of each input through this pipelined analog subsystem is illustrated in figure \ref{fig:sig-cond-subsystem-diagram}. The circuits in each pipeline share a common GND to reduce noise in the system and ensure that the \acrshort{adc} in the \acrshort{das} produces accurate results.
+	
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[width=0.55\linewidth]{Figures/Methodology/sig-cond-subsystem-diagram}
+		\caption{\acrlong{scs} diagram.}
+		\label{fig:sig-cond-subsystem-diagram}
+	\end{figure}
+
+	In the \acrfull{hsc} pipeline, the $\texttt{V}_\texttt{hin}$ sawtooth enters the circuit through the \acrshort{bnc} connector and is labelled at the input node as seen in figure \ref{fig:sig-cond-hsc-schematic}. The expected input range is $-\SI{5}{\volt}$ to $\SI{5}{\volt}$ from the auxiliary output of the HP8552B \acrshort{if} section. A $\SI{100}{\kilo\ohm}$ resistance is connected between the non-inverting input (pin 3) of the LM358 op-amp (U1A) in order to set the input impedance and pull the voltage input voltage to $\SI{3.3}{\volt}$. Additional $\SI{68}{\kilo\ohm}$ and $\SI{220}{\kilo\ohm}$ resistances contribute to the amplification as well as establishing a reference voltage at the non-inverting input. 
+	
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[width=0.55\linewidth]{Figures/Methodology/sig-cond-hsc-schematic}
+		\caption{The \acrshort{hsc} pipeline uses an LM358 op-amp to process the horizontal output signal from the HP141T scaling and shifting it to match the sampling microcontroller's \acrshort{adc}'s $\SI{0}{\volt}$ to $\SI{3.3}{\volt}$ input range.}
+		\label{fig:sig-cond-hsc-schematic}
+	\end{figure}
+
+	The $\SI{0}{\volt}$ to $\SI{3.3}{\volt}$ conditioned output, $\texttt{V}_\texttt{hout}$ is extracted through male connector pins as illustrated in figure \ref{fig:sig-cond-output-schematic}. 
+	
+	%Schematic of the \acrshort{bnc} connector for receiving the vertical output signal $\texttt{V}_\texttt{y}$ ($\text{V}_\text{vin}$) from the HP8552B plug-in or HP141T Emulator subsystem
+
+	%Since the input voltage range is limited to $\SI{0}{\volt}$ to $\SI{3.3}{\volt}$, the outputs of the \acrshort{scs} are constrained to values within this range. The \acrshort{scs} implements jumper wires to transmit the signals to the \acrshort{adc}s on the STM32H723ZG board. Output connectors of the \acrshort{scs} are illustrated in \ref{fig:sig-cond-output-schematic}. An additional $\SI{3.3}{\volt}$ output is included for debugging and testing purposes. Table \ref{tab:sig-cond-in-out-specs} includes the input/output voltage and current range specifications for the \acrshort{scs}. 
 	
 	\begin{figure}[h!]
 		\centering
@@ -960,15 +999,35 @@
 		\caption{Circuit schematic of the connectors with $\SI{0}{\volt}$ to $\SI{3.3}{\volt}$ outputs corresponding to the digitized values of the vertical, horizontal, and pen-lift outputs of the \acrshort{scs}.}
 		\label{fig:sig-cond-output-schematic}
 	\end{figure}
+	
+	The output of the \acrshort{hsc} pipeline was simulated in LTSpice to determine the expected behaviour of the circuit. The simulation results are included in figure \ref{fig:sig-cond-hsc-sim-output} where the output, in purple, is restricted to the desired input range of the microcontroller's \acrshort{adc}. The simulation was run for $\SI{400}{\milli\second}$ using the \texttt{PWL} command to reproduce the $-\SI{5}{\volt}$ to $\SI{5}{\volt}$ input sawtooth as a piecewise function.  
+	
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[width=0.7\linewidth]{Figures/Methodology/sig-cond-hsc-sim-output}
+		\caption{\acrshort{hsc} simulation output showing that the op-amp configuration is expected to maintain the shape of the sawtooth scan output.}
+		\label{fig:sig-cond-hsc-sim-output}
+	\end{figure}
 
+	The specifications of the \acrshort{scs} with respect to the \acrshort{hsc} pipeline are summarized in table \ref{tab:sig-cond-hsc-specs}. 
+	
 	\begin{table}[ht!]
 		\centering
+		\label{tab:sig-cond-hsc-specs}
 		\caption{Input and output specifications of the \acrshort{scs}.}
 		\begin{tabular}{ccc}
 			
 		\end{tabular}
 	\end{table}
-	The \acrshort{scs} is relies on the LM358 op-amp, as shown in the circuit schematics in \ref{fig:signal-conditioning-a} to \ref{fig:signal-conditioning-c}, to scale small voltages and inverting negative voltages. 
+	
+	The vertical output from the HP8552B is conditioned using LM358 op-amps in the inverting amplifier configuration with a gain of $A_{vsc} = -27$ using $\SI{10}{\kilo\ohm}$ and $\SI{2.7}{\kilo\ohm}$ resistance. This configuration was selected because the expected input voltage range of the \acrlong{vsc}, $\texttt{V}_\texttt{vin}$, is $-\SI{0.8}{\volt}$ to $\SI{0}{\volt}$, and inverting and amplifying the small, negative voltages, is necessary for the operation of the \acrshort{adc}s on the STM32H723ZG. The \acrshort{vsc} circuit is depicted in figure \ref{fig:sig-cond-vsc-schematic} with a compensating resistor at the non-inverting input of the LM358 op-amp. 
+	
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[width=0.7\linewidth]{Figures/Methodology/sig-cond-vsc-schematic}
+		\caption{An inverting amplifier configuration is used in the \acrshort{vsc} pipeline to prepare the vertical output of the HP8552B for digital processing.}
+		\label{fig:sig-cond-vsc-schematic}
+	\end{figure}
 	
 	% ----------------------------------------------------
 	\ifstandalone

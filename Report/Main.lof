@@ -24,8 +24,12 @@
 \contentsline {figure}{\numberline {3.16}{\ignorespaces Pen lift output simulation with the XR2206 SYNCO pulse in green and the pulse at the collector of the NPN transistor in red.\relax }}{34}{figure.caption.55}%
 \contentsline {figure}{\numberline {3.17}{\ignorespaces 3D view of the HP141T Emulator subsystem's \acrshort {pcb}.\relax }}{35}{figure.caption.57}%
 \contentsline {figure}{\numberline {3.18}{\ignorespaces HP141T Emulator power supply circuit with decoupling capacitors to reduce high frequency noise.\relax }}{35}{figure.caption.58}%
-\contentsline {figure}{\numberline {3.19}{\ignorespaces Schematic of the \acrshort {bnc} connector for receiving the vertical output signal $\texttt {V}_\texttt {y}$ ($\text {V}_\text {vin}$) from the HP8552B plug-in or HP141T Emulator subsystem.\relax }}{36}{figure.caption.60}%
-\contentsline {figure}{\numberline {3.20}{\ignorespaces Circuit schematic of the connectors with $\SI {0}{\volt }$ to $\SI {3.3}{\volt }$ outputs corresponding to the digitized values of the vertical, horizontal, and pen-lift outputs of the \acrshort {scs}.\relax }}{36}{figure.caption.61}%
+\contentsline {figure}{\numberline {3.19}{\ignorespaces Schematic of the input connectors that enable the \acrshort {scs} to interface with the outputs from the HP8552B plug-in or HP141T Emulator subsystem.\relax }}{36}{figure.caption.60}%
+\contentsline {figure}{\numberline {3.20}{\ignorespaces \acrlong {scs} diagram.\relax }}{36}{figure.caption.61}%
+\contentsline {figure}{\numberline {3.21}{\ignorespaces The \acrshort {hsc} pipeline uses an LM358 op-amp to process the horizontal output signal from the HP141T scaling and shifting it to match the sampling microcontroller's \acrshort {adc}'s $\SI {0}{\volt }$ to $\SI {3.3}{\volt }$ input range.\relax }}{37}{figure.caption.62}%
+\contentsline {figure}{\numberline {3.22}{\ignorespaces Circuit schematic of the connectors with $\SI {0}{\volt }$ to $\SI {3.3}{\volt }$ outputs corresponding to the digitized values of the vertical, horizontal, and pen-lift outputs of the \acrshort {scs}.\relax }}{37}{figure.caption.63}%
+\contentsline {figure}{\numberline {3.23}{\ignorespaces \acrshort {hsc} simulation output showing that the op-amp configuration is expected to maintain the shape of the sawtooth scan output.\relax }}{37}{figure.caption.64}%
+\contentsline {figure}{\numberline {3.24}{\ignorespaces An inverting amplifier configuration is used in the \acrshort {vsc} pipeline to prepare the vertical output of the HP8552B for digital processing.\relax }}{38}{figure.caption.66}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
