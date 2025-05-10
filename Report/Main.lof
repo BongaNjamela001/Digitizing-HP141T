@@ -30,6 +30,14 @@
 \contentsline {figure}{\numberline {3.22}{\ignorespaces Circuit schematic of the connectors with $\SI {0}{\volt }$ to $\SI {3.3}{\volt }$ outputs corresponding to the digitized values of the vertical, horizontal, and pen-lift outputs of the \acrshort {scs}.\relax }}{37}{figure.caption.63}%
 \contentsline {figure}{\numberline {3.23}{\ignorespaces \acrshort {hsc} simulation output showing that the op-amp configuration is expected to maintain the shape of the sawtooth scan output.\relax }}{37}{figure.caption.64}%
 \contentsline {figure}{\numberline {3.24}{\ignorespaces An inverting amplifier configuration is used in the \acrshort {vsc} pipeline to prepare the vertical output of the HP8552B for digital processing.\relax }}{38}{figure.caption.66}%
+\contentsline {figure}{\numberline {3.25}{\ignorespaces Simulation output for the case where $\texttt {V}_\texttt {vin}$ assumes all values in the range between $-\SI {0.8}{\volt }$ to $\SI {0}{\volt }$.\relax }}{38}{figure.caption.67}%
+\contentsline {figure}{\numberline {3.26}{\ignorespaces Simulation shows significant clipping of the output at $\SI {0}{\volt }$ when $\texttt {V}_\texttt {vin}$ has a peak-to-peak voltage of $-\SI {0.32}{\volt }$.\relax }}{39}{figure.caption.68}%
+\contentsline {figure}{\numberline {3.27}{\ignorespaces Simulation results indicate that the \acrshort {vsc} circuit has a linear sensitivity of $\SI {70}{\micro \volt }$, compared to the linear sensitivity of $\SI {0.1}{\volt }$ in the vertical output of the HP8552B.\relax }}{39}{figure.caption.69}%
+\contentsline {figure}{\numberline {3.28}{\ignorespaces Showing reduced distortion and voltage clipping in the output for a vertical output frequency of $\SI {100}{\kilo \hertz }$.\relax }}{40}{figure.caption.70}%
+\contentsline {figure}{\numberline {3.29}{\ignorespaces At the maximum rated vertical output frequency of $\SI {300}{\kilo \hertz }$, the phase difference between the input and the output of the \acrshort {vsc} is slightly more than $\pi \si {\radian }$.\relax }}{40}{figure.caption.71}%
+\contentsline {figure}{\numberline {3.30}{\ignorespaces Schematic of the \acrshort {plsc} circuit for preparing the HP8552B pen-lift output for digital processing.\relax }}{41}{figure.caption.73}%
+\contentsline {figure}{\numberline {3.31}{\ignorespaces Simulation result corresponding to the maximum operation voltage of the \acrshort {plsc} circuit corresponding to $\SI {18.77}{\volt }$.\relax }}{41}{figure.caption.74}%
+\contentsline {figure}{\numberline {3.32}{\ignorespaces The \acrshort {scs} is implemented on a single \acrshort {pcb} with a single $\SI {9}{\volt }$ power source.\relax }}{41}{figure.caption.75}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
