@@ -1094,7 +1094,7 @@
 		\label{fig:sig-cond-plsc-schematic}
 	\end{figure}  
 	
-	The expected input voltage range of the \acrshort{plsc} circuit is $\SI{0}{\volt}$ to $\SI{14}{\volt}$, however, a LTSpice simulation of the circuit indicates that the maximum allowed value of $\texttt{V}_\texttt{penin}$ is $\SI{18.77}{\volt}$, corresponding to an output voltage of $\SI{3.3}{\volt}$. This simulation result is shown in figure \ref{fig:sig-cond-plsc-sim-output-1877V} where a pulse function was used to depict the \texttt{pen-up} ($\SI{18.77}{\volt}$) and \texttt{pen-down} ($\SI{0}{\volt}$) states. 
+	The expected input voltage range of the \acrshort{plsc} circuit is $\SI{0}{\volt}$ to $\SI{14}{\volt}$, however, a LTSpice simulation of the circuit indicates that the maximum allowed value of $\texttt{V}_\texttt{penin}$ is $\SI{18.77}{\volt}$, corresponding to an output voltage of $\SI{3.3}{\volt}$. Simulation results are shown in figure \ref{fig:sig-cond-plsc-sim-output-1877V}, in which a pulse function was used to represent the \texttt{pen-up} ($\SI{18.77}{\volt}$) and \texttt{pen-down} ($\SI{0}{\volt}$) states. 
 	
 	\begin{figure}[h!]
 		\centering
@@ -1122,6 +1122,32 @@
 		\caption{The \acrshort{scs} is implemented on a single \acrshort{pcb} with a single $\SI{9}{\volt}$ power source.}
 		\label{fig:scs-full-subsystem}
 	\end{figure}
+
+	The physical hardware specifications of the \acrshort{vsc} \acrshort{pcb} are shown in figure \ref{tab:sig-cond-vsc-hardware-specs}. The \acrshort{pcb} was designed using KiCad 6 to consist of a porous GND copper layer for establishing a reference voltage for the through-hole components. Surface mount holes are also grounded to prevent electric shock and ensure safety. 
+	
+	\begin{table}[ht!]
+		\centering
+		\label{tab:sig-cond-vsc-hardware-specs}
+		\caption{Input and output specifications of the \acrshort{vsc}.}
+		\begin{tabular}{ccc}
+			
+		\end{tabular}
+	\end{table}
+
+	\subsubsection{Data Acquisition Subsystem}
+	
+	The \acrfull{das} is responsible for converting conditioned analog signals from the \acrshort{scs} into digital values for further processing. Therefore, the \acrshort{das} forms a critical part of the digitization of the HP141T system. It enables subsequent manipulation by the \acrlong{dps} and \acrshort{guis}. The \acrshort{das} ensures that the output analog signals from the \acrshort{scs}, i.e. $\texttt{V}_\texttt{hout}$, $\texttt{V}_\texttt{vout}$ and $\texttt{V}_\texttt{penout}$, which are the scaled and shifted versions of the outputs from the HP8552B plug-in, are accurately sampled and converted into digital values suitable for processing by a \acrshort{mcu} and \acrshort{sbc}. 
+	
+	The diagram in figure \ref{fig:das-subsystem-diagram} illustrates the functionality of the \acrshort{das} where an \acrshort{adc} samples the analog inputs at a rate sufficient for capturing high frequency components (up to $\SI{300}{\kilo\hertz}$ for the vertical channel). The digitized output values of the \acrshort{das} represent the amplitude and timing of the signals which is crucial for reconstructing the frequency spectrum of the input signal at the input of the HP8555A \acrshort{rf} section.
+	
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[width=0.7\linewidth]{Figures/Methodology/das-subsystem-diagram}
+		\caption{\acrshort{das} subsystem block diagram showing the digitization of the analog signals using 2 16-bit \acrshort{adc}s operating in double-interleaved mode.}
+		\label{fig:das-subsystem-diagram}
+	\end{figure} 
+	
+	The \acrshort{das} uses the two 16-bit resolution \acrshort{adc}s in double-interleaved mode. In 16-bit mode, the sampling rate of each \acrshort{adc} can reach up to $3.5$ \acrshort{msps} which implies that the system throughput can reach $7$ \acrshort{msps}. 
 	
 	% ----------------------------------------------------
 	\ifstandalone

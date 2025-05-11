@@ -38,6 +38,7 @@
 \contentsline {figure}{\numberline {3.30}{\ignorespaces Schematic of the \acrshort {plsc} circuit for preparing the HP8552B pen-lift output for digital processing.\relax }}{41}{figure.caption.73}%
 \contentsline {figure}{\numberline {3.31}{\ignorespaces Simulation result corresponding to the maximum operation voltage of the \acrshort {plsc} circuit corresponding to $\SI {18.77}{\volt }$.\relax }}{41}{figure.caption.74}%
 \contentsline {figure}{\numberline {3.32}{\ignorespaces The \acrshort {scs} is implemented on a single \acrshort {pcb} with a single $\SI {9}{\volt }$ power source.\relax }}{41}{figure.caption.75}%
+\contentsline {figure}{\numberline {3.33}{\ignorespaces \acrshort {das} subsystem block diagram showing the digitization of the analog signals using 2 16-bit \acrshort {adc}s operating in double-interleaved mode.\relax }}{42}{figure.caption.78}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

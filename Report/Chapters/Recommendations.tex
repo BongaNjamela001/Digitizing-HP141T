@@ -11,8 +11,9 @@
     {\emph{---Abraham Lincoln}}
 \vspace{0.5cm}
 % ----------------------------------------------------
-\lipsum[1]
+\section{Hardware Recommendations}
 
+To improve high current demand when sampling using the \acrshort{adc}s on the STM32H746ZG development board, a capacitor should be placed close to the \acrshort{adc}s' input pins. According to ST Electronics, the capacitor stores charge to ensure good settling time to the desired input voltage level.   
 % ----------------------------------------------------
 \ifstandalone
 \bibliography{../Bibliography/References.bib}
