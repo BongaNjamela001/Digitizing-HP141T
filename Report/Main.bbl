@@ -151,4 +151,9 @@ A.~Al~Adnani, J.~Duplicy, and L.~Philips, ``Spectrum {A}nalyzers {T}oday and
   \href{https://www.mantech.co.za/datasheets/products/xr2206.pdf}{Technical
   Data}.
 
+\bibitem{stm32adcmodes}
+\emph{STM32's ADC Modes and Their Applications}, ST Electronics, March 2010,
+  \href{https://www.st.com/resource/en/application_note/an3116-stm32s-adc-modes-and-their-applications-stmicroelectronics.pdf}{Application
+  Note}.
+
 \end{thebibliography}

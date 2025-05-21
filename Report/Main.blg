@@ -43,51 +43,56 @@ I was expecting a `,' or a `}'---line 388 of file Bibliography/References.bib
  :  url     = "https://www.mantech.co.za/datasheets/products/xr2206.pdf"
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 398 of file Bibliography/References.bib
+ :  
+ :  url     = "https://www.st.com/resource/en/application_note/an3116-stm32s-adc-modes-and-their-applications-stmicroelectronics.pdf"
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
 -- IEEEtran.bst version 1.14 (2015/08/26) by Michael Shell.
 -- http://www.michaelshell.org/tex/ieeetran/bibtex/
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
 Warning--empty journal in vollinger2023
 
 Done.
-You've used 25 entries,
+You've used 26 entries,
             4087 wiz_defined-function locations,
-            977 strings with 11793 characters,
-and the built_in function-call counts, 14148 in all, are:
-= -- 1183
-> -- 215
+            982 strings with 12007 characters,
+and the built_in function-call counts, 14463 in all, are:
+= -- 1211
+> -- 216
 < -- 102
-+ -- 121
++ -- 122
 - -- 31
-* -- 618
-:= -- 2297
-add.period$ -- 48
-call.type$ -- 25
-change.case$ -- 23
+* -- 629
+:= -- 2354
+add.period$ -- 49
+call.type$ -- 26
+change.case$ -- 24
 chr.to.int$ -- 231
-cite$ -- 26
-duplicate$ -- 1073
-empty$ -- 1216
+cite$ -- 27
+duplicate$ -- 1103
+empty$ -- 1245
 format.name$ -- 39
-if$ -- 3266
+if$ -- 3337
 int.to.chr$ -- 0
-int.to.str$ -- 25
-missing$ -- 187
-newline$ -- 100
+int.to.str$ -- 26
+missing$ -- 194
+newline$ -- 103
 num.names$ -- 19
-pop$ -- 401
+pop$ -- 414
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 1127
+skip$ -- 1154
 stack$ -- 0
-substring$ -- 564
-swap$ -- 811
+substring$ -- 566
+swap$ -- 831
 text.length$ -- 25
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 25
+type$ -- 26
 warning$ -- 1
 while$ -- 67
-width$ -- 27
-write$ -- 247
-(There were 7 error messages)
+width$ -- 28
+write$ -- 255
+(There were 8 error messages)

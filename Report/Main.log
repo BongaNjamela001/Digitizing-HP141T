@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.15)  11 MAY 2025 23:25
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.15)  20 MAY 2025 19:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1247,7 +1247,14 @@ Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 Package: filemod-expmin 2011/09/19 v1.2 Get and compare file modification times
  (expandable; minimal)
 ))
-(./FrontMatter/Glossary.tex) (./Main.aux)
+(./FrontMatter/Glossary.tex) (./Main.aux
+
+LaTeX Warning: Label `lst:das-spectrogram-init-code' multiply defined.
+
+
+LaTeX Warning: Label `lst:das-callbacks' multiply defined.
+
+)
 \openout1 = `Main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 8.
@@ -1388,7 +1395,7 @@ Package caption Info: supertabular package is loaded.
 Package caption Info: End \AtBeginDocument code.
 
 (./FrontMatter/Title.tex
-<FrontMatter/UCT_logo.png, id=175, 1554.80875pt x 1578.89874pt>
+<FrontMatter/UCT_logo.png, id=179, 1554.80875pt x 1578.89874pt>
 File: FrontMatter/UCT_logo.png Graphic file (type png)
 <use FrontMatter/UCT_logo.png>
 Package pdftex.def Info: FrontMatter/UCT_logo.png  used on input line 14.
@@ -1455,7 +1462,7 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./FrontMatter/UCT_logo.png
 >]
-<signature.png, id=190, 232.61906pt x 144.54pt>
+<signature.png, id=194, 232.61906pt x 144.54pt>
 File: signature.png Graphic file (type png)
 <use signature.png>
 Package pdftex.def Info: signature.png  used on input line 21.
@@ -1618,6 +1625,16 @@ used with new abbreviation definitions. Use \glsxtrshort instead on input line
 Package glossaries-extra Warning: Base acronym command \acrshort should not be 
 used with new abbreviation definitions. Use \glsxtrshort instead on input line 
 41.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+42.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+43.
 
 )
 \tf@lof=\write6
@@ -1839,7 +1856,7 @@ Package glossaries-extra Warning: Base acronym command \acrshort should not be
 used with new abbreviation definitions. Use \glsxtrshort instead on input line 
 31.
 
-<Figures/Literature_Review/zg-diagraph.png, id=555, 601.4972pt x 308.65312pt>
+<Figures/Literature_Review/zg-diagraph.png, id=577, 601.4972pt x 308.65312pt>
 File: Figures/Literature_Review/zg-diagraph.png Graphic file (type png)
 <use Figures/Literature_Review/zg-diagraph.png>
 Package pdftex.def Info: Figures/Literature_Review/zg-diagraph.png  used on inp
@@ -1881,7 +1898,7 @@ used with new abbreviation definitions. Use \glsxtrshort instead on input line
 46.
 
 [6 <./Figures/Literature_Review/zg-diagraph.png (PNG copy)>]
-<Figures/Literature_Review/hp8568a.png, id=581, 438.13687pt x 188.20313pt>
+<Figures/Literature_Review/hp8568a.png, id=602, 438.13687pt x 188.20313pt>
 File: Figures/Literature_Review/hp8568a.png Graphic file (type png)
 <use Figures/Literature_Review/hp8568a.png>
 Package pdftex.def Info: Figures/Literature_Review/hp8568a.png  used on input l
@@ -1903,7 +1920,7 @@ Package glossaries-extra Warning: Base acronym command \acrshort should not be
 used with new abbreviation definitions. Use \glsxtrshort instead on input line 
 57.
 
-<Figures/Literature_Review/hp8566-large.png, id=587, 277.035pt x 295.1025pt>
+<Figures/Literature_Review/hp8566-large.png, id=608, 277.035pt x 295.1025pt>
 File: Figures/Literature_Review/hp8566-large.png Graphic file (type png)
 <use Figures/Literature_Review/hp8566-large.png>
 Package pdftex.def Info: Figures/Literature_Review/hp8566-large.png  used on in
@@ -1956,7 +1973,7 @@ used with new abbreviation definitions. Use \glsxtrshort instead on input line
 
 [7 <./Figures/Literature_Review/hp8568a.png (PNG copy)> <./Figures/Literature_R
 eview/hp8566-large.png (PNG copy)>]
-<Figures/Literature_Review/agilent-hp8566EC.png, id=612, 1610.26593pt x 1015.54
+<Figures/Literature_Review/agilent-hp8566EC.png, id=633, 1610.26593pt x 1015.54
 407pt>
 File: Figures/Literature_Review/agilent-hp8566EC.png Graphic file (type png)
 <use Figures/Literature_Review/agilent-hp8566EC.png>
@@ -2302,7 +2319,7 @@ used with new abbreviation definitions. Use \glsxtrshort instead on input line
 [12
 
 ]
-<Figures/Methodology/design-stages-diagram.png, id=723, 1739.49875pt x 744.7825
+<Figures/Methodology/design-stages-diagram.png, id=744, 1739.49875pt x 744.7825
 pt>
 File: Figures/Methodology/design-stages-diagram.png Graphic file (type png)
 <use Figures/Methodology/design-stages-diagram.png>
@@ -2379,7 +2396,7 @@ See the caption package documentation for explanation.
 LaTeX Warning: Reference `fig:heterodyne-rauscher' on page 15 undefined on inpu
 t line 87.
 
-<Figures/Methodology/heterodyne-rauscher.png, id=759, 1223.57124pt x 366.36874p
+<Figures/Methodology/heterodyne-rauscher.png, id=780, 1223.57124pt x 366.36874p
 t>
 File: Figures/Methodology/heterodyne-rauscher.png Graphic file (type png)
 <use Figures/Methodology/heterodyne-rauscher.png>
@@ -2424,7 +2441,7 @@ Package glossaries-extra Warning: Base acronym command \acrshort should not be
 used with new abbreviation definitions. Use \glsxtrshort instead on input line 
 96.
 
-<Figures/Methodology/real-time-analyzer-rover.png, id=769, 1444.39626pt x 361.3
+<Figures/Methodology/real-time-analyzer-rover.png, id=790, 1444.39626pt x 361.3
 5pt>
 File: Figures/Methodology/real-time-analyzer-rover.png Graphic file (type png)
 <use Figures/Methodology/real-time-analyzer-rover.png>
@@ -3333,7 +3350,7 @@ Package glossaries-extra Warning: Base acronym command \acrshort should not be
 used with new abbreviation definitions. Use \glsxtrshort instead on input line 
 455.
 
-<Figures/Methodology/HP-Display-Section.jpg, id=1011, 610.28pt x 457.71pt>
+<Figures/Methodology/HP-Display-Section.jpg, id=1032, 610.28pt x 457.71pt>
 File: Figures/Methodology/HP-Display-Section.jpg Graphic file (type jpg)
 <use Figures/Methodology/HP-Display-Section.jpg>
 Package pdftex.def Info: Figures/Methodology/HP-Display-Section.jpg  used on in
@@ -3466,7 +3483,7 @@ Package glossaries-extra Warning: Base acronym command \acrshort should not be
 used with new abbreviation definitions. Use \glsxtrshort instead on input line 
 516.
 
-<Figures/Methodology/overall-system-diagram.png, id=1069, 829.0975pt x 356.3312
+<Figures/Methodology/overall-system-diagram.png, id=1090, 829.0975pt x 356.3312
 5pt>
 File: Figures/Methodology/overall-system-diagram.png Graphic file (type png)
 <use Figures/Methodology/overall-system-diagram.png>
@@ -3539,7 +3556,7 @@ t line 541.
 [26
 
  <./Figures/Methodology/overall-system-diagram.png>]
-<Figures/Methodology/emulated-system-diagram.png, id=1094, 830.10126pt x 366.36
+<Figures/Methodology/emulated-system-diagram.png, id=1115, 830.10126pt x 366.36
 874pt>
 File: Figures/Methodology/emulated-system-diagram.png Graphic file (type png)
 <use Figures/Methodology/emulated-system-diagram.png>
@@ -3572,7 +3589,7 @@ Package glossaries-extra Warning: Base acronym command \acrshort should not be
 used with new abbreviation definitions. Use \glsxtrshort instead on input line 
 550.
 
-<Figures/Methodology/system-block-diagram.png, id=1101, 1671.24374pt x 552.0625
+<Figures/Methodology/system-block-diagram.png, id=1122, 1671.24374pt x 552.0625
 pt>
 File: Figures/Methodology/system-block-diagram.png Graphic file (type png)
 <use Figures/Methodology/system-block-diagram.png>
@@ -3722,7 +3739,7 @@ Package glossaries-extra Warning: Base acronym command \acrshort should not be
 used with new abbreviation definitions. Use \glsxtrshort instead on input line 
 681.
 
-<Figures/Methodology/hp141t-emulator-subsystem-diagram.png, id=1145, 848.16875p
+<Figures/Methodology/hp141t-emulator-subsystem-diagram.png, id=1166, 848.16875p
 t x 540.0175pt>
 File: Figures/Methodology/hp141t-emulator-subsystem-diagram.png Graphic file (t
 ype png)
@@ -3745,7 +3762,7 @@ Package glossaries-extra Warning: Base acronym command \acrshort should not be
 used with new abbreviation definitions. Use \glsxtrshort instead on input line 
 690.
 
-<Figures/Methodology/hp8552b-vertical-output-emulator-3.png, id=1151, 421.575pt
+<Figures/Methodology/hp8552b-vertical-output-emulator-3.png, id=1172, 421.575pt
  x 532.23843pt>
 File: Figures/Methodology/hp8552b-vertical-output-emulator-3.png Graphic file (
 type png)
@@ -3753,7 +3770,7 @@ type png)
 Package pdftex.def Info: Figures/Methodology/hp8552b-vertical-output-emulator-3
 .png  used on input line 696.
 (pdftex.def)             Requested size: 193.47948pt x 244.27228pt.
-<Figures/Methodology/hp8552b-horizontal-output-emulator-3.png, id=1152, 478.035
+<Figures/Methodology/hp8552b-horizontal-output-emulator-3.png, id=1173, 478.035
 93pt x 493.845pt>
 File: Figures/Methodology/hp8552b-horizontal-output-emulator-3.png Graphic file
  (type png)
@@ -3779,7 +3796,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 765--765
 []|\T1/lmr/bx/n/10.95 (+20) Pin
  []
 
-<Figures/Methodology/emulator-vertical-output-sinewave.png, id=1167, 1444.64719
+<Figures/Methodology/emulator-vertical-output-sinewave.png, id=1188, 1444.64719
 pt x 690.32906pt>
 File: Figures/Methodology/emulator-vertical-output-sinewave.png Graphic file (t
 ype png)
@@ -3794,14 +3811,14 @@ Overfull \hbox (15.48923pt too wide) in paragraph at lines 826--855
  [][] 
  []
 
-<Figures/Methodology/hp8552b-sawtooth.png, id=1178, 443.6575pt x 387.4475pt>
+<Figures/Methodology/hp8552b-sawtooth.png, id=1199, 443.6575pt x 387.4475pt>
 File: Figures/Methodology/hp8552b-sawtooth.png Graphic file (type png)
 <use Figures/Methodology/hp8552b-sawtooth.png>
 Package pdftex.def Info: Figures/Methodology/hp8552b-sawtooth.png  used on inpu
 t line 858.
 (pdftex.def)             Requested size: 164.45515pt x 143.61345pt.
 [31]
-<Figures/Methodology/hp8552b-horizontal-output-level-shifter-3.png, id=1188, 59
+<Figures/Methodology/hp8552b-horizontal-output-level-shifter-3.png, id=1209, 59
 0.205pt x 334.24875pt>
 File: Figures/Methodology/hp8552b-horizontal-output-level-shifter-3.png Graphic
  file (type png)
@@ -3809,7 +3826,7 @@ File: Figures/Methodology/hp8552b-horizontal-output-level-shifter-3.png Graphic
 Package pdftex.def Info: Figures/Methodology/hp8552b-horizontal-output-level-sh
 ifter-3.png  used on input line 867.
 (pdftex.def)             Requested size: 241.84843pt x 136.96126pt.
-<Figures/Methodology/emulator-triangle-shift-ct-sim-1.png, id=1191, 1121.69063p
+<Figures/Methodology/emulator-triangle-shift-ct-sim-1.png, id=1212, 1121.69063p
 t x 483.30562pt>
 File: Figures/Methodology/emulator-triangle-shift-ct-sim-1.png Graphic file (ty
 pe png)
@@ -3818,7 +3835,7 @@ Package pdftex.def Info: Figures/Methodology/emulator-triangle-shift-ct-sim-1.p
 ng  used on input line 875.
 (pdftex.def)             Requested size: 314.40001pt x 135.46477pt.
  [32 <./Figures/Methodology/hp8552b-sawtooth.png>]
-<Figures/Methodology/emulator-sawtooth-output-1.png, id=1200, 1432.60219pt x 69
+<Figures/Methodology/emulator-sawtooth-output-1.png, id=1221, 1432.60219pt x 69
 1.83469pt>
 File: Figures/Methodology/emulator-sawtooth-output-1.png Graphic file (type png
 )
@@ -3826,7 +3843,7 @@ File: Figures/Methodology/emulator-sawtooth-output-1.png Graphic file (type png
 Package pdftex.def Info: Figures/Methodology/emulator-sawtooth-output-1.png  us
 ed on input line 884.
 (pdftex.def)             Requested size: 338.58632pt x 163.51015pt.
-<Figures/Methodology/emulator-pen-lift-ct-sim.png, id=1202, 821.31844pt x 445.6
+<Figures/Methodology/emulator-pen-lift-ct-sim.png, id=1223, 821.31844pt x 445.6
 65pt>
 File: Figures/Methodology/emulator-pen-lift-ct-sim.png Graphic file (type png)
 <use Figures/Methodology/emulator-pen-lift-ct-sim.png>
@@ -3836,7 +3853,7 @@ Package pdftex.def Info: Figures/Methodology/emulator-pen-lift-ct-sim.png  used
  [33 <./Figures/Methodology/hp8552b-horizontal-output-level-shifter-3.png (PNG 
 copy)> <./Figures/Methodology/emulator-triangle-shift-ct-sim-1.png (PNG copy)> 
 <./Figures/Methodology/emulator-sawtooth-output-1.png (PNG copy)>]
-<Figures/Methodology/emulator-pen-lift-ct-sim-output.png, id=1207, 1436.36626pt
+<Figures/Methodology/emulator-pen-lift-ct-sim-output.png, id=1228, 1436.36626pt
  x 690.32906pt>
 File: Figures/Methodology/emulator-pen-lift-ct-sim-output.png Graphic file (typ
 e png)
@@ -3859,7 +3876,7 @@ input line 924.
 
 [34 <./Figures/Methodology/emulator-pen-lift-ct-sim.png (PNG copy)> <./Figures/
 Methodology/emulator-pen-lift-ct-sim-output.png (PNG copy)>]
-<Figures/Methodology/emulator-pcb-3d-front-v03.png, id=1216, 755.07094pt x 477.
+<Figures/Methodology/emulator-pcb-3d-front-v03.png, id=1237, 755.07094pt x 477.
 28313pt>
 File: Figures/Methodology/emulator-pcb-3d-front-v03.png Graphic file (type png)
 
@@ -3888,7 +3905,7 @@ Package glossaries-extra Warning: Base acronym command \acrshort should not be
 used with new abbreviation definitions. Use \glsxtrshort instead on input line 
 933.
 
-<Figures/Methodology/emulator-power-supply.png, id=1222, 643.40375pt x 230.8625
+<Figures/Methodology/emulator-power-supply.png, id=1243, 643.40375pt x 230.8625
 pt>
 File: Figures/Methodology/emulator-power-supply.png Graphic file (type png)
 <use Figures/Methodology/emulator-power-supply.png>
@@ -3935,7 +3952,7 @@ Package glossaries-extra Warning: Base acronym command \acrshort should not be
 used with new abbreviation definitions. Use \glsxtrshort instead on input line 
 946.
 
-<Figures/Methodology/sig-cond-bnc-ct-schematic-j1.png, id=1233, 229.60782pt x 1
+<Figures/Methodology/sig-cond-bnc-ct-schematic-j1.png, id=1254, 229.60782pt x 1
 31.74219pt>
 File: Figures/Methodology/sig-cond-bnc-ct-schematic-j1.png Graphic file (type p
 ng)
@@ -3945,7 +3962,7 @@ used on input line 952.
 (pdftex.def)             Requested size: 127.69716pt x 73.27054pt.
 LaTeX Font Info:    Font shape `T1/DejaVuSansMono-TLF/m/n' will be
 (Font)              scaled to size 8.00003pt on input line 953.
-<Figures/Methodology/sig-cond-bnc-ct-schematic-j2.png, id=1234, 229.60782pt x 1
+<Figures/Methodology/sig-cond-bnc-ct-schematic-j2.png, id=1255, 229.60782pt x 1
 29.48375pt>
 File: Figures/Methodology/sig-cond-bnc-ct-schematic-j2.png Graphic file (type p
 ng)
@@ -3953,7 +3970,7 @@ ng)
 Package pdftex.def Info: Figures/Methodology/sig-cond-bnc-ct-schematic-j2.png  
 used on input line 958.
 (pdftex.def)             Requested size: 127.69716pt x 72.01447pt.
-<Figures/Methodology/sig-cond-bnc-ct-schematic-j3.png, id=1235, 229.60782pt x 1
+<Figures/Methodology/sig-cond-bnc-ct-schematic-j3.png, id=1256, 229.60782pt x 1
 31.74219pt>
 File: Figures/Methodology/sig-cond-bnc-ct-schematic-j3.png Graphic file (type p
 ng)
@@ -3986,7 +4003,7 @@ used with new abbreviation definitions. Use \glsxtrshort instead on input line
 
 [35 <./Figures/Methodology/emulator-pcb-3d-front-v03.png (PNG copy)> <./Figures
 /Methodology/emulator-power-supply.png>]
-<Figures/Methodology/sig-cond-subsystem-diagram.png, id=1248, 675.52374pt x 487
+<Figures/Methodology/sig-cond-subsystem-diagram.png, id=1269, 675.52374pt x 487
 .8225pt>
 File: Figures/Methodology/sig-cond-subsystem-diagram.png Graphic file (type png
 )
@@ -4030,7 +4047,7 @@ Package glossaries-extra Warning: Base acronym command \acrshort should not be
 used with new abbreviation definitions. Use \glsxtrshort instead on input line 
 981.
 
-<Figures/Methodology/sig-cond-hsc-schematic.png, id=1256, 520.94624pt x 251.439
+<Figures/Methodology/sig-cond-hsc-schematic.png, id=1277, 520.94624pt x 251.439
 38pt>
 File: Figures/Methodology/sig-cond-hsc-schematic.png Graphic file (type png)
 <use Figures/Methodology/sig-cond-hsc-schematic.png>
@@ -4060,7 +4077,7 @@ used with new abbreviation definitions. Use \glsxtrshort instead on input line
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figures/Methodology/sig-cond-output-ct-schematic.png, id=1262, 286.06876pt x 1
+<Figures/Methodology/sig-cond-output-ct-schematic.png, id=1283, 286.06876pt x 1
 58.84344pt>
 File: Figures/Methodology/sig-cond-output-ct-schematic.png Graphic file (type p
 ng)
@@ -4095,7 +4112,7 @@ used with new abbreviation definitions. Use \glsxtrshort instead on input line
 res/Methodology/sig-cond-bnc-ct-schematic-j2.png (PNG copy)> <./Figures/Methodo
 logy/sig-cond-bnc-ct-schematic-j3.png (PNG copy)> <./Figures/Methodology/sig-co
 nd-subsystem-diagram.png>]
-<Figures/Methodology/sig-cond-hsc-sim-output.png, id=1273, 1444.64719pt x 691.0
+<Figures/Methodology/sig-cond-hsc-sim-output.png, id=1294, 1444.64719pt x 691.0
 8188pt>
 File: Figures/Methodology/sig-cond-hsc-sim-output.png Graphic file (type png)
 <use Figures/Methodology/sig-cond-hsc-sim-output.png>
@@ -4159,7 +4176,7 @@ used with new abbreviation definitions. Use \glsxtrshort instead on input line
 [37 <./Figures/Methodology/sig-cond-hsc-schematic.png (PNG copy)> <./Figures/Me
 thodology/sig-cond-output-ct-schematic.png (PNG copy)> <./Figures/Methodology/s
 ig-cond-hsc-sim-output.png (PNG copy)>]
-<Figures/Methodology/sig-cond-vsc-schematic.png, id=1290, 512.66531pt x 248.428
+<Figures/Methodology/sig-cond-vsc-schematic.png, id=1311, 512.66531pt x 248.428
 13pt>
 File: Figures/Methodology/sig-cond-vsc-schematic.png Graphic file (type png)
 <use Figures/Methodology/sig-cond-vsc-schematic.png>
@@ -4197,7 +4214,7 @@ Package glossaries-extra Warning: Base acronym command \acrshort should not be
 used with new abbreviation definitions. Use \glsxtrshort instead on input line 
 1032.
 
-<Figures/Methodology/sig-cond-vsc-sine-sim-output.png, id=1298, 1443.14156pt x 
+<Figures/Methodology/sig-cond-vsc-sine-sim-output.png, id=1319, 1443.14156pt x 
 692.5875pt>
 File: Figures/Methodology/sig-cond-vsc-sine-sim-output.png Graphic file (type p
 ng)
@@ -4211,7 +4228,7 @@ ut line 1041.
 
 [38 <./Figures/Methodology/sig-cond-vsc-schematic.png (PNG copy)> <./Figures/Me
 thodology/sig-cond-vsc-sine-sim-output.png (PNG copy)>]
-<Figures/Methodology/sig-cond-vsc-sine-sim-output-0-32Vpp.png, id=1305, 1443.14
+<Figures/Methodology/sig-cond-vsc-sine-sim-output-0-32Vpp.png, id=1326, 1443.14
 156pt x 691.08188pt>
 File: Figures/Methodology/sig-cond-vsc-sine-sim-output-0-32Vpp.png Graphic file
  (type png)
@@ -4230,7 +4247,7 @@ Package glossaries-extra Warning: Base acronym command \acrshort should not be
 used with new abbreviation definitions. Use \glsxtrshort instead on input line 
 1050.
 
-<Figures/Methodology/sig-cond-vsc-sine-sim-output-0042Vpp.png, id=1309, 1443.89
+<Figures/Methodology/sig-cond-vsc-sine-sim-output-0042Vpp.png, id=1330, 1443.89
 438pt x 691.83469pt>
 File: Figures/Methodology/sig-cond-vsc-sine-sim-output-0042Vpp.png Graphic file
  (type png)
@@ -4258,7 +4275,7 @@ Package glossaries-extra Warning: Base acronym command \acrshort should not be
 used with new abbreviation definitions. Use \glsxtrshort instead on input line 
 1059.
 
-<Figures/Methodology/sig-cond-vsc-sine-sim-output-100khz.png, id=1315, 1443.141
+<Figures/Methodology/sig-cond-vsc-sine-sim-output-100khz.png, id=1336, 1443.141
 56pt x 693.34032pt>
 File: Figures/Methodology/sig-cond-vsc-sine-sim-output-100khz.png Graphic file 
 (type png)
@@ -4330,7 +4347,7 @@ Package glossaries-extra Warning: Base acronym command \acrlong should not be u
 sed with new abbreviation definitions. Use \glsxtrlong instead on input line 10
 88.
 
-<Figures/Methodology/sig-cond-plsc-schematic.png, id=1332, 538.26094pt x 200.24
+<Figures/Methodology/sig-cond-plsc-schematic.png, id=1353, 538.26094pt x 200.24
 812pt>
 File: Figures/Methodology/sig-cond-plsc-schematic.png Graphic file (type png)
 <use Figures/Methodology/sig-cond-plsc-schematic.png>
@@ -4355,7 +4372,7 @@ Package glossaries-extra Warning: Base acronym command \acrshort should not be
 used with new abbreviation definitions. Use \glsxtrshort instead on input line 
 1097.
 
-<Figures/Methodology/sig-cond-plsc-sim-output-1877V.png, id=1337, 1443.89438pt 
+<Figures/Methodology/sig-cond-plsc-sim-output-1877V.png, id=1358, 1443.89438pt 
 x 690.32906pt>
 File: Figures/Methodology/sig-cond-plsc-sim-output-1877V.png Graphic file (type
  png)
@@ -4407,7 +4424,7 @@ used with new abbreviation definitions. Use \glsxtrshort instead on input line
 1106.
 
 [40 <./Figures/Methodology/sig-cond-vsc-sine-sim-output-100khz.png (PNG copy)>]
-<Figures/Methodology/scs-pcb.png, id=1353, 570.63188pt x 613.54219pt>
+<Figures/Methodology/scs-pcb.png, id=1375, 570.63188pt x 613.54219pt>
 File: Figures/Methodology/scs-pcb.png Graphic file (type png)
 <use Figures/Methodology/scs-pcb.png>
 Package pdftex.def Info: Figures/Methodology/scs-pcb.png  used on input line 11
@@ -4433,7 +4450,7 @@ Package glossaries-extra Warning: Base acronym command \acrshort should not be
 used with new abbreviation definitions. Use \glsxtrshort instead on input line 
 1113.
 
-<Figures/Methodology/scs-power-schematic.png, id=1358, 220.57407pt x 318.43968p
+<Figures/Methodology/scs-power-schematic.png, id=1380, 220.57407pt x 318.43968p
 t>
 File: Figures/Methodology/scs-power-schematic.png Graphic file (type png)
 <use Figures/Methodology/scs-power-schematic.png>
@@ -4582,7 +4599,7 @@ Package glossaries-extra Warning: Base acronym command \acrshort should not be
 used with new abbreviation definitions. Use \glsxtrshort instead on input line 
 1141.
 
-<Figures/Methodology/das-subsystem-diagram.png, id=1391, 965.6075pt x 431.6125p
+<Figures/Methodology/das-subsystem-diagram.png, id=1412, 965.6075pt x 431.6125p
 t>
 File: Figures/Methodology/das-subsystem-diagram.png Graphic file (type png)
 <use Figures/Methodology/das-subsystem-diagram.png>
@@ -4634,18 +4651,630 @@ Package glossaries-extra Warning: Base acronym command \acrshort should not be
 used with new abbreviation definitions. Use \glsxtrshort instead on input line 
 1150.
 
-) (./Chapters/Results.tex [42 <./Figures/Methodology/das-subsystem-diagram.png>
-]
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+1150.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+1150.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+1150.
+
+<Figures/Methodology/das-adc-df-interleaved-mode.png, id=1426, 616.3025pt x 357
+.335pt>
+File: Figures/Methodology/das-adc-df-interleaved-mode.png Graphic file (type pn
+g)
+<use Figures/Methodology/das-adc-df-interleaved-mode.png>
+Package pdftex.def Info: Figures/Methodology/das-adc-df-interleaved-mode.png  u
+sed on input line 1154.
+(pdftex.def)             Requested size: 266.03474pt x 154.25082pt.
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+1155.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+1155.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+1159.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+1159.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+1159.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+1159.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+1159.
+
+
+Package glossaries-extra Warning: Base acronym command \acrfull should not be u
+sed with new abbreviation definitions. Use \glsxtrfull instead on input line 11
+59.
+
+
+Package glossaries-extra Warning: Base acronym command \acrlong should not be u
+sed with new abbreviation definitions. Use \glsxtrlong instead on input line 11
+59.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+1159.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+1159.
+
+[42 <./Figures/Methodology/das-subsystem-diagram.png>]
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+1161.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+1161.
+
+
+Package caption Warning: \label without proper reference on input line 1165.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `tab:das-matlab-sim-specs' on page 43 undefined on inp
+ut line 1161.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+1166.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+1166.
+
+<Figures/Methodology/das-adc-sim.png, id=1452, 1162.3425pt x 624.08156pt>
+File: Figures/Methodology/das-adc-sim.png Graphic file (type png)
+<use Figures/Methodology/das-adc-sim.png>
+Package pdftex.def Info: Figures/Methodology/das-adc-sim.png  used on input lin
+e 1174.
+(pdftex.def)             Requested size: 338.58632pt x 181.78844pt.
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+1175.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+1175.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+1179.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+1179.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+1179.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+1179.
+
+[43 <./Figures/Methodology/das-adc-df-interleaved-mode.png> <./Figures/Methodol
+ogy/das-adc-sim.png (PNG copy)>]
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+1181.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+1181.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+1181.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+1181.
+
+<Figures/Methodology/das-adc-sim-noisy.png, id=1472, 1164.60094pt x 647.41875pt
+>
+File: Figures/Methodology/das-adc-sim-noisy.png Graphic file (type png)
+<use Figures/Methodology/das-adc-sim-noisy.png>
+Package pdftex.def Info: Figures/Methodology/das-adc-sim-noisy.png  used on inp
+ut line 1185.
+(pdftex.def)             Requested size: 338.58632pt x 188.22081pt.
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+1190.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+1190.
+
+
+Package glossaries-extra Warning: Base acronym command \acrfull should not be u
+sed with new abbreviation definitions. Use \glsxtrfull instead on input line 11
+90.
+
+
+Package glossaries-extra Warning: Base acronym command \acrlong should not be u
+sed with new abbreviation definitions. Use \glsxtrlong instead on input line 11
+90.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+1190.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+1190.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+1190.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+1190.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+1190.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+1190.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+1190.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+1190.
+
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2020/03/24 1.8d listings language file
+)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
+)
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
+nput line 1192.
+ [44 <./Figures/Methodology/das-adc-sim-noisy.png (PNG copy)>]
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+1211.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+1211.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+1211.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+1211.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+1213.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+1213.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+1213.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+1213.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+1213.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+1213.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+1213.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+1213.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+1213.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+1213.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+1215.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+1215.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+1215.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+1215.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+1215.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+1215.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+1215.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+1215.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+1228.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+1228.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+1230.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+1230.
+
+
+LaTeX Warning: Reference `lst:das-adc-init' on page 45 undefined on input line 
+1230.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+1230.
+
+[45]
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+1254.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+1254.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+1255.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+1255.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+1255.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+1255.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+1255.
+
+[46]
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+1275.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+1275.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+1275.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+1275.
+
+
+LaTeX Warning: Reference `lst:das-mspinit' on page 47 undefined on input line 1
+276.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+1276.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+1276.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+1276.
+
+[47]
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+1303.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+1303.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+1303.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+1303.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+1304.
+
+
+Package glossaries-extra Warning: Base acronym command \acrfull should not be u
+sed with new abbreviation definitions. Use \glsxtrfull instead on input line 13
+04.
+
+
+Package glossaries-extra Warning: Base acronym command \acrlong should not be u
+sed with new abbreviation definitions. Use \glsxtrlong instead on input line 13
+04.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+1304.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+1304.
+
+
+Overfull \hbox (43.6783pt too wide) in paragraph at lines 1304--1305
+\T1/lmr/m/n/10.95 (-20) Note that the [][][]DMA[][] is used is cir-cu-lar mode 
+to sup-port con-tin-u-ous data ac-qui-si-tion. The \T1/DejaVuSansMono-TLF/m/n/1
+0.95 DMA_PDATAALIGN_HALFWORD
+ []
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+1306.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+1306.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+1306.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+1306.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+1306.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+1310.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+1310.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+1312.
+
+
+Package glossaries-extra Warning: Base acronym command \acrfull should not be u
+sed with new abbreviation definitions. Use \glsxtrfull instead on input line 13
+12.
+
+
+Package glossaries-extra Warning: Base acronym command \acrlong should not be u
+sed with new abbreviation definitions. Use \glsxtrlong instead on input line 13
+12.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+1312.
+
+
+Package glossaries-extra Warning: Base acronym command \acrfull should not be u
+sed with new abbreviation definitions. Use \glsxtrfull instead on input line 13
+12.
+
+
+Package glossaries-extra Warning: Base acronym command \acrlong should not be u
+sed with new abbreviation definitions. Use \glsxtrlong instead on input line 13
+12.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+1312.
+
+[48]
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+1350.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+1350.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+1350.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+1352.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+1352.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+1352.
+
+) (./Chapters/Results.tex [49] [50]
 Chapter 4.
-) (./Chapters/Discussion.tex [43
+) (./Chapters/Discussion.tex [51
 
 ]
 Chapter 5.
-) (./Chapters/Conclusions.tex [44
+) (./Chapters/Conclusions.tex [52
 
 ]
 Chapter 6.
-) (./Chapters/Recommendations.tex [45
+) (./Chapters/Recommendations.tex [53
 
 ]
 Chapter 7.
@@ -4659,7 +5288,7 @@ Package glossaries-extra Warning: Base acronym command \acrshort should not be
 used with new abbreviation definitions. Use \glsxtrshort instead on input line 
 16.
 
-) [46
+) [54
 
 ] (./Main.bbl
 Underfull \hbox (badness 10000) in paragraph at lines 31--34
@@ -4673,23 +5302,26 @@ Underfull \hbox (badness 10000) in paragraph at lines 31--34
 le % 20to % 20interpret % 20display % 20output .
  []
 
-[47
+[55
 
-]) [48] (./Main.aux)
+]) [56] (./Main.aux)
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package rerunfilecheck Info: File `Main.out' has not changed.
-(rerunfilecheck)             Checksum: 5117A9AC4D5D9C9C565CE0DC756213A5;9408.
+(rerunfilecheck)             Checksum: 5145AB25A228C1B624BDB7298D1B936F;9616.
  ) 
 Here is how much of TeX's memory you used:
- 46791 strings out of 478287
- 923647 string characters out of 5849289
- 1399065 words of memory out of 5000000
- 63540 multiletter control sequences out of 15000+600000
- 582091 words of font info for 249 fonts, out of 8000000 for 9000
+ 47736 strings out of 478287
+ 937185 string characters out of 5849289
+ 1933783 words of memory out of 5000000
+ 64317 multiletter control sequences out of 15000+600000
+ 582174 words of font info for 250 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 111i,17n,108p,1341b,1314s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 111i,17n,108p,1341b,2703s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exi
 st, replaced by a fixed one
 
@@ -4706,11 +5338,12 @@ e/texmf/fonts/type1/public/lm/lmr17.pfb></usr/share/texmf/fonts/type1/public/lm
 /lmr6.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fo
 nts/type1/public/lm/lmr9.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb
 ></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/typ
-e1/public/lm/lmsy8.pfb>
-Output written on Main.pdf (59 pages, 6560352 bytes).
+e1/public/lm/lmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
+ts/symbols/msbm10.pfb>
+Output written on Main.pdf (67 pages, 6758962 bytes).
 PDF statistics:
- 1586 PDF objects out of 1728 (max. 8388607)
- 1379 compressed objects within 14 object streams
- 294 named destinations out of 1000 (max. 500000)
- 67119 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 1944 PDF objects out of 2073 (max. 8388607)
+ 1708 compressed objects within 18 object streams
+ 453 named destinations out of 1000 (max. 500000)
+ 67142 words of extra memory for PDF output out of 74296 (max. 10000000)
 

@@ -1,0 +1,9 @@
+```
+[Desktop Entry]
+Type=Application
+Name=Spectrogram Display
+Exec=/usr/bin/python3 /home/pi/spectrogram_display.py
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
+```

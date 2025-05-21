@@ -39,6 +39,9 @@
 \contentsline {figure}{\numberline {3.31}{\ignorespaces Simulation result corresponding to the maximum operation voltage of the \acrshort {plsc} circuit corresponding to $\SI {18.77}{\volt }$.\relax }}{41}{figure.caption.74}%
 \contentsline {figure}{\numberline {3.32}{\ignorespaces The \acrshort {scs} is implemented on a single \acrshort {pcb} with a single $\SI {9}{\volt }$ power source.\relax }}{41}{figure.caption.75}%
 \contentsline {figure}{\numberline {3.33}{\ignorespaces \acrshort {das} subsystem block diagram showing the digitization of the analog signals using 2 16-bit \acrshort {adc}s operating in double-interleaved mode.\relax }}{42}{figure.caption.78}%
+\contentsline {figure}{\numberline {3.34}{\ignorespaces ADC1 and ADC2 convert the voltages in a period of 7 \acrshort {adc} clock cycles on the same channel.\relax }}{43}{figure.caption.79}%
+\contentsline {figure}{\numberline {3.35}{\ignorespaces Simulation results of a well-behaved sinusoidal signal that is sampled by the \acrshort {adc}s on the STM32H723ZG development board.\relax }}{43}{figure.caption.81}%
+\contentsline {figure}{\numberline {3.36}{\ignorespaces Simulation of a noisy signal sampled in double-interleaved mode by ADC1 and ADC2 on the STM32H723ZG.\relax }}{44}{figure.caption.82}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

@@ -117,7 +117,7 @@
 
 	In modern \acrshort{rtsa}s, \acrshort{if} analog output is transferred to the \acrshort{adc} through an anti-aliasing filter before being stored in memory \cite{tektronixRSA2208A}. This is in contrast to older heterodyne \acrshort{sa}s such as the HP141T which takes the \acrshort{if} output through a video filter is essentially an averaging low-pass filter which smooths the \acrshort{if} output and reduces the effects of internal noise before the signal is channelled to the display \cite{rauscher2007}. HP141T video filters may select $\SI{10}{\hertz}$, $\SI{100}{\hertz}$, $\SI{10}{\kilo\hertz}$ or OFF section of the low-pass filter for the detected video. 
 	
-	In the HP141T, the output of the video filter is transmitted to the vertical deflection of the \acrshort{crt} display \cite{HPsiganalyzers}. For the horizontal deflection of the electron beam in the \acrshort{crt} display, a sawtooth signal from the sweep generator governs the horizontal scaling of the output frequency as electrons impinge on the phosphorescent screen. Modern \acrshort{sa}s retrieve data from memory through high speed data lines to display information about the digital signal from the \acrshort{adc}. Digital display technologies include:
+	The output of the the HP141T video filter is transmitted to the vertical deflection of the \acrshort{crt} display \cite{HPsiganalyzers}. For the horizontal deflection of the electron beam in the \acrshort{crt} display, a sawtooth signal from the sweep generator governs the horizontal scaling of the output frequency as electrons impinge on the phosphorescent screen. Modern \acrshort{sa}s retrieve data from memory through high speed data lines to display information about the digital signal from the \acrshort{adc}. Digital display technologies include:
 	
 	\begin{itemize}
 		\item 
@@ -208,7 +208,7 @@
 
 	\subsubsection{Conditioning HP141T Output Voltages to Match the \acrshort{adc} Operating Voltages}
 	
-	To satisfy the modernization requirement, an \acrshort{adc} with at least three channels is required to sample the three auxiliary analog output signals from the HP141T system that are shown in Table \ref{tab:hp141t-output-voltages} below.
+	To satisfy the modernization requirement, at least three \acrshort{adc} channels are required to sample the three auxiliary analog output signals from the HP141T system that are shown in Table \ref{tab:hp141t-output-voltages} below.
 	
 	\begin{table}[!ht]
 		\centering
@@ -227,7 +227,7 @@
 		\caption{Auxiliary voltages of the HP141T that must be sampled to digitize the system.}
 	\end{table}
 
-	Since the operating voltage of most \acrshort{adc}s is in the range between $\SI{0}{\volt}$ and $\SI{3.3}{\volt}$ or $\pm\SI{5}{\volt}$, the auxiliary outputs listed in table \ref{tab:hp141t-output-voltages} need to be scaled and shift to be within the operating voltage range. To scale the signal, an op-amp with appropriate gain $A$ can be used between the auxiliary outputs of the HP141T and the input channels of the \acrshort{adc}. To shift the output voltages, a logic level-shifter can be used to translate the signals to be within the operating voltage domain. 
+	Since the operating voltage of most \acrshort{adc}s is in the range between $\SI{0}{\volt}$ and $\SI{3.3}{\volt}$ or $\pm\SI{5}{\volt}$, the auxiliary outputs listed in table \ref{tab:hp141t-output-voltages} need to be scaled and shift to be within the operating voltage range. To scale the signal, an op-amp based circuit with appropriate gain $A$ can be used between the auxiliary outputs of the HP141T and the input channels of the \acrshort{adc}. To shift the output voltages, a logic level-shifter can be used to translate the signals to be within the operating voltage domain. 
 
 	\subsubsection{Sampling Limitations in the Data Acquisition and Data Processing Subsystems}
 		
@@ -452,7 +452,7 @@
 
 	User requirements relating to the aspects of the display that the user can interact with include UR02, UR04, UR05 and UR07. The primary objective of the project is to display a plot of the amplitude vs frequency for the input signal, in real-time. To achieve this objective, spectrum data needs to be organized and easily accessible from \acrshort{ram} or flash memory, depending on the architecture of the system that is centred around the \acrshort{adc} and digital processor. For example, STM microcontrollers have a dedicated \acrshort{lcd}-\acrshort{tft} display controller with a frame buffer that can be located either in on-chip memory or in an external memory, depending on the resolution. Using external memory can increase latency which decreases the real-time performance of the system. 
 	
-	In addition, data needs to be scaled while considering the effects of windowing, so that all spectrum data can be translated to a grid with 8 divisions of the amplitude, on the vertical axis, and 10 divisions of the frequency, on the horizontal axis. This is also to ensure that the appearance of the \acrshort{crt} display, as shown in Figure \ref{fig:display-section}, is maintained.
+	In addition, data needs to be scaled while considering the effects of windowing, so that all spectrum data can be translated to a grid with 8 divisions of the amplitude, on the vertical axis, and 10 divisions of the frequency, on the horizontal axis. This is also to ensure that the graphical interface resembles the appearance of the \acrshort{crt} display, as shown in Figure \ref{fig:display-section}, is maintained.
 	 
 	\begin{figure}[ht!]
 		\centering
@@ -1147,8 +1147,210 @@
 		\label{fig:das-subsystem-diagram}
 	\end{figure} 
 	
-	The \acrshort{das} uses the two 16-bit resolution \acrshort{adc}s in double-interleaved mode. In 16-bit mode, the sampling rate of each \acrshort{adc} can reach up to $3.5$ \acrshort{msps} which implies that the system throughput can reach $7$ \acrshort{msps}. 
+	The \acrshort{das} uses the two 16-bit resolution \acrshort{adc}s in double-interleaved mode. Given that the outputs of the \acrshort{scs} assume values up to a reference voltage of $\SI{3.3}{\volt}$, the \acrshort{das} can represent 65565 values in $\SI{50.35}{\micro\volt}$ intervals. In 16-bit mode, the sampling rate of each \acrshort{adc} can reach up to $3.5$ \acrshort{msps} which implies that the system throughput can reach a total $7$ \acrshort{msps} when the \acrshort{adc}s are configured in dual fast interleaved mode as illustrated in figure \ref{fig:das-adc-df-interleaved-mode}. 
 	
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[width=0.55\linewidth]{Figures/Methodology/das-adc-df-interleaved-mode}
+		\caption{ADC1 and ADC2 convert the voltages in a period of 7 \acrshort{adc} clock cycles on the same channel.}
+		\label{fig:das-adc-df-interleaved-mode}
+	\end{figure} 
+	
+	In dual mode, ADC1 is the master and ADC2 is the slave. The pen-lift signal from the \acrshort{scs} behaves like a trigger which is internally synchronised for channel conversion. In dual fast interleaved mode, each \acrshort{adc} converts the channel every 14 \acrshort{adc} clock cycles and are stored into the ADC1 data register in a 32-bit format \cite{stm32adcmodes}. The Nyquist criteria requires that the sampling frequency rate should be higher than or equal to twice the frequency of the signal to be converted. Since the maximum frequency of the signals from the \acrshort{scs} circuit is $\SI{300}{\kilo\hertz}$, a $3.5$ \acrshort{msps} rate meets the $600$ kSPS needed for the vertical output. To ensure high integrity in data transfer, the \acrfull{das} subsystem uses DMA2 for the master \acrshort{adc} and DMA1 for the slave. 
+	
+	Results from a MATLAB simulation of the dual interleaved \acrshort{adc} operation are shown in figure \ref{fig:das-matlab-sim} where ADC1 and ADC2 alternate samples to double the sampling rate in order to satisfy the required 801 data points. The simulation calculates a \acrshort{snr} of $\SI{78}{\decibel}$ with $\SI{1}{\milli\volt}$ Gaussian noise. A table of summarizing the specifications modelled in the simulation is shown in \ref{tab:das-matlab-sim-specs}.
+	
+	\begin{table}[ht!]
+		\centering
+		\label{tab:das-matlab-sim-specs}
+		\caption{Specifications of the \acrshort{das}.}
+		\begin{tabular}{ccc}
+			
+		\end{tabular}
+	\end{table}
+	
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[width=0.70\linewidth]{Figures/Methodology/das-adc-sim}
+		\caption{Simulation results of a well-behaved sinusoidal signal that is sampled by the \acrshort{adc}s on the STM32H723ZG development board.}
+		\label{fig:das-matlab-sim}
+	\end{figure} 
+	
+	Figure \ref{fig:das-matlab-sim} shows the results from running the simulation with a well-behaved, sinusoidal analog vertical output signal from the \acrshort{scs} with a frequency of $\SI{10}{\kilo\hertz}$ and a conditioned peak-to-peak voltage of $\SI{0.8}{\volt}$. Given that the \acrshort{adc}s are operating with a 16-bit resolution, the subsequently high number of quantized levels allow for a smooth sample with closely spaced data points as seen in the second and third plots in the figure. The final figure illustrates the output of the \acrshort{adc}s operating in double-interleaved mode. Samples from the master \acrshort{adc} are shown in red while samples from the slave are shown in blue. 
+	
+	Results from a more accurate simulation are shown in figure \ref{fig:das-adc-sim-noisy} where the \acrshort{scs} outputs a noisy signal as input to the \acrshort{das}. The results illustrate that as long as the voltage is within the range $\SI{3.3}{\volt}$, the double interleaved mode is able to capture the a large number of samples to closely represent the input signal. The \acrshort{das} propagates errors from the \acrshort{scs} circuit which prepares the analog outputs from the HP8552B. 
+	
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[width=0.70\linewidth]{Figures/Methodology/das-adc-sim-noisy}
+		\caption{Simulation of a noisy signal sampled in double-interleaved mode by ADC1 and ADC2 on the STM32H723ZG.}
+		\label{fig:das-adc-sim-noisy}
+	\end{figure} 
+
+	The behaviour of the \acrshort{das} is implemented on the STM32H723ZG \acrshort{mcu} using embedded C to sample signals using functions in the \acrfull{hal} library. The horizontal ($\texttt{V}_\texttt{x}$), vertical ($\texttt{V}_\texttt{y}$) and pen-lift ($\texttt{V}_\texttt{z}$) outputs are mapped to PF10 (\texttt{ADC1\_PIN8}), PF9 \texttt{ADC1\_PIN7} and PF8 \texttt{ADC1\_PIN6}, respectively. The code snippet in listing \ref{lst:das-adc-macros} shows the definition of the macros including the \texttt{DMA\_REQUEST\_ADC1} macro which enables the system to stream data to a buffer using \acrshort{dma}. The \texttt{DMA2\_Stream0\_IRQHandler} macro handles \acrshort{dma} interrupts for the \acrshort{adc} data streaming by calling the \acrshort{hal} \acrshort{dma} handler to process events such as a full buffer. The \acrshort{das} uses a \texttt{uint16\_t} buffer size of 802, corresponding to 401 samples per \acrshort{adc} channel. 
+	
+	\begin{lstlisting}[language=C, label={lst:das-adc-macros}, caption={Showing macros for the \acrshort{adc} channels, \acrshort{dma} and the associated interrupts for handling streaming.}]
+	/* ADC Channels */
+	#define ADCx_CHANNEL                    ADC_CHANNEL_8  // V_x
+	#define ADCx_CHANNEL2                   ADC_CHANNEL_7  // V_y
+	#define ADCx_CHANNEL3                   ADC_CHANNEL_6  // V_z
+	
+	/* DMA Configuration */
+	#define ADCx_DMA_CHANNEL                DMA_REQUEST_ADC1 // Master ADC1
+	#define ADCx_DMA_STREAM                 DMA2_Stream0
+	#define ADCx_DMA_IRQn                   DMA2_Stream0_IRQn
+	#define ADCx_DMA_IRQHandler             DMA2_Stream0_IRQHandler
+	
+	ADC_HandleTypeDef    AdcHandleMaster;
+	ADC_HandleTypeDef    AdcHandleSlave;
+	
+	#define ADC_BUF_SIZE 802 // 802 samples (401 samples/channel)
+	volatile uint16_t adc_buffer[ADC_BUF_SIZE] = {0}; // 16-bit for interleaved data
+	
+	volatile int adc_error_flag = 0;
+	\end{lstlisting}
+
+	The STM32H723ZG shares the same clock for the master and slave \acrshort{adc}s, derived from the peripheral clock PLCK2 to be divided by a factors of 2. The proposed design derives the \acrshort{adc}s' clock via a \acrshort{adc} prescaler (\texttt{ADC\_CLOCKPRESCALER\_PCLK\_DIV4}) of 4 and a APB2 prescaler of 2, to achieve a sample achieve a frequency of $\SI{36}{\mega\hertz}$. The sampling rate depends on the \acrshort{adc} clock frequency $F_{ADC}$, sampling period $T_{ADC}$, and conversion time $T_{CONV}$. At $\SI{36}{\mega\hertz}$ and a total of 19 cycles per sample, a single \acrshort{adc}'s sampling period is $\SI{0.528}{\micro\second}$ per sample (or 1.89 \acrshort{msps}). The full sampling capability of the \acrshort{adc}s can be achieved by setting the \acrshort{adc} clock to $\SI{60}{\mega\hertz}$ and using 18 cycles per second, giving a sample rate of 6.66 \acrshort{msps}. The \texttt{adc\_error\_flag} global variable is initialized to zero and is used to track \acrshort{adc} initialization errors for debugging. 
+	
+	The \texttt{HAL\_DMA\_IRQHandler} function from the STM32H7 \acrshort{hal} \acrshort{api} is used to handle \acrshort{dma} interrupts for the master \acrshort{adc} and triggers callbacks. Given that only the master's \acrshort{dma} handles all data transfers, no \acrshort{dma} is required for the slave \acrshort{adc}. Processed \acrshort{adc} data is stored using the \texttt{spectrogram\_t} structure which is initialized as a pointer as shown in listing \ref{lst:das-spectrogram-init-code}. 
+	
+	\begin{lstlisting}[language=C, label={lst:das-spectrogram-init-code}, caption={The \texttt{HAL\_DMA\_IRQHandler} function is used to handle \acrshort{dma} transfers while the \texttt{adc\_set\_spectrogram(spectrogram\_t *s)} function is used to initialize a pointer to a \texttt{spectrogram} structure.}]
+	void adc_error_handler(void) {
+		adc_error_flag = 1;
+		while(1) {}
+	}
+	
+	spectrogram_t *adc_spectrogram = 0;
+	
+	void adc_set_spectrogram(spectrogram_t *s) {
+		adc_spectrogram = s;
+	}
+	\end{lstlisting}
+	
+	The \texttt{adc\_init} function forms a critical part of the \acrshort{das} because it initializes ADC1 as the master and ADC2 as the slave in double-interleaved mode, configures three sampling channels, and begins \acrshort{dma} transfers as shown in listing \ref{lst:das-adc-init}. In addition, the function sets the resolution to 16-bits and enables a continuous mode for uninterrupted conversions for seamless real-time data acquisition. The development board is configured by the \texttt{ADC\_DUALMODEDATAFORMAT\_32\_10\_BITS} variable to use outputs with 32-bit words, however, the \texttt{adc\_buffer} is \texttt{uint16\_t}. Therefore, the \acrshort{hal} is expected to extract the lower 16 bits. 
+	\begin{lstlisting}[language=C, label={lst:das-spectrogram-init-code}, caption={Code snippet of the \texttt{adc\_init} function which configures the double-interleaved operation of the \acrshort{adc}s.}]
+	int adc_init(void) {
+			ADC_ChannelConfTypeDef sConfig;
+			ADC_MultiModeTypeDef multiMode;
+		//...
+		/* Configure ADC2 (Slave) */
+		AdcHandleSlave.Instance = ADCx_SLAVE;
+		AdcHandleSlave.Init = AdcHandleMaster.Init; // Same config as master
+		if (HAL_ADC_Init(&AdcHandleSlave) != HAL_OK) {
+			adc_error_handler();
+			return -1;
+		}
+		
+		/* Configure double-interleaved mode */
+		multiMode.Mode = ADC_DUALMODE_INTERL_FAST; // Fast interleaved mode
+		multiMode.DualModeData = ADC_DUALMODEDATAFORMAT_32_10_BITS;
+		multiMode.TwoSamplingDelay = ADC_TWOSAMPLINGDELAY_1CYCLE;
+		if (HAL_ADCEx_MultiModeConfigChannel(&AdcHandleMaster, &multiMode) != HAL_OK) {
+			adc_error_handler();
+			return -1;
+		}
+		//...
+	}
+	\end{lstlisting}
+	\acrshort{adc} data that is stored in the \texttt{adc\_spectrogram} structure is processed using conversion callbacks such as the \texttt{HAL\_ADC\_ConvHalfCpltCallback} in listing \ref{lst:das-callbacks} used when the \acrshort{dma} is half-full. The function reads interleaved data, corresponding to values of $\texttt{V}_\texttt{x}$, $\texttt{V}_\texttt{y}$ and $\texttt{V}_\texttt{z}$ from the \texttt{adc\_buffer}. Three variables, \texttt{x}\_\texttt{val}, \texttt{y}\_\texttt{val} and \texttt{z}\_\texttt{val} are scaled and inverted according to the 16-bit resolution of the \acrshort{adc}s. For example, \texttt{x}\_\texttt{val} is scaled to \texttt{npoints} by dividing by 65536, corresponding to a 16-bit scaling which matches the resolution of the \acrshort{adc}s. The pen-lift output, $\texttt{V}_\texttt{z}$, is assigned a threshold value of 32768, corresponding to $\SI{1.65}{\volt}$ for the \texttt{pen-down} state. The threshold value is expected to require adjustments if the \acrshort{scs} output is slightly higher or lower than the simulated outputs. 
+	\begin{lstlisting}[language=C, label={lst:das-callbacks}, caption={Showing conversion callbacks for processing \acrshort{adc} data when the \acrshort{dma} fills half.}]
+	void HAL_ADC_ConvHalfCpltCallback(ADC_HandleTypeDef* AdcHandle) {
+		for (int j = 0; j < ADC_BUF_SIZE/6; ++j) {
+			uint32_t x_val = adc_buffer[j*3];     // V_x
+			uint32_t y_val = adc_buffer[j*3+1];   // V_y
+			uint32_t z_val = adc_buffer[j*3+2];   // V_z
+			x_val = (x_val * adc_spectrogram->npoints) / 65536; // 16-bit scaling
+			y_val = adc_spectrogram->size_y - (adc_spectrogram->size_y * y_val) / 65536;
+			z_val = z_val > 32768 ? 1 : 0; // Threshold at mid-scale (~1.65 V)
+			if (x_val < 5) prev_x = 0;
+			if (x_val > prev_x && z_val == 0) {
+				if (pending_normalization) {
+					adc_spectrogram->data_normal[x_val] = adc_spectrogram->size_y/2 - y_val;
+				}
+				adc_spectrogram->data[x_val] = y_val + adc_spectrogram->data_normal[x_val];
+				prev_x = x_val;
+			}
+		}
+	}
+	\end{lstlisting}
+	The code design implements the \texttt{HAL\_MspInit} callback function, shown in listing \ref{lst:das-mspinit} to perform system level initializations as indicated in the \acrshort{hal} manual for the STM32H7 series. This function enables clocks for the \acrshort{adc}s, GPIOF, and DMA2, in addition to configuring the correct pins as analog inputs. Clocks and \acrshort{gpio} pins are enable with analog mode and no pull up resistors. 
+	\begin{lstlisting}[language=C, label={lst:das-callbacks}, caption={Showing conversion callbacks for processing \acrshort{adc} data when the \acrshort{dma} fills half.}]
+		void HAL_ADC_MspInit(ADC_HandleTypeDef *hadc) {
+			GPIO_InitTypeDef GPIO_InitStruct = {0};
+			static DMA_HandleTypeDef hdma_adc;
+			
+			if (hadc->Instance == ADCx_MASTER) {
+				/* Enable clocks */
+				ADCx_CLK_ENABLE();0
+				ADCx_CHANNEL_GPIO_CLK_ENABLE();
+				DMAx_CLK_ENABLE();
+				//...
+				/* Configure GPIO pins */
+				GPIO_InitStruct.Pin = ADCx_CHANNEL_PIN | ADCx_CHANNEL_PIN2 | ADCx_CHANNEL_PIN3;
+				GPIO_InitStruct.Mode = GPIO_MODE_ANALOG;
+				GPIO_InitStruct.Pull = GPIO_NOPULL;
+				//...
+				hdma_adc.Init.PeriphDataAlignment = DMA_PDATAALIGN_HALFWORD; // 16-bit
+				hdma_adc.Init.MemDataAlignment = DMA_MDATAALIGN_HALFWORD;
+				hdma_adc.Init.Mode = DMA_CIRCULAR;
+				//...
+				__HAL_LINKDMA(hadc, DMA_Handle, hdma_adc);
+				
+				/* Configure NVIC */
+				HAL_NVIC_SetPriority(ADCx_DMA_IRQn, 0, 0);
+				HAL_NVIC_EnableIRQ(ADCx_DMA_IRQn);
+			}
+	\end{lstlisting}
+	Note that the \acrshort{dma} is used is circular mode to support continuous data acquisition. The \texttt{DMA\_PDATAALIGN\_HALFWORD} variable aligns with 16-bit data corresponding to half a 32-bit word. Furthermore, the board is designed to use and \acrfull{nvic} as a higher-priority interrupt for ensuring timely \acrshort{dma} handling for real-time data acquisition. 
+	
+	Due to time constraints and the low availability of the STM32H723ZG development board, the output spectrogram of the \acrshort{das} is stored in the \texttt{.csv} format with 4 columns for the time-stamp ($\si{\milli\second}$) and the interleaved data samples corresponding to $\texttt{V}_\texttt{x}$, $\texttt{V}_\texttt{y}$, and $\texttt{V}_\texttt{z}$ (in $\si{\volt}$). A Picoscope 2204A \acrshort{usb} oscilloscope which can acquire data at a maximum sampling rate of $100$ \acrshort{msps}. In addition, the Picoscope can output data in a series of \texttt{.csv} files with two columns for the time-stamp and sampled voltage, separately for each channel. Picoscope samples can be visualized using the Picoscope 7 Software which includes multiple analysis tools such as visualizations of the amplitude vs frequency spectrum of the input. In addition to being a substitute sampling device for the STM32H723ZG board, the design employs the \acrshort{usb} oscilloscope and accompanying Picoscope 7 Software to verify the operation of the HP141T Emulator and \acrshort{scs} circuits. This use of the Picoscope is discussed in more detail in the following sections. 
+	
+	\subsection{Digital Processing Subsystem}
+	
+	The aim of the \acrshort{dps} is to prepare the data for display in the \acrshort{guis} and fulfill the requirement for the digitized \acrshort{sa} to have 3 display modes, including the \acrfull(phm), \acrfull{avm} . 
+	
+	To ensure that the \acrshort{das} can integrate seamlessly with the \acrfull{dps} and \acrfull{guis}, regardless of the sampling device that is available between the STM32H723ZG and Picoscope, the code for the spectrogram structure, adopted from a similar project, was modified to generate a series of \texttt{.csv} files, as shown in listing \ref{lst:das-csv-file}. 
+	\begin{lstlisting}[language=C, label={lst:das-csv-file}, caption={Code snippet of the function for storing the interleaved sampling data in a \texttt{.csv}.}]
+	int spectrogram_to_csv(spectrogram_t *s, const char *base_filename) {
+		if (!s || !base_filename) return -1;
+		
+		const double sample_period_ms = 0.000138889; // 1 / 7.2 MSPS
+		int file_index = 0;
+		int point_count = 0;
+		char filename[64];
+		FILE *fp = NULL;
+		
+		for (int i = 0; i < s->npoints && !pause_flag; ++i) {
+			if (point_count == 0) {
+				// Open new file
+				snprintf(filename, sizeof(filename), "%s%d.csv", base_filename, file_index);
+				fp = fopen(filename, "w");
+				if (!fp) return -1;
+				fprintf(fp, "Time (ms),V_x (V),V_y (V),V_z (V)\n");
+			}
+			
+			double time_ms = i * sample_period_ms;
+			float vx = s->data_x[i] * 3.3f / 65535.0f;
+			float vy = s->data_y[i] * 3.3f / 65535.0f;
+			float vz = s->data_z[i] * 3.3f;
+			
+			fprintf(fp, "%.8f,%.8f,%.8f,%.8f\n", time_ms, vx, vy, vz);
+			
+			point_count++;
+			if (point_count >= 801 || i == s->npoints - 1) {
+				fclose(fp);
+				point_count = 0;
+				file_index++;
+			}
+		}
+		
+		return 0;
+	}
+	\end{lstlisting}
+	The \texttt{spectrogram\_data\_i.csv} ($\texttt{i}=0,1,2,..,n, n \in \mathbb{N}$) files generated by the \texttt{spectrogram\_to\_csv} function are inputs to the \acrshort{dps} where mathematical operations are performed on the data in order to display it accurately and allow different view modes. To approximate real-time performance, a \texttt{pause\_flag} variable set in the \texttt{pause\_recording} function and triggered by a touch-screen button on the Raspberry Pi 4B \acrshort{sbc}-based \acrshort{gui}. Time-stamps are calculated at intervals of $\SI{0.00013889}{\milli\second}$ in order to match a the high-sampling rate requirements. The function also scales the sampled 16-bit values to the appropriate $\SI{0}{\volt}$ to $\SI{3.3}{\volt}$ range. 
+	
+	Each division in the displayed amplitude vs frequency spectrogram is mapped to the input voltages from the system. Given that the the vertical output of the HP141T is inverted and scaled in the \acrshort{scs}, the \acrshort{dps} associates the $\SI{0}{\volt}$ to $\SI{3.3}{\volt}$ $\texttt{V}_\texttt{y}$ input with a vertical axis with values up to 80 $\si{\decibel}$. This is in line with the plot shown on the \acrshort{crt} display of the HP141T system which uses $\SI{0.1}{\volt}$ per division scaling to represent the amplitude on 8 divisions of $\SI{10}{\decibel}$ each. 
+	%The pipeline of the \acrshort{dps} is illustrated in figure \ref{fig:dps-pipeline}
 	% ----------------------------------------------------
 	\ifstandalone
 	\bibliography{../Bibliography/References.bib}
