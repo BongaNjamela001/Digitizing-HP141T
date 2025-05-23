@@ -10,39 +10,52 @@
 \contentsline {figure}{\numberline {3.2}{\ignorespaces Heterodyne Spectrum Analyzer Block Diagram.\relax }}{15}{figure.caption.15}%
 \contentsline {figure}{\numberline {3.3}{\ignorespaces Vector analyzer block diagram showing digitization of the \acrshort {if} frequency.\relax }}{16}{figure.caption.16}%
 \contentsline {figure}{\numberline {3.4}{\ignorespaces HP141T \acrshort {crt} display section.\relax }}{24}{figure.caption.33}%
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Overview system block diagram for the modernized HP141T which employs the HP8555A and HP8552B plug-in sections.\relax }}{26}{figure.caption.36}%
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Calibration system diagram where the HP141T Emulator is used to configure the primary subsystems such as the \acrshort {scs}, \acrshort {das}, etc.\relax }}{27}{figure.caption.37}%
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Expansion of the overall system diagram showing the primary components and functions in each subsystem.\relax }}{27}{figure.caption.38}%
-\contentsline {figure}{\numberline {3.8}{\ignorespaces The HP141T Emulator subsystem diagram showing the primary components powered by the same $\pm \SI {12}{\volt }$ DC dual rail supply.\relax }}{29}{figure.caption.45}%
-\contentsline {figure}{\numberline {3.9}{\ignorespaces Emulator circuits for vertical and horizontal outputs of the HP8552B \acrshort {if} section.\relax }}{30}{figure.caption.46}%
-\contentsline {figure}{\numberline {3.10}{\ignorespaces Simulated output at the STO pin of the XR2206 chip for emulating the vertical output of as a $3~\text {V}_\text {pp}$ sinusoidal wave.\relax }}{30}{figure.caption.48}%
-\contentsline {figure}{\numberline {3.11}{\ignorespaces Illustration of the duty cycle and rise time of sawtooth function corresponding to the horizontal output, $\texttt {V}_\texttt {x}$, of the HP8552B.\relax }}{32}{figure.caption.50}%
-\contentsline {figure}{\numberline {3.12}{\ignorespaces XR2206 sawtooth output level shifter for achieving the appropriate voltage range.\relax }}{33}{figure.caption.51}%
-\contentsline {figure}{\numberline {3.13}{\ignorespaces Simulated level shift circuit.\relax }}{33}{figure.caption.52}%
-\contentsline {figure}{\numberline {3.14}{\ignorespaces Showing simulated scan output of the emulator.\relax }}{33}{figure.caption.53}%
-\contentsline {figure}{\numberline {3.15}{\ignorespaces Simulation of the pen lift output using the XR2206 SYNCO pulse output.\relax }}{34}{figure.caption.54}%
-\contentsline {figure}{\numberline {3.16}{\ignorespaces Pen lift output simulation with the XR2206 SYNCO pulse in green and the pulse at the collector of the NPN transistor in red.\relax }}{34}{figure.caption.55}%
-\contentsline {figure}{\numberline {3.17}{\ignorespaces 3D view of the HP141T Emulator subsystem's \acrshort {pcb}.\relax }}{35}{figure.caption.57}%
-\contentsline {figure}{\numberline {3.18}{\ignorespaces HP141T Emulator power supply circuit with decoupling capacitors to reduce high frequency noise.\relax }}{35}{figure.caption.58}%
-\contentsline {figure}{\numberline {3.19}{\ignorespaces Schematic of the input connectors that enable the \acrshort {scs} to interface with the outputs from the HP8552B plug-in or HP141T Emulator subsystem.\relax }}{36}{figure.caption.60}%
-\contentsline {figure}{\numberline {3.20}{\ignorespaces \acrlong {scs} diagram.\relax }}{36}{figure.caption.61}%
-\contentsline {figure}{\numberline {3.21}{\ignorespaces The \acrshort {hsc} pipeline uses an LM358 op-amp to process the horizontal output signal from the HP141T scaling and shifting it to match the sampling microcontroller's \acrshort {adc}'s $\SI {0}{\volt }$ to $\SI {3.3}{\volt }$ input range.\relax }}{37}{figure.caption.62}%
-\contentsline {figure}{\numberline {3.22}{\ignorespaces Circuit schematic of the connectors with $\SI {0}{\volt }$ to $\SI {3.3}{\volt }$ outputs corresponding to the digitized values of the vertical, horizontal, and pen-lift outputs of the \acrshort {scs}.\relax }}{37}{figure.caption.63}%
-\contentsline {figure}{\numberline {3.23}{\ignorespaces \acrshort {hsc} simulation output showing that the op-amp configuration is expected to maintain the shape of the sawtooth scan output.\relax }}{37}{figure.caption.64}%
-\contentsline {figure}{\numberline {3.24}{\ignorespaces An inverting amplifier configuration is used in the \acrshort {vsc} pipeline to prepare the vertical output of the HP8552B for digital processing.\relax }}{38}{figure.caption.66}%
-\contentsline {figure}{\numberline {3.25}{\ignorespaces Simulation output for the case where $\texttt {V}_\texttt {vin}$ assumes all values in the range between $-\SI {0.8}{\volt }$ to $\SI {0}{\volt }$.\relax }}{38}{figure.caption.67}%
-\contentsline {figure}{\numberline {3.26}{\ignorespaces Simulation shows significant clipping of the output at $\SI {0}{\volt }$ when $\texttt {V}_\texttt {vin}$ has a peak-to-peak voltage of $-\SI {0.32}{\volt }$.\relax }}{39}{figure.caption.68}%
-\contentsline {figure}{\numberline {3.27}{\ignorespaces Simulation results indicate that the \acrshort {vsc} circuit has a linear sensitivity of $\SI {70}{\micro \volt }$, compared to the linear sensitivity of $\SI {0.1}{\volt }$ in the vertical output of the HP8552B.\relax }}{39}{figure.caption.69}%
-\contentsline {figure}{\numberline {3.28}{\ignorespaces Showing reduced distortion and voltage clipping in the output for a vertical output frequency of $\SI {100}{\kilo \hertz }$.\relax }}{40}{figure.caption.70}%
-\contentsline {figure}{\numberline {3.29}{\ignorespaces At the maximum rated vertical output frequency of $\SI {300}{\kilo \hertz }$, the phase difference between the input and the output of the \acrshort {vsc} is slightly more than $\pi \si {\radian }$.\relax }}{40}{figure.caption.71}%
-\contentsline {figure}{\numberline {3.30}{\ignorespaces Schematic of the \acrshort {plsc} circuit for preparing the HP8552B pen-lift output for digital processing.\relax }}{41}{figure.caption.73}%
-\contentsline {figure}{\numberline {3.31}{\ignorespaces Simulation result corresponding to the maximum operation voltage of the \acrshort {plsc} circuit corresponding to $\SI {18.77}{\volt }$.\relax }}{41}{figure.caption.74}%
-\contentsline {figure}{\numberline {3.32}{\ignorespaces The \acrshort {scs} is implemented on a single \acrshort {pcb} with a single $\SI {9}{\volt }$ power source.\relax }}{41}{figure.caption.75}%
-\contentsline {figure}{\numberline {3.33}{\ignorespaces \acrshort {das} subsystem block diagram showing the digitization of the analog signals using 2 16-bit \acrshort {adc}s operating in double-interleaved mode.\relax }}{42}{figure.caption.78}%
-\contentsline {figure}{\numberline {3.34}{\ignorespaces ADC1 and ADC2 convert the voltages in a period of 7 \acrshort {adc} clock cycles on the same channel.\relax }}{43}{figure.caption.79}%
-\contentsline {figure}{\numberline {3.35}{\ignorespaces Simulation results of a well-behaved sinusoidal signal that is sampled by the \acrshort {adc}s on the STM32H723ZG development board.\relax }}{43}{figure.caption.81}%
-\contentsline {figure}{\numberline {3.36}{\ignorespaces Simulation of a noisy signal sampled in double-interleaved mode by ADC1 and ADC2 on the STM32H723ZG.\relax }}{44}{figure.caption.82}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Overview system block diagram for the modernized HP141T which employs the HP8555A and HP8552B plug-in sections.\relax }}{27}{figure.caption.36}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Calibration system diagram where the HP141T Emulator is used to configure the primary subsystems such as the \acrshort {scs}, \acrshort {das}, etc.\relax }}{28}{figure.caption.37}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Expansion of the overall system diagram showing the primary components and functions in each subsystem.\relax }}{28}{figure.caption.38}%
+\contentsline {figure}{\numberline {3.8}{\ignorespaces The HP141T Emulator subsystem diagram showing the primary components powered by the same $\pm \SI {12}{\volt }$ DC dual rail supply.\relax }}{30}{figure.caption.45}%
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Emulator circuits for vertical and horizontal outputs of the HP8552B \acrshort {if} section.\relax }}{31}{figure.caption.46}%
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Simulated output at the STO pin of the XR2206 chip employed in emulating the vertical output of as a $3~\text {V}_\text {pp}$ sinusoidal wave.\relax }}{31}{figure.caption.48}%
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Illustration of the duty cycle and rise time of sawtooth function corresponding to the horizontal output, $\texttt {V}_\texttt {x}$, of the HP8552B.\relax }}{33}{figure.caption.50}%
+\contentsline {figure}{\numberline {3.12}{\ignorespaces XR2206 sawtooth output level shifter for achieving the appropriate voltage range.\relax }}{34}{figure.caption.51}%
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Simulated level shift circuit.\relax }}{34}{figure.caption.52}%
+\contentsline {figure}{\numberline {3.14}{\ignorespaces Showing simulated scan output of the emulator.\relax }}{34}{figure.caption.53}%
+\contentsline {figure}{\numberline {3.15}{\ignorespaces Simulation of the pen lift output using the XR2206 SYNCO pulse output.\relax }}{35}{figure.caption.54}%
+\contentsline {figure}{\numberline {3.16}{\ignorespaces Pen lift output simulation with the XR2206 SYNCO pulse in green and the pulse at the collector of the NPN transistor in red.\relax }}{35}{figure.caption.55}%
+\contentsline {figure}{\numberline {3.17}{\ignorespaces 3D view of the HP141T Emulator subsystem's \acrshort {pcb}.\relax }}{36}{figure.caption.57}%
+\contentsline {figure}{\numberline {3.18}{\ignorespaces HP141T Emulator power supply circuit with decoupling capacitors to reduce high frequency noise.\relax }}{36}{figure.caption.58}%
+\contentsline {figure}{\numberline {3.19}{\ignorespaces Schematic of the input connectors that enable the \acrshort {scs} to interface with the outputs from the HP8552B plug-in or HP141T Emulator subsystem.\relax }}{37}{figure.caption.60}%
+\contentsline {figure}{\numberline {3.20}{\ignorespaces \acrlong {scs} diagram.\relax }}{37}{figure.caption.61}%
+\contentsline {figure}{\numberline {3.21}{\ignorespaces The \acrshort {hsc} pipeline uses an LM358 op-amp to process the horizontal output signal from the HP141T scaling and shifting it to match the sampling microcontroller's \acrshort {adc}'s $\SI {0}{\volt }$ to $\SI {3.3}{\volt }$ input range.\relax }}{38}{figure.caption.62}%
+\contentsline {figure}{\numberline {3.22}{\ignorespaces Circuit schematic of the connectors with $\SI {0}{\volt }$ to $\SI {3.3}{\volt }$ outputs corresponding to the digitized values of the vertical, horizontal, and pen-lift outputs of the \acrshort {scs}.\relax }}{38}{figure.caption.63}%
+\contentsline {figure}{\numberline {3.23}{\ignorespaces \acrshort {hsc} simulation output showing that the op-amp configuration is expected to maintain the shape of the sawtooth scan output.\relax }}{38}{figure.caption.64}%
+\contentsline {figure}{\numberline {3.24}{\ignorespaces An inverting amplifier configuration is used in the \acrshort {vsc} pipeline to prepare the vertical output of the HP8552B for digital processing.\relax }}{39}{figure.caption.66}%
+\contentsline {figure}{\numberline {3.25}{\ignorespaces Simulation output for the case where $\texttt {V}_\texttt {vin}$ assumes all values in the range between $-\SI {0.8}{\volt }$ to $\SI {0}{\volt }$.\relax }}{39}{figure.caption.67}%
+\contentsline {figure}{\numberline {3.26}{\ignorespaces Simulation shows significant clipping of the output at $\SI {0}{\volt }$ when $\texttt {V}_\texttt {vin}$ has a peak-to-peak voltage of $-\SI {0.32}{\volt }$.\relax }}{40}{figure.caption.68}%
+\contentsline {figure}{\numberline {3.27}{\ignorespaces Simulation results indicate that the \acrshort {vsc} circuit has a linear sensitivity of $\SI {70}{\micro \volt }$, compared to the linear sensitivity of $\SI {0.1}{\volt }$ in the vertical output of the HP8552B.\relax }}{40}{figure.caption.69}%
+\contentsline {figure}{\numberline {3.28}{\ignorespaces Showing reduced distortion and voltage clipping in the output for a vertical output frequency of $\SI {100}{\kilo \hertz }$.\relax }}{41}{figure.caption.70}%
+\contentsline {figure}{\numberline {3.29}{\ignorespaces At the maximum rated vertical output frequency of $\SI {300}{\kilo \hertz }$, the phase difference between the input and the output of the \acrshort {vsc} is slightly more than $\pi \si {\radian }$.\relax }}{41}{figure.caption.71}%
+\contentsline {figure}{\numberline {3.30}{\ignorespaces Schematic of the \acrshort {plsc} circuit for preparing the HP8552B pen-lift output for digital processing.\relax }}{42}{figure.caption.73}%
+\contentsline {figure}{\numberline {3.31}{\ignorespaces Simulation result corresponding to the maximum operation voltage of the \acrshort {plsc} circuit corresponding to $\SI {18.77}{\volt }$.\relax }}{42}{figure.caption.74}%
+\contentsline {figure}{\numberline {3.32}{\ignorespaces The \acrshort {scs} is implemented on a single \acrshort {pcb} with a single $\SI {9}{\volt }$ power source.\relax }}{42}{figure.caption.75}%
+\contentsline {figure}{\numberline {3.33}{\ignorespaces \acrshort {das} subsystem block diagram showing the digitization of the analog signals using 2 16-bit \acrshort {adc}s operating in double-interleaved mode.\relax }}{43}{figure.caption.78}%
+\contentsline {figure}{\numberline {3.34}{\ignorespaces ADC1 and ADC2 convert the voltages in a period of 7 \acrshort {adc} clock cycles on the same channel.\relax }}{44}{figure.caption.79}%
+\contentsline {figure}{\numberline {3.35}{\ignorespaces Simulation results of a well-behaved sinusoidal signal that is sampled by the \acrshort {adc}s on the STM32H723ZG development board.\relax }}{44}{figure.caption.81}%
+\contentsline {figure}{\numberline {3.36}{\ignorespaces Simulation of a noisy signal sampled in double-interleaved mode by ADC1 and ADC2 on the STM32H723ZG.\relax }}{45}{figure.caption.82}%
+\contentsline {figure}{\numberline {3.37}{\ignorespaces Illustrating how the outputs of the HP141T can be sampled using input channels A and B on the Picoscope 2204A.\relax }}{49}{figure.caption.83}%
+\contentsline {figure}{\numberline {3.38}{\ignorespaces Flow diagram of the \acrlong {dps} which prepares time domain data for display in the frequency domain through the \acrlong {guis}.\relax }}{50}{figure.caption.84}%
+\contentsline {figure}{\numberline {3.39}{\ignorespaces Parts of the \acrshort {rpi} 4B that are of particular interest for this project.\relax }}{52}{figure.caption.85}%
+\contentsline {figure}{\numberline {3.40}{\ignorespaces Illustrating the output voltage range associated with each subsystem. The operation performed by the subsystem is shown above the arrow preceding the block containing the output range of that subsystem.\relax }}{52}{figure.caption.86}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {B.1}{\ignorespaces Gannt Chart employed as a project management tool.\relax }}{73}{figure.caption.95}%
+\contentsline {figure}{\numberline {B.2}{\ignorespaces Part of the Bill of Materials for tracking component purchases.\relax }}{74}{figure.caption.96}%
+\contentsline {figure}{\numberline {B.3}{\ignorespaces Snippet of git log since the first commit.\relax }}{75}{figure.caption.97}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {C.1}{\ignorespaces AI was used for clarifying terms regarding the HP141T system before research was performed.\relax }}{76}{figure.caption.98}%
+\contentsline {figure}{\numberline {C.2}{\ignorespaces AI was used for clarifying terms regarding the HP141T system before research was performed.\relax }}{77}{figure.caption.99}%
+\contentsline {figure}{\numberline {C.3}{\ignorespaces AI was used to restructure phrases.\relax }}{78}{figure.caption.100}%
 \addvspace {10\p@ }

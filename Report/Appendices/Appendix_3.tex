@@ -1,0 +1,45 @@
+% ----------------------------------------------------
+% Introduction
+% ----------------------------------------------------
+\documentclass[class=report,11pt,crop=false]{standalone}
+\input{../Style/ChapterStyle.tex}
+\input{../FrontMatter/Glossary.tex}
+\begin{document}
+	% ----------------------------------------------------
+	\chapter{Appendix}
+
+	\section{AI Usage History}
+	
+	\subsection{Prompts and Results for Clarification}
+	
+	\begin{figure}[ht!]
+		\centering
+		\includegraphics[width=0.50\linewidth]{Figures/Appendices/clarification}
+		\caption{AI was used for clarifying terms regarding the HP141T system before research was performed.}
+		\label{fig:prompts-clarification}
+	\end{figure} 
+
+	\begin{figure}[ht!]
+		\centering
+		\includegraphics[width=0.50\linewidth]{Figures/Appendices/clarification-2}
+		\caption{AI was used for clarifying terms regarding the HP141T system before research was performed.}
+		\label{fig:prompts-clarification-2}
+	\end{figure} 
+	\clearpage
+	\subsection{Prompts for Editing}
+	
+	\begin{figure}[ht!]
+		\centering
+		\includegraphics[width=0.50\linewidth]{Figures/Appendices/editing}
+		\caption{AI was used to restructure phrases.}
+		\label{fig:prompts-editing}
+	\end{figure} 
+	
+	\subsection{Prompts for Debugging}
+	
+	\ifstandalone
+	\bibliography{../Bibliography/References.bib}
+	\printnoidxglossary[type=\acronymtype,nonumberlist]
+	\fi
+\end{document}
+% ----------------------------------------------------

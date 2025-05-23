@@ -1,0 +1,131 @@
+commit 276cbaa7420604c7d6fccf375b9a3c05307400fe
+Author: Bonga Njamela <njmlun002@myuct.ac.za>
+Date:   Wed May 21 22:12:40 2025 +0200
+
+    Completed DAS design and collected some results.
+
+commit 0a0dbbf3f5e60b833f1aaca1696073b75cc76ddb
+Author: Bonga Njamela <njmlun002@myuct.ac.za>
+Date:   Sun May 11 23:34:42 2025 +0200
+
+    Completed the adc.c module in the Software directory.
+
+commit 48d949c75fe2019b61fa13710b2b4cfef93f9d64
+Author: Bonga Njamela <njmlun002@myuct.ac.za>
+Date:   Sat May 10 22:19:26 2025 +0200
+
+    Updated specifications of the SCS.
+
+commit 18fd2e0e5b88b01cd143c3cf62704d3e20f2007a
+Author: Bonga Njamela <njmlun002@myuct.ac.za>
+Date:   Fri May 9 21:50:59 2025 +0200
+
+    Proceeding to complete the methodology.
+
+commit 743562688c6c3ebc406d1019df8c9149e0749319
+Author: Bonga Njamela <njmlun002@myuct.ac.za>
+Date:   Wed Apr 30 01:41:40 2025 +0200
+
+    Updated the Signal Conditioning Subsystem specifications in report.
+
+commit 165f69957de8ac5a0e5376ea7752aa2a1fb8b9ac
+Author: Bonga Njamela <njmlun002@myuct.ac.za>
+Date:   Mon Apr 28 22:07:50 2025 +0200
+
+    Completed report HP141T subsystem design specifications.
+
+commit 650600c35478cce9835ba9597a70143670248ccb
+Author: Bonga Njamela <njmlun002@myuct.ac.za>
+Date:   Mon Apr 28 01:57:09 2025 +0200
+
+    Expanded on specifications report.
+
+commit 67b239392675114734986d2e5dcf295e4e9b80ab
+Author: Bonga Njamela <njmlun002@myuct.ac.za>
+Date:   Fri Apr 25 18:51:42 2025 +0200
+
+    Uploaded MATLAB ADC simulation for STM32H723ZG
+
+commit 3a7678d70080be8a411308eed8166d81cd0151f5
+Author: Bonga Njamela <njmlun002@myuct.ac.za>
+Date:   Fri Apr 25 15:57:38 2025 +0200
+
+    Uploaded MATLAB ADC sim files and results.
+
+commit 2e1e26ab2e0d4f601e294a3681afa21d86e3a41e
+Author: Bonga Njamela <njmlun002@myuct.ac.za>
+Date:   Fri Apr 25 13:43:03 2025 +0200
+
+    Uploaded simulation files.
+
+commit 9d8990e42f6187c91e42b3b3da625d3ac0a4005e
+Author: Bonga Njamela <njmlun002@myuct.ac.za>
+Date:   Tue Apr 22 14:26:42 2025 +0200
+
+    Updated hp141t emulator. Removed +12V to +9V divider
+
+commit 1bfac59a400e8681d3e60ddc93001bcc317d845d
+Author: Bonga Njamela <njmlun002@myuct.ac.za>
+Date:   Thu Apr 10 17:39:55 2025 +0200
+
+    Removed voltage divider. Added 0.1uF power capacitors.
+
+commit 3410a3f7e2b5b18540ae16038cc01de0bb5faa0a
+Author: Bonga Njamela <njmlun002@myuct.ac.za>
+Date:   Thu Apr 10 13:30:03 2025 +0200
+
+    Updated Emulator PCB from v01 to v02. Power supply change.
+
+commit 6d3cf419261add30bc230383238249eb5bead88c
+Author: Bonga Njamela <njmlun002@myuct.ac.za>
+Date:   Wed Apr 9 00:48:21 2025 +0200
+
+    Completed the HP141T Emulator Board
+
+commit 8ce597de85d1750810fb99a8f26882ac51518f2c
+Author: Bonga Njamela <njmlun002@myuct.ac.za>
+Date:   Fri Apr 4 19:40:58 2025 +0200
+
+    Added GND mounting holes to SigConditioningCirc
+
+commit 2527a1f622df6ba2fed050731b71977a7d26086d
+Author: Bonga Njamela <njmlun002@myuct.ac.za>
+Date:   Fri Apr 4 03:02:33 2025 +0200
+
+    Completed Signal Conditioning PCB design.
+
+commit af3bef4cf01732378be2c22aa9a3e62e8f787a23
+Author: Bonga Njamela <njmlun002@myuct.ac.za>
+Date:   Tue Apr 1 20:37:09 2025 +0200
+
+    Completed history section in literature review.
+
+commit dde462536b775a0416495317a7473cdf2eae91db
+Author: Bonga Njamela <njmlun002@myuct.ac.za>
+Date:   Mon Mar 17 03:32:21 2025 +0200
+
+    Completed requirements review and system block diagram.
+
+commit 6febbc1e15ad35aea2193d47f16e781539103382
+Author: Bonga Njamela <njmlun002@myuct.ac.za>
+Date:   Sat Mar 15 02:50:01 2025 +0200
+
+    Started comparison of 141T to modern SAs in requirements review.
+
+commit 56914221f7bfbcfa66e8eb80226875326737ae52
+Author: Bonga Njamela <njmlun002@myuct.ac.za>
+Date:   Thu Mar 13 03:24:01 2025 +0200
+
+    Complete methodology overview and start of requirements review.
+
+commit cb57f9ea4dafbfa5011df5119d0a9470c9874c97
+Author: Bonga Njamela <njmlun002@myuct.ac.za>
+Date:   Wed Mar 12 15:40:42 2025 +0200
+
+    Added report as backup and for version control.
+
+commit c30c70353bfa6912adf86b5be99643dde38fc407
+Author: Bonga Njamela <75367761+BongaNjamela001@users.noreply.github.com>
+Date:   Sat Mar 8 02:23:26 2025 +0200
+
+    Initial commit

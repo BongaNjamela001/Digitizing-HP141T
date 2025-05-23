@@ -1,0 +1,197 @@
+% ----------------------------------------------------
+% Introduction
+% ----------------------------------------------------
+\documentclass[class=report,11pt,crop=false]{standalone}
+\input{../Style/ChapterStyle.tex}
+\input{../FrontMatter/Glossary.tex}
+\begin{document}
+	% ----------------------------------------------------
+	\chapter{Appendix}
+	
+	\section{Data Acquisition Subsystem Code}
+	
+	\subsection{\acrshort{das} Macros}
+	
+	The \acrfull{das} is implemented on the STM32H723ZG microcontroller using embedded C and the STM32 HAL library to sample the horizontal, vertical, and pen-lift signals via ADC1 pins PF10, PF9, and PF8, respectively. A 3-channel \acrshort{dma} stream is used to continuously transfer 16-bit ADC samples into a 402-element buffer, with the \texttt{DMA2\_Stream0\_IRQHandler} managing buffer events via HAL \acrshort{dma} interrupt handling.
+	
+	\begin{lstlisting}[language=C, label={lst:das-adc-macros}, caption={Showing macros for the \acrshort{adc} channels, \acrshort{dma} and the associated interrupts for handling streaming.}]
+		/* ADC Channels */
+		#define ADCx_CHANNEL                    ADC_CHANNEL_8  // V_x
+		#define ADCx_CHANNEL2                   ADC_CHANNEL_7  // V_y
+		#define ADCx_CHANNEL3                   ADC_CHANNEL_6  // V_z
+		
+		/* DMA Configuration */
+		#define ADCx_DMA_CHANNEL                DMA_REQUEST_ADC1 // Master ADC1
+		#define ADCx_DMA_STREAM                 DMA2_Stream0
+		#define ADCx_DMA_IRQn                   DMA2_Stream0_IRQn
+		#define ADCx_DMA_IRQHandler             DMA2_Stream0_IRQHandler
+		
+		ADC_HandleTypeDef    AdcHandleMaster;
+		ADC_HandleTypeDef    AdcHandleSlave;
+		
+		#define ADC_BUF_SIZE 802 // 802 samples (401 samples/channel)
+		volatile uint16_t adc_buffer[ADC_BUF_SIZE] = {0}; // 16-bit for interleaved data
+		
+		volatile int adc_error_flag = 0;
+	\end{lstlisting}
+
+	\subsection{Implementing Direct Memory Access for \acrshort{das}}
+	
+	The \texttt{adc\_init} function configures ADC1 and ADC2 in double-interleaved mode for continuous 16-bit sampling across three channels, with DMA handling enabled for real-time data acquisition. Although the system is configured to output 32-bit words, the use of a \texttt{uint16\_t} buffer relies on the HAL to extract the lower 16 bits of each sample.
+		
+	\begin{lstlisting}[language=C, label={lst:das-spectrogram-init-code}, caption={Code snippet of the \texttt{adc\_init} function which configures the double-interleaved operation of the \acrshort{adc}s.}]
+		int adc_init(void) {
+			ADC_ChannelConfTypeDef sConfig;
+			ADC_MultiModeTypeDef multiMode;
+			//...
+			/* Configure ADC2 (Slave) */
+			AdcHandleSlave.Instance = ADCx_SLAVE;
+			AdcHandleSlave.Init = AdcHandleMaster.Init; // Same config as master
+			if (HAL_ADC_Init(&AdcHandleSlave) != HAL_OK) {
+				adc_error_handler();
+				return -1;
+			}
+			
+			/* Configure double-interleaved mode */
+			multiMode.Mode = ADC_DUALMODE_INTERL_FAST; // Fast interleaved mode
+			multiMode.DualModeData = ADC_DUALMODEDATAFORMAT_32_10_BITS;
+			multiMode.TwoSamplingDelay = ADC_TWOSAMPLINGDELAY_1CYCLE;
+			if (HAL_ADCEx_MultiModeConfigChannel(&AdcHandleMaster, &multiMode) != HAL_OK) {
+				adc_error_handler();
+				return -1;
+			}
+			//...
+		}
+	\end{lstlisting}
+
+	\section{Digital Processing Subsystem Code}
+	
+	\subsection{Using Piecewise Cubic Polynomial Interpolation to Smooth Display}
+	
+	The proposed design implements the Cubic spline interpolation algorithm which uses piecewise cubic polynomials to define a curve within different segments of the data. The code snippet in listing \ref{lst:dps-spline} illustrates how the frequency domain plot of the signal is smoothed to reduce sharp edges that can occur when using linear interpolation. The program plots the \acrshort{crt}-like background grid on the touchscreen, allowing users to analyse the input signal in the tuning section.
+	
+	\begin{lstlisting}[language=Python, caption={Code snippet for performing polynomial interpolation in the \acrshort{dps} to the spectrogram a smoother appearance.}, label={lst:dps-spline}]
+	from scipy.interpolate import CubicSpline
+	#...
+	# Perform cubic spline interpolation
+	def interpolate_data(time_ms, power_db):
+		cs = CubicSpline(time_ms, power_db)
+		time_smooth = np.linspace(time_ms[0], time_ms[-1], 1000)  # Increase resolution
+		power_smooth = cs(time_smooth)
+		 plt.clf()
+		ax = plt.gca()
+		
+		# Plot with CRT styling using spline-interpolated data
+		ax.plot(time_smooth, power_smooth, color='limegreen', linewidth=2)
+		
+		# CRT-like background and grid
+		ax.set_facecolor('black')
+		fig.patch.set_facecolor('black')
+		ax.grid(True, color='gray', linestyle='--', linewidth=0.5)
+		
+		# Grid divisions: 10 (time), 8 (amplitude)
+		time_max = time_ms[-1]
+		ax.set_xticks(np.linspace(0, time_max, 11))
+		ax.set_yticks(np.linspace(0, 80, 9))
+		
+		# Labels and title
+		ax.set_xlabel('Frequency (GHz)', color='white', fontsize=12)
+		ax.set_ylabel('Amplitude (dB)', color='white', fontsize=12)
+		ax.set_title('HP141T Spectrogram', color='white', fontsize=14)
+		ax.tick_params(axis='both', colors='white')
+		
+		# Set axis limits
+		ax.set_xlim(0, time_max)
+		ax.set_ylim(0, 80)
+		
+		canvas.draw()
+		logging.info("Frequency domain plot updated successfully with spline interpolation")
+	\end{lstlisting}
+
+	\section{Graphical User Interface Code}
+
+	\subsection{Pause Functionality Implemented on the Single-Board Computer}
+	The code snippet below is used to flag the STM32H723ZG connected to the single-board \acrshort{rpi} 4B to pause data sampling. The code also illustrates enabled logging for debugging and getting feedback on the user's actions.
+	\begin{lstlisting}[language=Python, caption={Code snippet for function associated with the pause function in latex.}, label={lst:guis-pause-function}]
+	# Global pause flag
+	pause_flag = False
+	
+	def pause_recording():
+		global pause_flag
+		pause_flag = True
+		status_label.config(text="Recording Paused")
+		logging.info("Recording paused by user")
+	\end{lstlisting}
+
+	\subsection{Enabling the \acrfull{phm}, \acrfull{avm} and \acrfull{rwm} Display Modes}
+	The \acrshort{phm} tracks and displays the maximum value seen for each data point and is updated per scan. The \texttt{hp141t} Python module includes a \texttt{SpectrumProcessor Class} for updating the \texttt{time\_data} with the maximum value at each index. 
+	
+	\begin{lstlisting}[language=Python, caption={Code snippet for enabling the \acrshort{phm} when the user presses the \texttt{PHM} button on the screen.}, label={lst:guis-phm}]
+		 # Update mode-specific data
+		if self.mode == 'PHM':
+			np.maximum(self.peak_data, power_db, out=self.peak_data)
+			return self.peak_data
+		elif self.mode == 'AvM':
+			if self.scan_count == 1:
+				self.avg_data = power_db
+			else:
+				self.avg_data = (self.avg_data * (self.scan_count - 1) + power_db) / self.scan_count
+			return self.avg_data
+		else:  # RwM
+			self.raw_data = power_db
+			return self.raw_data
+	\end{lstlisting} 
+
+	\subsection{System Documentation and Tutorial for Users}
+	
+	A \texttt{HELP} button is included to enhance the usability of the system, in line with SRO6. The tutorial is displayed in a read-only \texttt{Text} widget and explains the system to users.
+	
+	\begin{lstlisting}[language=Python, caption={Code snippet for creating a pop-up window with a tutorial when the user interacts with the \texttt{HELP} button.}, label={lst:guis-show-help}]
+		def show_help():
+			"""Display a tutorial window"""
+			help_window = tk.Toplevel(root)
+			help_window.title("Help - HP141T Spectrogram Tutorial")
+			help_window.geometry("400x300")
+			help_window.configure(bg='black')
+			
+			# Tutorial text
+			tutorial_text = """
+			=== HP141T Spectrogram Tutorial ===
+			
+			Welcome to the HP141T Spectrogram Display!
+			This system visualizes data from the HP141T spectrum analyzer on a touchscreen LCD.
+			
+			**Purpose:**
+			- Displays time-domain spectrogram data (0 to 80 dB amplitude, time sweep).
+			- Replicates the CRT display with a green trace and grid.
+			
+			**Modes:**
+			- **Peak Hold Mode (PHM):** Shows the largest value seen at each time point, updated per scan.
+			- **Average Mode (AvM):** Displays the running average of values at each time point, updated per scan.
+			- **Raw Mode (RwM):** Shows the latest value, overwriting previous data during each scan.
+			
+			**Usage:**
+			- **Mode Selection:** Tap 'Peak Hold Mode', 'Average Mode', or 'Raw Mode' to switch display modes.
+			- **Pause:** Tap 'Pause Recording' to stop updates.
+			- **Help:** Tap 'Help' to view this tutorial.
+			- Navigate using touchscreen gestures if supported by future updates.
+			
+			**Notes:**
+			- Data is loaded from 'spectrogram_data_X.csv' files in /home/pi.
+			- Contact support for issues (log at /home/pi/spectrogram_display.log).
+			
+			Close this window to return to the display.
+			"""
+			
+			# Create and configure text widget
+			text_widget = tk.Text(help_window, bg='black', fg='white', font=('Courier', 10), wrap='word')
+			text_widget.insert(tk.END, tutorial_text)
+			text_widget.config(state='disabled')  # Make read-only
+			text_widget.pack(expand=True, fill='both', padx=10, pady=10)
+	\end{lstlisting} 
+	\ifstandalone
+	\bibliography{../Bibliography/References.bib}
+	\printnoidxglossary[type=\acronymtype,nonumberlist]
+	\fi
+\end{document}
+% ----------------------------------------------------

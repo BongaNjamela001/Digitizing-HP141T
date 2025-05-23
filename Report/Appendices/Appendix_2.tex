@@ -1,0 +1,40 @@
+% ----------------------------------------------------
+% Introduction
+% ----------------------------------------------------
+\documentclass[class=report,11pt,crop=false]{standalone}
+\input{../Style/ChapterStyle.tex}
+\input{../FrontMatter/Glossary.tex}
+\begin{document}
+	% ----------------------------------------------------
+	\chapter{Appendix}
+
+	\section{Project Management Documentation}
+	
+	\subsection{Gantt Chart}
+	\begin{figure}[ht!]
+		\centering
+		\includegraphics[width=0.50\linewidth]{Figures/Appendices/gantt-chart}
+		\caption{Gannt Chart employed as a project management tool.}
+		\label{fig:project-gannt}
+	\end{figure} 
+	\clearpage
+	\subsection{Bill of Materials}
+	\begin{figure}[ht!]
+		\centering
+		\includegraphics[width=1.0\linewidth]{Figures/Appendices/system-bom}
+		\caption{Part of the Bill of Materials for tracking component purchases.}
+		\label{fig:system-bom}
+	\end{figure} 
+	\subsection{GitHub Log for Version Control}
+	\begin{figure}[ht!]
+		\centering
+		\includegraphics[width=0.80\linewidth]{Figures/Appendices/gitlog}
+		\caption{Snippet of git log since the first commit.}
+		\label{fig:github-qr}
+	\end{figure} 
+	\ifstandalone
+	\bibliography{../Bibliography/References.bib}
+	\printnoidxglossary[type=\acronymtype,nonumberlist]
+	\fi
+\end{document}
+% ----------------------------------------------------

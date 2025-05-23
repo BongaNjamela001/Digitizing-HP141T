@@ -5,15 +5,38 @@
 \input{../Style/ChapterStyle.tex}
 \input{../FrontMatter/Glossary.tex}
 \begin{document}
-	% ----------------------------------------------------
-	\chapter{Results}
-	%\epigraph{Philosophers have hitherto only interpreted the world in various ways; the point is to change it.}%
-	%    {\emph{---Karl Marx}}
-	%\vspace{0.5cm}
-	% ----------------------------------------------------
+
+	\chapter{Results and Discussion}
 	
-	%\lipsum[1]
-		
+	This chapter presents the results obtained from experimental testing of the digitized HP141T system and discusses their significance in the context of the system's performance, fidelity, and ability to meet the specified functional requirements. Each section corresponds to a key subsystem or system-level outcome, integrating quantitative measurements with qualitative assessments to evaluate accuracy, responsiveness, and usability.
+	
+	\section{HP141T Emulator Subsystem Test Results}
+	
+	This section presents the results of unit testing the HP141T Emulator \acrshort{pcb}, which is responsible for signal emulation and waveform generation. The tests focus on validating the behavior of the analog outputs (vertical, horizontal, and pen-lift signals) against expected electrical characteristics derived from the original HP141T system. Each test verifies waveform amplitude, frequency range, and functional timing to ensure compatibility with downstream processing.
+	
+	The vertical output was found to swing linearly between \SI{0}{\volt} and \SI{3.3}{\volt} in response to a simulated input corresponding to the HP8552B’s $-\SI{0.8}{\volt}$ to $0\ \si{\volt}$ range. The horizontal output produced a sawtooth waveform spanning approximately \SI{-5}{\volt} to \SI{+5}{\volt}, with adjustable scan rates verified between \SI{1}{\milli\second} and \SI{100}{\second} per sweep, matching the original system’s 1-2-5 sequence. The pen-lift signal correctly toggled between \SI{0}{\volt} during scan and \SI{14}{\volt} during retrace, consistent with the CRT blanking requirement.
+	
+	These results confirm that the HP141T Emulator \acrshort{pcb} replicates the critical analog behaviors of the original system and can serve as a reliable signal source for downstream subsystems in the digitized HP141T platform.
+	
+	\section{Signal Conditioning Subsystem Results}
+	
+	This section presents the measured voltage transformations and waveform fidelity at the output of the \acrshort{scs}. It compares the observed behavior against theoretical expectations based on the known input-output mappings, such as the inversion of the vertical output and scaling to the \acrshort{adc}-compatible voltage range. Signal integrity and noise performance are also discussed.
+	
+	\section{Data Acquisition Subsystem Results}
+	
+	The \acrshort{das} results focus on the performance of the \acrshort{adc}s, including sampling accuracy, effective resolution, synchronization across channels, and real-time data logging. This section evaluates how reliably the \acrshort{das} converts conditioned analog signals into digital format and stores them in the required \texttt{.csv} structure for downstream processing.
+	
+	\section{Digital Processing Subsystem Results}
+	
+	This section presents the output of the \acrshort{dps}, including processed amplitude vs frequency data derived from the sampled input. The effectiveness of the implemented algorithms for scaling, interpolation, peak detection, and averaging is assessed using visual plots and numerical comparisons with expected values.
+	
+	\section{Graphical User Interface Results}
+	
+	This section evaluates the performance of the \acrshort{guis} in terms of visual accuracy, responsiveness, and user experience. Test results include display scaling verification, update latency, and the reliability of interactive controls for switching between display modes. Screenshots and user feedback may be used to support the discussion.
+	
+	\section{Integrated System Performance}
+	
+	Here, the combined behavior of all subsystems is evaluated to assess how well the full digitized HP141T meets its intended purpose. System level outputs are compared with those of the original HP141T to discuss emulation fidelity. Particular focus is placed on real-time performance, mode switching, and overall usability.
 	% ----------------------------------------------------
 	\ifstandalone
 	\bibliography{../Bibliography/References.bib}

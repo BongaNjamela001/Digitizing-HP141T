@@ -54,45 +54,45 @@ I'm skipping whatever remains of this entry
 Warning--empty journal in vollinger2023
 
 Done.
-You've used 26 entries,
+You've used 27 entries,
             4087 wiz_defined-function locations,
-            982 strings with 12007 characters,
-and the built_in function-call counts, 14463 in all, are:
-= -- 1211
-> -- 216
+            989 strings with 12180 characters,
+and the built_in function-call counts, 14816 in all, are:
+= -- 1239
+> -- 220
 < -- 102
-+ -- 122
-- -- 31
-* -- 629
-:= -- 2354
-add.period$ -- 49
-call.type$ -- 26
-change.case$ -- 24
++ -- 124
+- -- 32
+* -- 639
+:= -- 2419
+add.period$ -- 51
+call.type$ -- 27
+change.case$ -- 25
 chr.to.int$ -- 231
-cite$ -- 27
-duplicate$ -- 1103
-empty$ -- 1245
-format.name$ -- 39
-if$ -- 3337
+cite$ -- 28
+duplicate$ -- 1134
+empty$ -- 1282
+format.name$ -- 40
+if$ -- 3416
 int.to.chr$ -- 0
-int.to.str$ -- 26
-missing$ -- 194
-newline$ -- 103
-num.names$ -- 19
-pop$ -- 414
+int.to.str$ -- 27
+missing$ -- 201
+newline$ -- 106
+num.names$ -- 20
+pop$ -- 433
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 1154
+skip$ -- 1184
 stack$ -- 0
-substring$ -- 566
-swap$ -- 831
+substring$ -- 567
+swap$ -- 848
 text.length$ -- 25
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 26
+type$ -- 27
 warning$ -- 1
-while$ -- 67
-width$ -- 28
-write$ -- 255
+while$ -- 68
+width$ -- 29
+write$ -- 263
 (There were 8 error messages)

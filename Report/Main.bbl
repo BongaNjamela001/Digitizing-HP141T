@@ -156,4 +156,9 @@ A.~Al~Adnani, J.~Duplicy, and L.~Philips, ``Spectrum {A}nalyzers {T}oday and
   \href{https://www.st.com/resource/en/application_note/an3116-stm32s-adc-modes-and-their-applications-stmicroelectronics.pdf}{Application
   Note}.
 
+\bibitem{sebgithub2024}
+H.~Sebastian, ``{HP141T} {LCD} {U}pgrade,''
+  \href{https://github.com/vk2seb/stm32_hp141_lcd}{GitHub Repo. Last Accessed
+  21 May 2025.}, 2024.
+
 \end{thebibliography}
