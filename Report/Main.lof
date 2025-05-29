@@ -29,33 +29,44 @@
 \contentsline {figure}{\numberline {3.21}{\ignorespaces The \acrshort {hsc} pipeline uses an LM358 op-amp to process the horizontal output signal from the HP141T scaling and shifting it to match the sampling microcontroller's \acrshort {adc}'s $\SI {0}{\volt }$ to $\SI {3.3}{\volt }$ input range.\relax }}{38}{figure.caption.62}%
 \contentsline {figure}{\numberline {3.22}{\ignorespaces Circuit schematic of the connectors with $\SI {0}{\volt }$ to $\SI {3.3}{\volt }$ outputs corresponding to the digitized values of the vertical, horizontal, and pen-lift outputs of the \acrshort {scs}.\relax }}{38}{figure.caption.63}%
 \contentsline {figure}{\numberline {3.23}{\ignorespaces \acrshort {hsc} simulation output showing that the op-amp configuration is expected to maintain the shape of the sawtooth scan output.\relax }}{38}{figure.caption.64}%
-\contentsline {figure}{\numberline {3.24}{\ignorespaces An inverting amplifier configuration is used in the \acrshort {vsc} pipeline to prepare the vertical output of the HP8552B for digital processing.\relax }}{39}{figure.caption.66}%
-\contentsline {figure}{\numberline {3.25}{\ignorespaces Simulation output for the case where $\texttt {V}_\texttt {vin}$ assumes all values in the range between $-\SI {0.8}{\volt }$ to $\SI {0}{\volt }$.\relax }}{39}{figure.caption.67}%
-\contentsline {figure}{\numberline {3.26}{\ignorespaces Simulation shows significant clipping of the output at $\SI {0}{\volt }$ when $\texttt {V}_\texttt {vin}$ has a peak-to-peak voltage of $-\SI {0.32}{\volt }$.\relax }}{40}{figure.caption.68}%
-\contentsline {figure}{\numberline {3.27}{\ignorespaces Simulation results indicate that the \acrshort {vsc} circuit has a linear sensitivity of $\SI {70}{\micro \volt }$, compared to the linear sensitivity of $\SI {0.1}{\volt }$ in the vertical output of the HP8552B.\relax }}{40}{figure.caption.69}%
-\contentsline {figure}{\numberline {3.28}{\ignorespaces Showing reduced distortion and voltage clipping in the output for a vertical output frequency of $\SI {100}{\kilo \hertz }$.\relax }}{41}{figure.caption.70}%
-\contentsline {figure}{\numberline {3.29}{\ignorespaces At the maximum rated vertical output frequency of $\SI {300}{\kilo \hertz }$, the phase difference between the input and the output of the \acrshort {vsc} is slightly more than $\pi \si {\radian }$.\relax }}{41}{figure.caption.71}%
-\contentsline {figure}{\numberline {3.30}{\ignorespaces Schematic of the \acrshort {plsc} circuit for preparing the HP8552B pen-lift output for digital processing.\relax }}{42}{figure.caption.73}%
-\contentsline {figure}{\numberline {3.31}{\ignorespaces Simulation result corresponding to the maximum operation voltage of the \acrshort {plsc} circuit corresponding to $\SI {18.77}{\volt }$.\relax }}{42}{figure.caption.74}%
-\contentsline {figure}{\numberline {3.32}{\ignorespaces The \acrshort {scs} is implemented on a single \acrshort {pcb} with a single $\SI {9}{\volt }$ power source.\relax }}{42}{figure.caption.75}%
-\contentsline {figure}{\numberline {3.33}{\ignorespaces \acrshort {das} subsystem block diagram showing the digitization of the analog signals using 2 16-bit \acrshort {adc}s operating in double-interleaved mode.\relax }}{43}{figure.caption.78}%
-\contentsline {figure}{\numberline {3.34}{\ignorespaces ADC1 and ADC2 convert the voltages in a period of 7 \acrshort {adc} clock cycles on the same channel.\relax }}{44}{figure.caption.79}%
-\contentsline {figure}{\numberline {3.35}{\ignorespaces Simulation results of a well-behaved sinusoidal signal that is sampled by the \acrshort {adc}s on the STM32H723ZG development board.\relax }}{44}{figure.caption.81}%
-\contentsline {figure}{\numberline {3.36}{\ignorespaces Simulation of a noisy signal sampled in double-interleaved mode by ADC1 and ADC2 on the STM32H723ZG.\relax }}{45}{figure.caption.82}%
-\contentsline {figure}{\numberline {3.37}{\ignorespaces Illustrating how the outputs of the HP141T can be sampled using input channels A and B on the Picoscope 2204A.\relax }}{49}{figure.caption.83}%
-\contentsline {figure}{\numberline {3.38}{\ignorespaces Flow diagram of the \acrlong {dps} which prepares time domain data for display in the frequency domain through the \acrlong {guis}.\relax }}{50}{figure.caption.84}%
-\contentsline {figure}{\numberline {3.39}{\ignorespaces Parts of the \acrshort {rpi} 4B that are of particular interest for this project.\relax }}{52}{figure.caption.85}%
-\contentsline {figure}{\numberline {3.40}{\ignorespaces Illustrating the output voltage range associated with each subsystem. The operation performed by the subsystem is shown above the arrow preceding the block containing the output range of that subsystem.\relax }}{52}{figure.caption.86}%
+\contentsline {figure}{\numberline {3.24}{\ignorespaces An inverting amplifier configuration is used in the \acrshort {vsc} pipeline to prepare the vertical output of the HP8552B for digital processing.\relax }}{39}{figure.caption.65}%
+\contentsline {figure}{\numberline {3.25}{\ignorespaces Simulation output for the case where $\texttt {V}_\texttt {vin}$ assumes all values in the range between $-\SI {0.8}{\volt }$ to $\SI {0}{\volt }$.\relax }}{39}{figure.caption.66}%
+\contentsline {figure}{\numberline {3.26}{\ignorespaces Simulation shows significant clipping of the output at $\SI {0}{\volt }$ when $\texttt {V}_\texttt {vin}$ has a peak-to-peak voltage of $-\SI {0.32}{\volt }$.\relax }}{40}{figure.caption.67}%
+\contentsline {figure}{\numberline {3.27}{\ignorespaces Simulation results indicate that the \acrshort {vsc} circuit has a linear sensitivity of $\SI {70}{\micro \volt }$, compared to the linear sensitivity of $\SI {0.1}{\volt }$ in the vertical output of the HP8552B.\relax }}{40}{figure.caption.68}%
+\contentsline {figure}{\numberline {3.28}{\ignorespaces Showing reduced distortion and voltage clipping in the output for a vertical output frequency of $\SI {100}{\kilo \hertz }$.\relax }}{41}{figure.caption.69}%
+\contentsline {figure}{\numberline {3.29}{\ignorespaces At the maximum rated vertical output frequency of $\SI {300}{\kilo \hertz }$, the phase difference between the input and the output of the \acrshort {vsc} is slightly more than $\pi \si {\radian }$.\relax }}{41}{figure.caption.70}%
+\contentsline {figure}{\numberline {3.30}{\ignorespaces Schematic of the \acrshort {plsc} circuit for preparing the HP8552B pen-lift output for digital processing.\relax }}{41}{figure.caption.71}%
+\contentsline {figure}{\numberline {3.31}{\ignorespaces Simulation result corresponding to the maximum operation voltage of the \acrshort {plsc} circuit corresponding to $\SI {18.77}{\volt }$.\relax }}{42}{figure.caption.72}%
+\contentsline {figure}{\numberline {3.32}{\ignorespaces The \acrshort {scs} is implemented on a single \acrshort {pcb} with a single $\SI {9}{\volt }$ power source.\relax }}{42}{figure.caption.73}%
+\contentsline {figure}{\numberline {3.33}{\ignorespaces \acrshort {das} subsystem block diagram showing the digitization of the analog signals using 2 16-bit \acrshort {adc}s operating in double-interleaved mode.\relax }}{43}{figure.caption.75}%
+\contentsline {figure}{\numberline {3.34}{\ignorespaces ADC1 and ADC2 convert the voltages in a period of 7 \acrshort {adc} clock cycles on the same channel.\relax }}{43}{figure.caption.76}%
+\contentsline {figure}{\numberline {3.35}{\ignorespaces Simulation results of a well-behaved sinusoidal signal that is sampled by the \acrshort {adc}s on the STM32H723ZG development board.\relax }}{44}{figure.caption.78}%
+\contentsline {figure}{\numberline {3.36}{\ignorespaces Simulation of a noisy signal sampled in double-interleaved mode by ADC1 and ADC2 on the STM32H723ZG.\relax }}{45}{figure.caption.79}%
+\contentsline {figure}{\numberline {3.37}{\ignorespaces Illustrating how the outputs of the HP141T can be sampled using input channels A and B on the Picoscope 2204A.\relax }}{48}{figure.caption.80}%
+\contentsline {figure}{\numberline {3.38}{\ignorespaces Flow diagram of the \acrlong {dps} which prepares time domain data for display in the frequency domain through the \acrlong {guis}.\relax }}{49}{figure.caption.81}%
+\contentsline {figure}{\numberline {3.39}{\ignorespaces Parts of the \acrshort {rpi} 4B that are of particular interest for this project.\relax }}{50}{figure.caption.82}%
+\contentsline {figure}{\numberline {3.40}{\ignorespaces Illustrating the output voltage range associated with each subsystem. The operation performed by the subsystem is shown above the arrow preceding the block containing the output range of that subsystem.\relax }}{51}{figure.caption.83}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Test environment for the approximating outputs of the HP8552B plug-in section.\relax }}{59}{figure.caption.91}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Results from the investigation of the relationship between the vertical output's peak-to-peak voltage settings on the SDG1010 and the measured peak-to-peak voltage in Picoscope 7. The frequency and phase were maintained at constant values of $\SI {10}{\kilo \hertz }$ and $\SI {0}{\degree }$, respectively.\relax }}{60}{figure.caption.92}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Showing approximation of the vertical output with a noisy signal from the wave generator.\relax }}{61}{figure.caption.94}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Test results of the approximated values of the horizontal and pen-lift outputs of the original HP141T system obtained using the Siglent SDG1010.\relax }}{61}{figure.caption.95}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Showing construction of the HP141T Emulator and connection to the HP-E3630 DC power supply. The outputs of the design were collected using a oscilloscope probe connected to the Picoscope and \acrshort {bnc} adapters on the circuit.\relax }}{62}{figure.caption.96}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Results of the HP141T Emulator indicating that the device was not operating as expected.\relax }}{63}{figure.caption.97}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Results from the implementation of the \acrshort {scs} on a \acrshort {pcb}.\relax }}{64}{figure.caption.99}%
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Results showing the effect of increasing the frequency on the amount of voltage clipping at the output of the \acrshort {scs}.\relax }}{64}{figure.caption.100}%
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Results showing a satisfactory response of the \acrshort {scs} to a noisy vertical input signal.\relax }}{65}{figure.caption.101}%
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Showing how data was stored using the Picoscope to generate \texttt {.csv} files for processing in the \acrshort {dsp}.\relax }}{66}{figure.caption.103}%
+\contentsline {figure}{\numberline {4.11}{\ignorespaces Showing the setup for the \acrshort {dps} and \acrshort {guis} which were both based on the \acrshort {rpi} 4B \acrshort {sbc}.\relax }}{66}{figure.caption.104}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {B.1}{\ignorespaces Gannt Chart employed as a project management tool.\relax }}{82}{figure.caption.108}%
+\contentsline {figure}{\numberline {B.2}{\ignorespaces Part of the Bill of Materials for tracking component purchases.\relax }}{83}{figure.caption.109}%
+\contentsline {figure}{\numberline {B.3}{\ignorespaces Snippet of git log since the first commit.\relax }}{84}{figure.caption.110}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {B.1}{\ignorespaces Gannt Chart employed as a project management tool.\relax }}{73}{figure.caption.95}%
-\contentsline {figure}{\numberline {B.2}{\ignorespaces Part of the Bill of Materials for tracking component purchases.\relax }}{74}{figure.caption.96}%
-\contentsline {figure}{\numberline {B.3}{\ignorespaces Snippet of git log since the first commit.\relax }}{75}{figure.caption.97}%
-\addvspace {10\p@ }
-\contentsline {figure}{\numberline {C.1}{\ignorespaces AI was used for clarifying terms regarding the HP141T system before research was performed.\relax }}{76}{figure.caption.98}%
-\contentsline {figure}{\numberline {C.2}{\ignorespaces AI was used for clarifying terms regarding the HP141T system before research was performed.\relax }}{77}{figure.caption.99}%
-\contentsline {figure}{\numberline {C.3}{\ignorespaces AI was used to restructure phrases.\relax }}{78}{figure.caption.100}%
+\contentsline {figure}{\numberline {C.1}{\ignorespaces AI was used for clarifying terms regarding the HP141T system before research was performed.\relax }}{85}{figure.caption.111}%
+\contentsline {figure}{\numberline {C.2}{\ignorespaces AI was used for clarifying terms regarding the HP141T system before research was performed.\relax }}{86}{figure.caption.112}%
+\contentsline {figure}{\numberline {C.3}{\ignorespaces AI was used to restructure phrases.\relax }}{87}{figure.caption.113}%
 \addvspace {10\p@ }

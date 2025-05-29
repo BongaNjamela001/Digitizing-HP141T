@@ -11,9 +11,37 @@
     {\emph{---Abraham Lincoln}}
 \vspace{0.5cm}
 % ----------------------------------------------------
-\section{Hardware Recommendations}
+\section{Subsystem Recommendations}
+
+\subsection{Recommendations for the HP141T System Tests}
+
+The unit tests for verifying the operation of the HP141T system should be performed with the access to the actual device to confirm the results obtained using the Siglent SDG1010.
+
+\subsection{Recommendations for the HP141T Emulator}
+
+The system should use the E24 series of resistances to ensure that the design follows the recommended circuit structures in the datasheet of the XR2206 function generator.
+
+Isolated tests should be performed for each chip on a breadboard to ensure that they are functioning as exepected. 
+
+The design should use the specified 5 pole right angle DIN 41524 socket for compatibility with the 28W power brick AC/DC adapter. 
+
+\subsection{Recommendations for the \acrlong{scs}}
+
+The system can improve accuracy by using op-amps with higher performance, such as the NE5532, TL072, or TLV324. 
+
+\subsection{Recommendations for the \acrlong{das}}
+
+Tests for real-time performance should be performed using the STM32H723ZG development board. High priority should be placed on early procurement of the device due to its limited availability.
 
 To improve high current demand when sampling using the \acrshort{adc}s on the STM32H746ZG development board, a capacitor should be placed close to the \acrshort{adc}s' input pins. According to ST Electronics, the capacitor stores charge to ensure good settling time to the desired input voltage level.   
+
+\subsection{Recommendations for the \acrlong{dps}}
+
+The subsystem should implement dataprocessing on a \acrshort{fpga} for higher performance. 
+
+\subsection{Recommendations for the \acrshort{guis}}
+
+A touchscreen with the same dimensions as the \acrshort{crt} display of the original HP141T system should be developed to replace the \acrshort{crt} display. 
 % ----------------------------------------------------
 \ifstandalone
 \bibliography{../Bibliography/References.bib}

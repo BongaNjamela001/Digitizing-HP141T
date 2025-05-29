@@ -17,13 +17,7 @@
 \contentsline {subsection}{\numberline {2.1.6}Obsolescence Mitigation and Modernization Strategies}{8}{subsection.2.1.6}%
 \contentsline {subsection}{\numberline {2.1.7}Conclusion}{9}{subsection.2.1.7}%
 \contentsline {section}{\numberline {2.2}A Preview of the Operation of Spectrum Analyzers to Establish the Context for Digitization and Modernization}{10}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}Classifications of Spectrum Analyzers}{11}{subsection.2.2.1}%
-\contentsline {subsection}{\numberline {2.2.2}Primary Components of Spectrum Analyzers}{11}{subsection.2.2.2}%
-\contentsline {subsection}{\numberline {2.2.3}Features of Modern Spectrum Analyzer Displays}{11}{subsection.2.2.3}%
-\contentsline {section}{\numberline {2.3}Digitizing Spectrum Analyzer Outputs}{11}{section.2.3}%
-\contentsline {subsection}{\numberline {2.3.1}Output Voltage Regulation and Preparation for Frequency Analysis}{11}{subsection.2.3.1}%
-\contentsline {subsection}{\numberline {2.3.2}Transforming Spectrum Analyzer Output Signals to Digital Frequency Domain}{11}{subsection.2.3.2}%
-\contentsline {subsection}{\numberline {2.3.3}Interfacing Computers with Spectrum Analyzers}{11}{subsection.2.3.3}%
+\contentsline {subsection}{\numberline {2.2.1}Conclusion}{10}{subsection.2.2.1}%
 \contentsline {chapter}{\numberline {3}Methodology }{12}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Methodology Outline}{12}{section.3.1}%
 \contentsline {section}{\numberline {3.2}Phases in the Design Process}{13}{section.3.2}%
@@ -48,50 +42,56 @@
 \contentsline {subsubsection}{HP141T Subsystem Specifications}{29}{section*.40}%
 \contentsline {subsubsection}{HP141T Emulator Subsystem Design}{30}{section*.44}%
 \contentsline {subsubsection}{Signal Conditioning Subsystem Design}{36}{section*.59}%
-\contentsline {subsubsection}{Data Acquisition Subsystem}{43}{section*.77}%
-\contentsline {subsection}{\numberline {3.4.3}Digital Processing Subsystem}{49}{subsection.3.4.3}%
-\contentsline {subsection}{\numberline {3.4.4}Graphical User Interface Subsystem}{53}{subsection.3.4.4}%
-\contentsline {section}{\numberline {3.5}Experimental Test Procedures}{54}{section.3.5}%
-\contentsline {subsection}{\numberline {3.5.1}Unit Tests for Subsystem Verification}{55}{subsection.3.5.1}%
-\contentsline {subsubsection}{HP141T System Unit Tests}{55}{section*.88}%
-\contentsline {subsubsection}{HP141T Emulator Unit Tests}{56}{section*.89}%
-\contentsline {subsubsection}{\acrlong {scs} Unit Tests}{57}{section*.90}%
-\contentsline {subsubsection}{\acrlong {das} Unit Tests}{58}{section*.91}%
-\contentsline {subsubsection}{\acrlong {dps} Unit Tests}{59}{section*.92}%
-\contentsline {subsubsection}{\acrshort {guis} Unit Tests}{59}{section*.93}%
-\contentsline {subsection}{\numberline {3.5.2}Integration Tests for Overall Digitized HP141T System Verification}{60}{subsection.3.5.2}%
-\contentsline {subsection}{\numberline {3.5.3}Acceptance Tests}{60}{subsection.3.5.3}%
-\contentsline {chapter}{\numberline {4}Results and Discussion}{61}{chapter.4}%
-\contentsline {section}{\numberline {4.1}HP141T Emulator Subsystem Test Results}{61}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Signal Conditioning Subsystem Results}{61}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Data Acquisition Subsystem Results}{62}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Digital Processing Subsystem Results}{62}{section.4.4}%
-\contentsline {section}{\numberline {4.5}Graphical User Interface Results}{62}{section.4.5}%
-\contentsline {section}{\numberline {4.6}Integrated System Performance}{62}{section.4.6}%
-\contentsline {chapter}{\numberline {5}Conclusions }{63}{chapter.5}%
-\contentsline {chapter}{\numberline {6}Recommendations }{64}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Hardware Recommendations}{64}{section.6.1}%
-\contentsline {chapter}{Bibliography}{65}{chapter*.94}%
-\contentsline {chapter}{\numberline {A}Appendix}{67}{appendix.A}%
-\contentsline {section}{\numberline {A.1}Data Acquisition Subsystem Code}{67}{section.A.1}%
-\contentsline {subsection}{\numberline {A.1.1}\acrshort {das} Macros}{67}{subsection.A.1.1}%
-\contentsline {subsection}{\numberline {A.1.2}Implementing Direct Memory Access for \acrshort {das}}{68}{subsection.A.1.2}%
-\contentsline {section}{\numberline {A.2}Digital Processing Subsystem Code}{68}{section.A.2}%
-\contentsline {subsection}{\numberline {A.2.1}Using Piecewise Cubic Polynomial Interpolation to Smooth Display}{68}{subsection.A.2.1}%
-\contentsline {section}{\numberline {A.3}Graphical User Interface Code}{70}{section.A.3}%
-\contentsline {subsection}{\numberline {A.3.1}Pause Functionality Implemented on the Single-Board Computer}{70}{subsection.A.3.1}%
-\contentsline {subsection}{\numberline {A.3.2}Enabling the \acrfull {phm}, \acrfull {avm} and \acrfull {rwm} Display Modes}{70}{subsection.A.3.2}%
-\contentsline {subsection}{\numberline {A.3.3}System Documentation and Tutorial for Users}{71}{subsection.A.3.3}%
-\contentsline {chapter}{\numberline {B}Appendix}{73}{appendix.B}%
-\contentsline {section}{\numberline {B.1}Project Management Documentation}{73}{section.B.1}%
-\contentsline {subsection}{\numberline {B.1.1}Gantt Chart}{73}{subsection.B.1.1}%
-\contentsline {subsection}{\numberline {B.1.2}Bill of Materials}{74}{subsection.B.1.2}%
-\contentsline {subsection}{\numberline {B.1.3}GitHub Log for Version Control}{75}{subsection.B.1.3}%
-\contentsline {chapter}{\numberline {C}Appendix}{76}{appendix.C}%
-\contentsline {section}{\numberline {C.1}AI Usage History}{76}{section.C.1}%
-\contentsline {subsection}{\numberline {C.1.1}Prompts and Results for Clarification}{76}{subsection.C.1.1}%
-\contentsline {subsection}{\numberline {C.1.2}Prompts for Editing}{78}{subsection.C.1.2}%
-\contentsline {subsection}{\numberline {C.1.3}Prompts for Debugging}{78}{subsection.C.1.3}%
-\contentsline {chapter}{\numberline {D}Appendix}{79}{appendix.D}%
-\contentsline {section}{\numberline {D.1}Graduate Attributes}{79}{section.D.1}%
-\contentsline {subsection}{\numberline {D.1.1}GA Table}{79}{subsection.D.1.1}%
+\contentsline {subsubsection}{Data Acquisition Subsystem}{42}{section*.74}%
+\contentsline {subsection}{\numberline {3.4.3}Digital Processing Subsystem}{48}{subsection.3.4.3}%
+\contentsline {subsection}{\numberline {3.4.4}Graphical User Interface Subsystem}{51}{subsection.3.4.4}%
+\contentsline {section}{\numberline {3.5}Experimental Test Procedures}{53}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}Unit Tests for Subsystem Verification}{53}{subsection.3.5.1}%
+\contentsline {subsubsection}{HP141T System Unit Tests}{53}{section*.85}%
+\contentsline {subsubsection}{HP141T Emulator Unit Tests}{54}{section*.86}%
+\contentsline {subsubsection}{\acrlong {scs} Unit Tests}{55}{section*.87}%
+\contentsline {subsubsection}{\acrlong {das} Unit Tests}{56}{section*.88}%
+\contentsline {subsubsection}{\acrlong {dps} Unit Tests}{57}{section*.89}%
+\contentsline {subsubsection}{\acrshort {guis} Unit Tests}{57}{section*.90}%
+\contentsline {subsection}{\numberline {3.5.2}Integration Tests for Overall Digitized HP141T System Verification}{58}{subsection.3.5.2}%
+\contentsline {subsection}{\numberline {3.5.3}Acceptance Tests}{58}{subsection.3.5.3}%
+\contentsline {chapter}{\numberline {4}Results and Discussion}{59}{chapter.4}%
+\contentsline {section}{\numberline {4.1}HP141T System Test Results}{59}{section.4.1}%
+\contentsline {section}{\numberline {4.2}HP141T Emulator Subsystem Test Results}{62}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Signal Conditioning Subsystem Results}{63}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Data Acquisition Subsystem Results}{65}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Digital Processing and Graphical User Interface Results}{66}{section.4.5}%
+\contentsline {chapter}{\numberline {5}Conclusions }{68}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Recommendations }{70}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Subsystem Recommendations}{70}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1}Recommendations for the HP141T System Tests}{70}{subsection.6.1.1}%
+\contentsline {subsection}{\numberline {6.1.2}Recommendations for the HP141T Emulator}{70}{subsection.6.1.2}%
+\contentsline {subsection}{\numberline {6.1.3}Recommendations for the \acrlong {scs}}{70}{subsection.6.1.3}%
+\contentsline {subsection}{\numberline {6.1.4}Recommendations for the \acrlong {das}}{70}{subsection.6.1.4}%
+\contentsline {subsection}{\numberline {6.1.5}Recommendations for the \acrlong {dps}}{71}{subsection.6.1.5}%
+\contentsline {subsection}{\numberline {6.1.6}Recommendations for the \acrshort {guis}}{71}{subsection.6.1.6}%
+\contentsline {chapter}{Bibliography}{72}{chapter*.107}%
+\contentsline {chapter}{\numberline {A}Appendix}{74}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Data Acquisition Subsystem Code}{74}{section.A.1}%
+\contentsline {subsection}{\numberline {A.1.1}\acrshort {das} Macros}{74}{subsection.A.1.1}%
+\contentsline {subsection}{\numberline {A.1.2}Implementing Direct Memory Access for \acrshort {das}}{75}{subsection.A.1.2}%
+\contentsline {subsection}{\numberline {A.1.3}Reading Interleaved Data}{75}{subsection.A.1.3}%
+\contentsline {subsection}{\numberline {A.1.4}Enabling \acrshort {adc}'s and Peripherals on STM32H723ZG}{76}{subsection.A.1.4}%
+\contentsline {section}{\numberline {A.2}Digital Processing Subsystem Code}{77}{section.A.2}%
+\contentsline {subsection}{\numberline {A.2.1}Data Formatting}{77}{subsection.A.2.1}%
+\contentsline {subsection}{\numberline {A.2.2}Using Piecewise Cubic Polynomial Interpolation to Smooth Display}{78}{subsection.A.2.2}%
+\contentsline {section}{\numberline {A.3}Graphical User Interface Code}{79}{section.A.3}%
+\contentsline {subsection}{\numberline {A.3.1}Pause Functionality Implemented on the Single-Board Computer}{79}{subsection.A.3.1}%
+\contentsline {subsection}{\numberline {A.3.2}Enabling the \acrfull {phm}, \acrfull {avm} and \acrfull {rwm} Display Modes}{80}{subsection.A.3.2}%
+\contentsline {subsection}{\numberline {A.3.3}System Documentation and Tutorial for Users}{80}{subsection.A.3.3}%
+\contentsline {chapter}{\numberline {B}Appendix}{82}{appendix.B}%
+\contentsline {section}{\numberline {B.1}Project Management Documentation}{82}{section.B.1}%
+\contentsline {subsection}{\numberline {B.1.1}Gantt Chart}{82}{subsection.B.1.1}%
+\contentsline {subsection}{\numberline {B.1.2}Bill of Materials}{83}{subsection.B.1.2}%
+\contentsline {subsection}{\numberline {B.1.3}GitHub Log for Version Control}{84}{subsection.B.1.3}%
+\contentsline {chapter}{\numberline {C}Appendix}{85}{appendix.C}%
+\contentsline {section}{\numberline {C.1}AI Usage History}{85}{section.C.1}%
+\contentsline {subsection}{\numberline {C.1.1}Prompts and Results for Clarification}{85}{subsection.C.1.1}%
+\contentsline {subsection}{\numberline {C.1.2}Prompts for Editing}{87}{subsection.C.1.2}%
+\contentsline {chapter}{\numberline {D}Appendix}{88}{appendix.D}%
+\contentsline {section}{\numberline {D.1}Graduate Attributes}{88}{section.D.1}%

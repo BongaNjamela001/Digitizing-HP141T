@@ -136,7 +136,7 @@
 	 	\centering
 	 	\begin{tabular}{|m{8em}|m{15em}|m{15em}|}
 	 		\hline
-	 		\cellcolor{cyan!25}\textbf{Feature}	& \cellcolor{cyan!25}\textbf{HP141T}	& \cellcolor{cyan!25}\textbf{Real-Time Spectrum Analyzer}\\
+	 		\textbf{Feature}	& \textbf{HP141T}	& \textbf{Real-Time Spectrum Analyzer}\\
 	 		\hline
 	 		Operation &	Heterodyne	&	\acrshort{fft}-based real-time processing\\
 	 		\hline
@@ -187,7 +187,7 @@
 		\centering
 		\begin{tabular}{|m{8em}|m{15em}|m{15em}|}
 			\hline
-			\cellcolor{cyan!25}\textbf{Constraint}	& \cellcolor{cyan!25}\textbf{Problem}	& \cellcolor{cyan!25}\textbf{Solution}\\
+			\textbf{Constraint}	& \textbf{Problem}	& \textbf{Solution}\\
 			\hline
 			Operating Voltage	& Limited input voltage range of $\SI{0}{\volt}$ to $\SI{3.3}{\volt}$ or $\SI{5.0}{\volt}$. The HP141T produces incompatible auxiliary output voltages	& Signal conditioning circuit for scaling and shifting signals for compatibility with \acrshort{adc} operating voltages\\
 			\hline
@@ -214,7 +214,7 @@
 		\centering
 		\begin{tabular}{|m{5em}|m{8em}|m{25em}|}
 			\hline
-			\cellcolor{cyan!25}\textbf{Name} & \cellcolor{cyan!25}\textbf{Range} & \cellcolor{cyan!25}\textbf{Description}\\
+			\textbf{Name} & \textbf{Range} & \textbf{Description}\\
 			\hline
 			 Pen-Lift	&$\SI{0}{\volt}$ to $\SI{14}{\volt}$ & Triggers the \acrshort{crt} display. The pen-lift output is $\SI{0}{\volt}$ during scanning\\
 			\hline
@@ -243,7 +243,7 @@
 		\centering
 		\begin{tabular}{|m{5em}|m{15em}|m{20em}|}
 			\hline
-			\cellcolor{cyan!25}\textbf{Digital Processor Type}	& \cellcolor{cyan!25}\textbf{Consideration}	&	\cellcolor{cyan!25}\textbf{Feature}\\
+			\textbf{Digital Processor Type}	& \textbf{Consideration}	&	\textbf{Feature}\\
 			\hline
 			\multirow{3}{*}{\acrshort{mcu}}	& Communication Interface &	Supports $\text{I}^2\text{C}$ and \acrshort{spi} \\
 			\cline{2-3}
@@ -281,7 +281,7 @@
 		\label{tab:digital-processor-comparison}
 		\begin{tabular}{|m{8em}|m{10em}|m{10em}|m{10em}|}
 			\hline
-			\cellcolor{cyan!25}\textbf{Design Aspect}	&	\cellcolor{cyan!25}\textbf{\acrshort{mcu}}	&	\cellcolor{cyan!25}\textbf{\acrshort{sbc}}	&	\cellcolor{cyan!25}\textbf{\acrshort{fpga}}\\
+			\textbf{Design Aspect}	&	\textbf{\acrshort{mcu}}	&	\textbf{\acrshort{sbc}}	&	\textbf{\acrshort{fpga}}\\
 			\hline
 			Development Time	&	Short	&	Moderate	& 	Long\\
 			\hline
@@ -326,7 +326,7 @@
 		\centering
 		\begin{tabular}{|m{5em}|m{10em}|m{24em}|}
 			\hline
-			\cellcolor{cyan!25}\textbf{Key Consideration}	&	\cellcolor{cyan!25}\textbf{Aspects}	& \cellcolor{cyan!25}\textbf{Description}\\
+			\textbf{Key Consideration}	&	\textbf{Aspects}	& \textbf{Description}\\
 			\hline
 			\multirow{3}{*}{Processor}	& Clock Speed	& Clock speed of at least $\SI{100}{\mega\hertz}$ for rendering 801 points per scan to the display\\
 			\cline{2-3}
@@ -359,7 +359,7 @@
 		\centering
 		\begin{tabular}{|m{5em}|m{10em}|m{24em}|}
 			\hline
-			\cellcolor{cyan!25}\textbf{Key Consideration}	&	\cellcolor{cyan!25}\textbf{Aspects}	& \cellcolor{cyan!25}\textbf{Description}\\
+			\textbf{Key Consideration}	&	\textbf{Aspects}	& \textbf{Description}\\
 			\hline
 			\multirow{2}{*}{Resolution} 
 			& 1080p at 60Hz & Recommended for smooth spectrum rendering; higher resolutions. \\
@@ -407,7 +407,7 @@
 		\centering
 		\begin{tabular}{|m{8em}|m{10em}|m{22em}|}
 			\hline
-			\cellcolor{cyan!25}\textbf{Key Consideration} & \cellcolor{cyan!25}\textbf{Aspects} & \cellcolor{cyan!25}\textbf{Description} \\
+			\textbf{Key Consideration} & \textbf{Aspects} & \textbf{Description} \\
 			\hline
 			\multirow{3}{*}{Video Output} 
 			& \acrshort{hdmi} Support & Different FPGAs feature built-in \acrshort{hdmi}, \acrshort{dvi} transmitters or external serializer chips. The chosen FPGA must support high-speed video output \\
@@ -569,7 +569,7 @@
 		\label{tab:subsystem-components}
 		\begin{tabular}{|m{18em}|m{15em}|m{8em}|}
 			\hline
-			\cellcolor{cyan!25}\textbf{Subsystem}	& \cellcolor{cyan!25}\textbf{Component}	& \cellcolor{cyan!25}\textbf{Signal Type}\\
+			\textbf{Subsystem}	&\textbf{Component}	& \textbf{Signal Type}\\
 			\hline
 			\multirow{2}{*}{\textbf{HP141T Subsystem}}	& HP8555A	& Analog\\
 			\cline{2-3}
@@ -617,7 +617,7 @@
 		\label{tab:hp8552b-output-vals}
 		\begin{tabular}{|c|c|c|c|}
 			\hline
-			\cellcolor{cyan!25}\textbf{Output}	& \cellcolor{cyan!25}\textbf{Symbol}& \cellcolor{cyan!25}\textbf{Voltage Range}	& \cellcolor{cyan!25}\textbf{Bandwidth} \\
+			\textbf{Output}	& \textbf{Symbol}& \textbf{Voltage Range}	& \textbf{Bandwidth} \\
 			\hline
 			Horizontal & $\texttt{V}_\texttt{x}$	& $-\SI{5.0}{\volt}$ to $\SI{+5.0}{\volt}$	& $\SI{0.005}{\hertz}$ to $\SI{500}{\hertz}$\\
 			\hline
@@ -636,7 +636,7 @@
 		\label{tab:hp8552b-amplitude-specs}
 		\begin{tabular}{|m{8em}|m{10em}|m{8em}|m{8em}|}
 			\hline
-			\cellcolor{cyan!25}\textbf{Operation Mode}	& \cellcolor{cyan!25}\textbf{Amplitude Calibration Range} & \cellcolor{cyan!25}\textbf{Amplitude per Division} ($\si{\decibel}$/div)	& \cellcolor{cyan!25}\textbf{Display Range} ($\si{\decibel}$)\\
+			\textbf{Operation Mode}	& \textbf{Amplitude Calibration Range} & \textbf{Amplitude per Division} ($\si{\decibel}$/div)	& \textbf{Display Range} ($\si{\decibel}$)\\
 			\hline
 			Logarithmic & $-\SI{130}{\decibel}\text{m}$	to $+\SI{10}{\decibel}\text{m}$ & 10 & 70	\\
 			\hline
@@ -653,7 +653,7 @@
 		\label{tab:scan-specifications}
 		\begin{tabular}{|c|c|}
 			\hline
-			\cellcolor{cyan!25}\textbf{Scan Characteristic}	& \cellcolor{cyan!25}\textbf{Description} \\
+			\textbf{Scan Characteristic}	& \textbf{Description} \\
 			\hline
 			Scan Time	& 16 scan rates from $\SI{0.1}{\milli\second}/\text{div}$ to $\SI{10}{\second}/\text{div}$ in a 1, 2, 5 sequence\\
 			\hline
@@ -767,7 +767,7 @@
 		\centering
 		\begin{tabular}{|m{3em}|c|m{10em}|m{18em}|}
 			\hline
-			\cellcolor{cyan!25}\textbf{Pin No.} & \cellcolor{cyan!25}\textbf{Type}	& \cellcolor{cyan!25}\textbf{Symbol} & \cellcolor{cyan!25}\textbf{Description} \\
+			\textbf{Pin No.} & \textbf{Type}	& \textbf{Symbol} & \textbf{Description} \\
 			\hline
 			1	&	I	& AMSI 	& A $\SI{0}{\volt}$ amplitude modulation signal input.\\
 			\hline
@@ -830,7 +830,7 @@
 		\centering
 		\begin{tabular}{|cm{10em}m{5em}m{5em}m{5em}m{8em}|}
 			\hline
-			\cellcolor{cyan!25}\textbf{Designation} & \cellcolor{cyan!25}\textbf{Parameter} &	\cellcolor{cyan!25}\textbf{Minimum} &  \cellcolor{cyan!25}\textbf{Maximum}	& \cellcolor{cyan!25}\textbf{Units} & \cellcolor{cyan!25}\textbf{Conditions}\\
+			\textbf{Designation} & \textbf{Parameter} &	\textbf{Minimum} &  \textbf{Maximum}	& \textbf{Units} & \textbf{Conditions}\\
 			\hline
 			\multicolumn{6}{c}{\textbf{General Characteristics}}\\
 			\hline
@@ -914,7 +914,7 @@
 		\label{tab:emulator-pen-lift-specs}
 		\begin{tabular}{cccccc}
 			\hline
-			\cellcolor{cyan!25}\textbf{Designation} & \cellcolor{cyan!25}\textbf{Parameter} & \cellcolor{cyan!25}\textbf{Minimum} & \cellcolor{cyan!25}\textbf{Maximum} & \cellcolor{cyan!25}\textbf{Units} &  \cellcolor{cyan!25}\textbf{Condition}\\
+			\textbf{Designation} & \textbf{Parameter} & \textbf{Minimum} & \textbf{Maximum} & \textbf{Units} &  \textbf{Condition}\\
 			\hline
 			$\text{V}_\text{B}$	& Base input voltage & $0$ & $3$ & $\si{\volt}$ & $\text{R}_\text{B} = \SI{1}{\kilo\ohm}$\\ 
 			\hline
@@ -1013,17 +1013,6 @@
 		\caption{\acrshort{hsc} simulation output showing that the op-amp configuration is expected to maintain the shape of the sawtooth scan output.}
 		\label{fig:sig-cond-hsc-sim-output}
 	\end{figure}
-
-	The specifications of the \acrshort{scs} with respect to the \acrshort{hsc} pipeline are summarized in table \ref{tab:sig-cond-hsc-specs}. 
-	
-	\begin{table}[ht!]
-		\centering
-		\label{tab:sig-cond-hsc-specs}
-		\caption{Input and output specifications of the \acrshort{scs}.}
-		\begin{tabular}{ccc}
-			
-		\end{tabular}
-	\end{table}
 	
 	The vertical output from the HP8552B is conditioned using LM358 op-amps in the inverting amplifier configuration with a gain of $A_{vsc} = -3.7$ using a $\SI{10}{\kilo\ohm}$ feedback resistor and a $\SI{2.7}{\kilo\ohm}$ input resistor. This configuration was selected because the expected input voltage range of the \acrlong{vsc}, $\texttt{V}_\texttt{vin}$, is $-\SI{0.8}{\volt}$ to $\SI{0}{\volt}$, and inverting and amplifying the small, negative voltages, is necessary for the operation of the \acrshort{adc}s on the STM32H723ZG. The \acrshort{vsc} circuit is depicted in figure \ref{fig:sig-cond-vsc-schematic} with a $\SI{2.2}{\kilo\ohm}$ compensating resistor at the non-inverting input of the LM358 op-amp to minimize the contribution of the input offset bias current.
 	
@@ -1078,17 +1067,6 @@
 		\caption{At the maximum rated vertical output frequency of $\SI{300}{\kilo\hertz}$, the phase difference between the input and the output of the \acrshort{vsc} is slightly more than $\pi\si{\radian}$.}
 		\label{fig:sig-cond-vsc-sine-sim-output-300khz}
 	\end{figure}  
-
-	The specification of the \acrshort{scs} with respect to the \acrshort{vsc} pipeline are summarized in table \ref{tab:sig-cond-vsc-specs}.
-	
-	\begin{table}[ht!]
-		\centering
-		\label{tab:sig-cond-vsc-specs}
-		\caption{Input and output specifications of the \acrshort{vsc}.}
-		\begin{tabular}{ccc}
-			
-		\end{tabular}
-	\end{table}
 	
 	The circuit for the \acrlong{plsc} pipeline is illustrated in figure \ref{fig:sig-cond-plsc-schematic} where an LM358 op-amp is used in the non-inverting buffer configuration which serves to scale the pen-lift output, $\texttt{V}_\texttt{penin}$, from the HP8552B plug-in of the HP141T system. 
 	
@@ -1128,16 +1106,7 @@
 		\label{fig:scs-full-subsystem}
 	\end{figure}
 
-	The physical hardware specifications of the \acrshort{vsc} \acrshort{pcb} are shown in figure \ref{tab:sig-cond-vsc-hardware-specs}. The \acrshort{pcb} was designed using KiCad 6 to consist of a porous GND copper layer for establishing a reference voltage for the through-hole components. Surface mount holes are also grounded to prevent electric shock and ensure safety. 
-	
-	\begin{table}[ht!]
-		\centering
-		\label{tab:sig-cond-vsc-hardware-specs}
-		\caption{Input and output specifications of the \acrshort{vsc}.}
-		\begin{tabular}{ccc}
-			
-		\end{tabular}
-	\end{table}
+	 The \acrshort{pcb} was designed using KiCad 6 to consist of a porous GND copper layer for establishing a reference voltage for the through-hole components. Surface mount holes are also grounded to prevent electric shock and ensure safety. 
 
 	\subsubsection{Data Acquisition Subsystem}
 	
@@ -1199,41 +1168,22 @@
 	The \texttt{HAL\_DMA\_IRQHandler} function from the STM32H7 \acrshort{hal} \acrshort{api} is used to handle \acrshort{dma} interrupts for the master \acrshort{adc} and triggers callbacks. Given that only the master's \acrshort{dma} handles all data transfers, no \acrshort{dma} is required for the slave \acrshort{adc}. Processed \acrshort{adc} data is stored using the \texttt{spectrogram\_t} structure which is initialized as a pointer as shown in listing \ref{lst:das-spectrogram-init-code}. 
 	
 	\begin{lstlisting}[language=C, label={lst:das-spectrogram-init-code}, caption={The \texttt{HAL\_DMA\_IRQHandler} function is used to handle \acrshort{dma} transfers while the \texttt{adc\_set\_spectrogram(spectrogram\_t *s)} function is used to initialize a pointer to a \texttt{spectrogram} structure.}]
-	void adc_error_handler(void) {
-		adc_error_flag = 1;
-		while(1) {}
-	}
-	
-	spectrogram_t *adc_spectrogram = 0;
-	
-	void adc_set_spectrogram(spectrogram_t *s) {
-		adc_spectrogram = s;
-	}
+		void adc_error_handler(void) {
+			adc_error_flag = 1;
+			while(1) {}
+		}
+		
+		spectrogram_t *adc_spectrogram = 0;
+		
+		void adc_set_spectrogram(spectrogram_t *s) {
+			adc_spectrogram = s;
+		}
 	\end{lstlisting}
 	
 	The \texttt{adc\_init} function forms a critical part of the \acrshort{das} because it initializes ADC1 as the master and ADC2 as the slave in double-interleaved mode, configures three sampling channels, and begins \acrshort{dma} transfers as shown in listing \ref{lst:das-spectrogram-init-code} in Appendix A. In addition, the function sets the resolution to 16-bits and enables a continuous mode for uninterrupted conversions for seamless real-time data acquisition. The development board is configured by the \texttt{ADC\_DUALMODEDATAFORMAT\_32\_10\_BITS} variable to use outputs with 32-bit words, however, the \texttt{adc\_buffer} is \texttt{uint16\_t}. Therefore, the \acrshort{hal} is expected to extract the lower 16 bits. 
 	
 	\acrshort{adc} data that is stored in the \texttt{adc\_spectrogram} structure is processed using conversion callbacks such as the \texttt{HAL\_ADC\_ConvHalfCpltCallback} in listing \ref{lst:das-callbacks} used when the \acrshort{dma} is half-full. The function reads interleaved data, corresponding to values of $\texttt{V}_\texttt{x}$, $\texttt{V}_\texttt{y}$ and $\texttt{V}_\texttt{z}$ from the \texttt{adc\_buffer}. Three variables, \texttt{x}\_\texttt{val}, \texttt{y}\_\texttt{val} and \texttt{z}\_\texttt{val} are scaled and inverted according to the 16-bit resolution of the \acrshort{adc}s. For example, \texttt{x}\_\texttt{val} is scaled to \texttt{npoints} by dividing by 65536, corresponding to a 16-bit scaling which matches the resolution of the \acrshort{adc}s. The pen-lift output, $\texttt{V}_\texttt{z}$, is assigned a threshold value of 32768, corresponding to $\SI{1.2}{\volt}$ for the \texttt{pen-down} state as shown in the simulation results. The threshold value is expected to require adjustments if the \acrshort{scs} output is slightly higher or lower than the simulated outputs. 
-	\begin{lstlisting}[language=C, label={lst:das-callbacks}, caption={Showing conversion callbacks for processing \acrshort{adc} data when the \acrshort{dma} fills half.}]
-	void HAL_ADC_ConvHalfCpltCallback(ADC_HandleTypeDef* AdcHandle) {
-		for (int j = 0; j < ADC_BUF_SIZE/6; ++j) {
-			uint32_t x_val = adc_buffer[j*3];     // V_x
-			uint32_t y_val = adc_buffer[j*3+1];   // V_y
-			uint32_t z_val = adc_buffer[j*3+2];   // V_z
-			x_val = (x_val * adc_spectrogram->npoints) / 65536; // 16-bit scaling
-			y_val = adc_spectrogram->size_y - (adc_spectrogram->size_y * y_val) / 65536;
-			z_val = z_val > 32768 ? 1 : 0; // Threshold at mid-scale (~1.65 V)
-			if (x_val < 5) prev_x = 0;
-			if (x_val > prev_x && z_val == 0) {
-				if (pending_normalization) {
-					adc_spectrogram->data_normal[x_val] = adc_spectrogram->size_y/2 - y_val;
-				}
-				adc_spectrogram->data[x_val] = y_val + adc_spectrogram->data_normal[x_val];
-				prev_x = x_val;
-			}
-		}
-	}
-	\end{lstlisting}
+	
 	The code design implements the \texttt{HAL\_MspInit} callback function, shown in listing \ref{lst:das-callbacks} to perform system level initializations as indicated in the \acrshort{hal} manual for the STM32H7 series. This function enables clocks for the \acrshort{adc}s, GPIOF, and DMA2, in addition to configuring the correct pins as analog inputs. Clocks and \acrshort{gpio} pins are enable with analog mode and no pull up resistors. 
 	\begin{lstlisting}[language=C, label={lst:das-callbacks}, caption={Showing conversion callbacks for processing \acrshort{adc} data when the \acrshort{dma} fills half.}]
 		void HAL_ADC_MspInit(ADC_HandleTypeDef *hadc) {
@@ -1295,43 +1245,7 @@
 	The flow diagram shows that the methods used for processing sampled data depends on the whether input data is from the standard data from the HP141T system or the HP141T Emulator for cases where access the \acrshort{sa} is limited. In other words, if the system being measured is the HP141T system with the original outputs, then the \acrfull{svsis} is used to convert the data to appropriate values for the \acrfull{hvs} which is later used by the \acrshort{guis} for drawing the plot on the touchscreen. If measurements of the HP141T Emulator are taken, then the \acrfull{evsis} is used to scale the time domain values in the iterable spectrogram data. In the subsequent steps, the \acrshort{dps} assesses the user-selected display mode to determine which operation to perform. Different functions, such as the \texttt{average\_spectrogram()} which updates the frequency bin's average at each scan. This subsection describes the scaling and interpolation algorithms, and the principle functions for each display mode used to process the data in the \acrshort{dps} for display in the \acrshort{guis}.
 	
 	To ensure that the \acrshort{das} can integrate seamlessly with the \acrfull{dps} and \acrfull{guis}, regardless of the sampling device that is available between the STM32H7 and Picoscope, the code for the spectrogram structure, adopted from a similar project designed to run on an STM32F746G Discovery board, was modified to process sampled data from 3 \acrshort{adc}s and store it in a series of \texttt{.csv} files, as shown in listing \ref{lst:das-csv-file} \cite{sebgithub2024}. 
-	\begin{lstlisting}[language=C, label={lst:das-csv-file}, caption={Code snippet of the function for storing the interleaved sampling data in a \texttt{.csv}.}]
-	int spectrogram_to_csv(spectrogram_t *s, const char *base_filename) {
-		if (!s || !base_filename) return -1;
-		
-		const double sample_period_ms = 0.000138889; // 1 / 7.2 MSPS
-		int file_index = 0;
-		int point_count = 0;
-		char filename[64];
-		FILE *fp = NULL;
-		
-		for (int i = 0; i < s->npoints && !pause_flag; ++i) {
-			if (point_count == 0) {
-				// Open new file
-				snprintf(filename, sizeof(filename), "%s%d.csv", base_filename, file_index);
-				fp = fopen(filename, "w");
-				if (!fp) return -1;
-				fprintf(fp, "Time (ms),V_x (V),V_y (V),V_z (V)\n");
-			}
-			
-			double time_ms = i * sample_period_ms;
-			float vx = s->data_x[i] * 3.3f / 65535.0f;
-			float vy = s->data_y[i] * 3.3f / 65535.0f;
-			float vz = s->data_z[i] * 3.3f;
-			
-			fprintf(fp, "%.8f,%.8f,%.8f,%.8f\n", time_ms, vx, vy, vz);
-			
-			point_count++;
-			if (point_count >= 801 || i == s->npoints - 1) {
-				fclose(fp);
-				point_count = 0;
-				file_index++;
-			}
-		}
-		
-		return 0;
-	}
-	\end{lstlisting}
+
 	The \texttt{spectrogram\_data\_i.csv} ($\texttt{i}=0,1,2,..,n, \text{ for }n \in \mathbb{N}$) files generated by the \texttt{spectrogram\_to\_csv} function are inputs to the \acrshort{dps} where mathematical operations, such the $\max$ function for returning the largest value seem, are performed on the data in order to display it accurately and allow different view modes. To approximate real-time performance, a \texttt{pause\_flag} variable set in the \texttt{pause\_recording} function and triggered by a touch-screen button on the Raspberry Pi 4B \acrshort{sbc}-based \acrshort{gui}. Time-stamps are calculated at intervals of $\SI{0.00013889}{\milli\second}$ in order to fulfil high-sampling rate requirements. The function also scales the sampled 16-bit values to the appropriate $\SI{0}{\volt}$ to $\SI{3.3}{\volt}$ range. 
 
 	A \acrfull{rpi} 4B, as depicted in figure \ref{fig:dps-rpi-4b}, was selected as the \acrshort{sbc} for performing data processing algorithms in the \acrshort{dps}. The 4B is based on a ARM Cortex-A72 processor with a maximum CPU clock frequency of $\SI{1.5}{\giga\hertz}$. In addition, the \acrshort{rpi} has a versatile framebuffer which supports a resolution of up to 4K. The selection of the \acrshort{rpi} 4B was also aimed at fulfilling the modernization requirement (UR01) which states that the display of the proposed design should behave like the display of newer \acrshort{sa}s. The \acrshort{rpi} is mounted to the touchscreen in the \acrshort{guis} and is powered by a single wall wart power source, in alignment with requirement UR09. 
@@ -1345,7 +1259,7 @@
 
 	The \acrshort{rpi} 4B can also connect to both the STM32H723ZG microcontroller or Picoscope 2204A via \acrshort{usb} to integrate the \acrshort{dps} with the \acrshort{das}. Figure \ref{fig:dps-rpi-4b} of the \acrshort{rpi}. A Raspberry Pi \acrshort{os} image is flashed to a \acrshort{sd} card using Raspberry Pi imager, then the Python scripts for running the \acrshort{dps} and \acrshort{guis} operations is loaded and executed on the device. 
 	
-	Each division in the displayed amplitude vs frequency spectrogram is mapped to the sampled input voltages which are input to the \acrshort{dps}. Given that the vertical output of the HP141T is inverted and scaled in the \acrshort{scs}, the \acrshort{dps} associates the $\SI{0}{\volt}$ to $\SI{3.3}{\volt}$ $\texttt{V}_\texttt{y}$ input with a vertical axis with values up to 80 $\si{\decibel}$. This is in line with the plot shown on the \acrshort{crt} display of the HP141T system which uses $\SI{0.1}{\volt}$ per division scaling to represent the amplitude on 8 divisions of $\SI{10}{\decibel}$ each (in line with UR03). Different stages of the vertical output are illustrated in figure \ref{fig:dps-vertical-scaling} to inform the \acrshort{svsis} and \acrshort{evsis} for converting data to the appropriate scale and performing interpolation to ensure that a continuous spectrum can be displayed. 
+	Each division in the displayed amplitude vs frequency spectrogram is mapped to the sampled input voltages which are input to the \acrshort{dps}. Given that the vertical output of the HP141T is inverted and scaled in the \acrshort{scs}, the \acrshort{dps} associates the $\SI{0}{\volt}$ to $\SI{3.3}{\volt}$ $\texttt{V}_\texttt{y}$ input with a vertical axis with values up to -80 $\si{\decibel}$. This is in line with the plot shown on the \acrshort{crt} display of the HP141T system which uses $\SI{0.1}{\volt}$ per division scaling to represent the amplitude on 8 divisions of $\SI{10}{\decibel}$ each (in line with UR03). Different stages of the vertical output are illustrated in figure \ref{fig:dps-vertical-scaling} to inform the \acrshort{svsis} and \acrshort{evsis} for converting data to the appropriate scale and performing interpolation to ensure that a continuous spectrum can be displayed. 
 	\begin{figure}[ht!]
 		\centering
 		\includegraphics[width=0.58\linewidth]{Figures/Methodology/dps-vertical-scaling}
@@ -1354,11 +1268,11 @@
 	\end{figure} 
 	The schematic of the flow of the vertical output at different stages in each subsystem shows that since the \acrshort{scs} inverts the scales the HP141T's auxiliary signal to $\SI{0}{\volt}$ to $\SI{3.3}{\volt}$, the original negative maximum of $-\SI{0.8}{\volt}$ is mapped to $\SI{0}{\volt}$ at the \acrshort{adc} stage. Similarly, the original zero minimum voltage maps to the maximum voltage of the \acrshort{adc}. To prepare the data for display on the amplitude vs frequency plot, the \acrshort{dps} maps the \acrshort{adc}'s $\SI{0}{\volt}$ to $\SI{0}{\decibel}$ and uses a linear mapping to plot the points along the vertical axis. For example, given that $\SI{0}{\volt}$ to $-\SI{0.8}{\volt}$ maps to $\SI{3.3}{\volt}$ to $\SI{0}{\volt}$, the \acrshort{adc} sample $\texttt{V}_\texttt{y}$ can be converted to the 80-$\si{\decibel}$ using
 	\begin{align}
-		\si{\decibel}	& = 80\times \frac{(\SI{3.3}{\volt} - \texttt{V}_\texttt{y})}{\SI{3.3}{\volt}}
+		\si{\decibel}	& = -80\times \frac{(\SI{3.3}{\volt} - \texttt{V}_\texttt{y})}{\SI{3.3}{\volt}}
 	\end{align} 
 	so that each $\SI{0.1}{\volt}$ shift corresponds to $\SI{10}{\decibel}$. 
 	
-	Preparations for displaying the HP141T Emulator vertical output are performed in a similar manner to the one described above for scaling the vertical output of the HP141T \acrshort{sa} to the required $\SI{80}{\decibel}$ amplitude range.  However, the expected input range is mapped from [$\SI{0}{\volt}$, $\SI{3.0}{\volt}$] to [$\SI{80}{\decibel}$].
+	Preparations for displaying the HP141T Emulator vertical output are performed in a similar manner to the one described above for scaling the vertical output of the HP141T \acrshort{sa} to the required $\SI{80}{\decibel}$ amplitude range.  However, the expected input range is mapped from [$\SI{0}{\volt}$, $\SI{3.0}{\volt}$] to [$\SI{0}{\decibel}$, $-\SI{80}{\decibel}$].
 	
 	The horizontal output is mapped to the frequency axis to represent the scan rate. The original output range of the HP141T system's sawtooth function is [$-\SI{5}{\volt}$, $\SI{5}{\volt}$]. After the signal is conditioned through the operational amplifier-based circuit in \acrshort{scs}, values range between $\SI{0}{\volt}$ and $\SI{3.3}{\volt}$. Time domain characteristics of the scan output do not change during the signal conditioning process - suggested by the simulation results. This implies that the time column in the \texttt{.csv} file is used directly to display the frequency axis on the display with 10 horizontal divisions. The sawtooth rise-time represents the frequency sweep. For 801 points at 7.2 \acrshort{msps}, each division corresponds to $\SI{0.0111}{\milli\second}$. 
 	
@@ -1370,13 +1284,13 @@
 	
 	The \acrshort{guis} uses \acrshort{gui} libraries such as \texttt{matplotlib} and \texttt{tkinter} to render the amplitude vs frequency plot on the digitized \acrshort{sa}. The \acrshort{gui} libraries interface with the \acrshort{rpi}'s framebuffer, through which the \acrshort{dps} sends video data for drawing directly to the screen. The final image frame is pushed directly to \texttt{/dev/fb0} to ensure that frequency domain data is rendered in real-time on the display based on the processed outputs of the \acrshort{dps}.
 	
-	Table \ref{tab:guis-properties} gives a description of the properties of the \acrshort{guis} which replicates the HP141T's \acrshort{crt} graticule. 
+	Table 3.20 gives a description of the properties of the \acrshort{guis} which replicates the HP141T's \acrshort{crt} graticule. 
 	\begin{table}[ht!]
 		\centering
 		\label{tab:guis-properties}
 		\begin{tabular}{|m{5em}|m{15em}|m{10em}|}
 			\hline
-			\rowcolor{cyan!25} \textbf{Property}	& \textbf{Description}	& \textbf{Associated Values}\\
+			\textbf{Property}	& \textbf{Description}	& \textbf{Associated Values}\\
 			\hline
 			Vertical Axis	& Mapping of \acrshort{adc} samples to match the scaling on the original HP141T display.	&  $\SI{80}{\decibel}$ scale ($\SI{10}{\decibel}$ per division)\\
 			\hline
@@ -1409,7 +1323,7 @@
 		\item 
 		Siglent SDG1010 $\SI{10}{\mega\hertz}$ function generator for producing the modelling the auxiliary outputs of the HP141T, as well as noisy signals for non-ideal cases.
 		\item 
-		HPE3630A Triple Output DC Power Supply with $\SI{0}{\volt}-\SI{6}{\volt}$, $\SI{2.5}{\ampere}$ outputs, or $\SI{0}{\volt}$ - $\pm\SI{20}{\volt}$, $\SI{0}{\volt}$ - $\SI{0.5}{\ampere}$ outputs.
+		HP-E3630A Triple Output DC Power Supply with $\SI{0}{\volt}-\SI{6}{\volt}$, $\SI{2.5}{\ampere}$ outputs, or $\SI{0}{\volt}$ - $\pm\SI{20}{\volt}$, $\SI{0}{\volt}$ - $\SI{0.5}{\ampere}$ outputs.
 		\item 
 		Picoscope 2204A \acrshort{usb} oscilloscope with two analog channels and maximum input frequency of $\SI{10}{\mega\hertz}$.
 		\item 
@@ -1469,9 +1383,9 @@
 	Ensure the HP141T Emulator is powered by the designated plug-in AC/DC adapter rated at $\SI{12}{\volt}$, $\SI{1}{\ampere}$ maximum output. With the emulator powered on, use a multimeter or oscilloscope to measure the voltage at the outputs of all power rails generated by internal regulators and inverter circuits. Confirm the following:
 	
 	\begin{itemize}
-		\item \textbf{+3.3V rail}: Output must be within $\SI{3.3}{\volt} \pm \SI{0.1}{\volt}$, used for ADCs and digital logic.
-		\item \textbf{-5V rail (if generated)}: Output must be within \SI{-5}{\volt} $\pm$ \SI{0.2}{\volt}, used for op-amps or analog reference circuits.
-		\item \textbf{+5V or +12V rail}: Check regulator outputs for subsystems such as op-amps or display drivers.
+		\item \textbf{+5V rail}: Output must be within $\SI{5}{\volt} \pm \SI{0.1}{\volt}$, used for digital logic.
+		\item \textbf{-12V rail}: Output must be within \SI{-5}{\volt} $\pm$ \SI{0.2}{\volt}, used for op-amps or analog reference circuits.
+		\item \textbf{+12V rail}: Check regulator outputs for subsystems such as op-amps or display drivers.
 	\end{itemize}
 	
 	Use an oscilloscope to check for voltage ripple and noise on each power rail. Verify that ripple does not exceed $\SI{50}{\milli\volt}$ under load. Confirm that startup transients settle within $\SI{10}{\milli\second}$. This test ensures the emulator's power delivery is stable and within tolerance for all connected subsystems.
@@ -1587,27 +1501,27 @@
 	The \acrshort{guis} runs on the Raspberry Pi 4B and is responsible for rendering the processed spectrogram data, managing user inputs via touchscreen, and switching between display modes. The following unit tests ensure correct visualization, responsiveness, and display scaling.
 	
 	\begin{center}
-		\textbf{UTE05}: \textbf{Display Scaling Verification}
+		\textbf{UTF00}: \textbf{Display Scaling Verification}
 	\end{center}
 	Load a set of scaled decibel values from the \acrshort{dps} into the \acrshort{gui} rendering module. Confirm that each 10 dB increment correctly maps to one vertical division on the \acrshort{gui} plot.
 	
 	\begin{center}
-		\textbf{UTE06}: \textbf{Touchscreen Mode Switching}
+		\textbf{UTF01}: \textbf{Touchscreen Mode Switching}
 	\end{center}
 	Verify that all \acrshort{gui} buttons (e.g., Average, Peak Hold, Raw) correctly update the active display mode and the interface reflects the change without delay.
 	
 	\begin{center}
-		\textbf{UTE07}: \textbf{Real-Time Plot Update Rate}
+		\textbf{UTF02}: \textbf{Real-Time Plot Update Rate}
 	\end{center}
 	Run the \acrshort{gui} using a constant stream of spectrogram data and measure the update rate. Verify that the display refreshes in near real-time (e.g., every 50–100 ms) with minimal lag.
 	
 	\begin{center}
-		\textbf{UTE08}: \textbf{Graph Rendering Accuracy}
+		\textbf{UTF03}: \textbf{Graph Rendering Accuracy}
 	\end{center}
 	Input a known waveform or fixed dataset into the \acrshort{guis}. Visually verify that the plot matches expected amplitude vs frequency behavior. Compare screen coordinates to underlying data values to confirm accuracy.
 	
 	\begin{center}
-		\textbf{UTE09}: \textbf{Pause and Resume Functionality}
+		\textbf{UTF04}: \textbf{Pause and Resume Functionality}
 	\end{center}
 	Press the pause/resume button on the \acrshort{gui} while data is being processed. Confirm that data acquisition halts immediately, and resumes without loss of continuity or data corruption when resumed.
 	

@@ -7,24 +7,20 @@
 \begin{document}
 % ----------------------------------------------------
 \chapter{Conclusions \label{ch:conclusions}}
-\epigraph{The same rule holds for us now, of course: we choose our next world through what we learn in this one. Learn nothing, and the next world is the same as this one.}%
-    {\emph{---Richard Bach, Jonathan Livingston Seagull}}
-\vspace{0.5cm}
-% ----------------------------------------------------
 
-The purpose of this project was to...
+The experimental testing of the digitized HP141T system, incorporating the HP8555A and HP8552B plug-in sections, has yielded valuable insights into its performance and alignment with the specified functional requirements. The results demonstrate a mixed outcome, with significant achievements in certain subsystems tempered by challenges in others, necessitating further refinement.
 
-This report began with...
+The HP141T System Test Results, utilizing the Siglent SDG1010 waveform generator and Picoscope 2204 USB oscilloscope, successfully approximated the vertical output with satisfactory accuracy, achieving a peak-to-peak voltage deviation of approximately 10\% from the expected values. The Picoscope proved to be a reliable measurement tool, and the sinusoidal approximation at 10 kHz provided a suitable basis for testing, despite limitations in replicating the full range of the original HP141T outputs. However, the horizontal and pen-lift outputs could not be accurately emulated due to waveform shape discrepancies and voltage range constraints, highlighting the need for alternative hardware or calibration methods to fully replicate the HP8552B behavior.
 
-The literature review was followed in Chapter...
+The HP141T Emulator Subsystem Test Results revealed significant deviations from expected performance, attributed to the use of E6 series resistors and adjusted capacitor values instead of the recommended E24 series. The failure of the emulator to produce the correct vertical (0 to 3.0 V), horizontal (±4.75 V sawtooth), and pen-lift (0 to 14 V) outputs underscores the sensitivity of the XR2206-based design to component tolerances. While the power rails met specifications, further iterations are required to enhance waveform fidelity and ensure compatibility with downstream systems.
 
-The bulk of the work for this project followed next, in Chapter... 
+In contrast, the SCS performed admirably, with unit tests confirming its ability to invert and scale the vertical input from -0.8 V to 0 V to the ADC-compatible 0 V to 3.3 V range. The subsystem handled noisy inputs effectively, maintaining output within the desired range, though clipping effects were observed at higher amplitudes, mitigated somewhat by increasing the input frequency to 300 kHz. These results validate the SCS design and its robustness against real-world signal variations.
 
-In Chapter...
+The Data Acquisition Subsystem DAS, adapted to use the Picoscope 2204A due to the unavailability of the STM32H723ZG microcontroller, successfully generated CSV files with 6257 data points at a 3.3 kHz sampling rate, exceeding the required 801 samples per second. This adaptation, while affecting real-time performance, ensured data integrity for downstream processing, demonstrating the system's flexibility in leveraging alternative hardware.
 
-Finally, Chapter... attempted to... 
+The Digital Processing Subsystem DPS and Graphical User Interface Subsystem GUIS, implemented on the Raspberry Pi 4B, met all unit test criteria. The DPS accurately scaled voltages to decibels, retained peak amplitudes, averaged spectrograms, and interpolated sparse data, while the GUIS provided near real-time updates (50-100 ms latency), reliable mode switching, and a faithful 8x10 grid display with CRT styling. These results affirm the software's robustness and usability, closely emulating the original HP141T's visual output.
 
-In summary, the project achieved the goals that were set out, by designing and demonstrating...
+Overall, the digitized HP141T system achieves a high degree of fidelity in its software components (DPS and GUIS) and signal conditioning SCS, meeting the functional requirements for display accuracy, responsiveness, and user interaction. However, hardware-related limitations in the emulator and original system approximation highlight areas for improvement, particularly in component selection and waveform emulation. Future work should focus on refining the HP141T Emulator with precise E24 components, exploring higher-voltage waveform generators for the pen-lift output, and optimizing the DAS for real-time performance with the intended microcontroller. These enhancements will further align the system with the original HP141T's capabilities, ensuring a comprehensive and accurate digital replica.
 
 % ----------------------------------------------------
 \ifstandalone

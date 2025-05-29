@@ -8,8 +8,9 @@
 % \newgeometry{margin=30mm}
 \chapter*{Abstract}
 
-\lipsum[2-4]
 
+This report evaluates the performance, fidelity, and usability of a digitized HP141T spectrum analyzer system, integrated with the HP8555A RF and HP8552B IF plug-in sections, through a series of experimental tests conducted on its subsystems: the HP141T Emulator, Signal Conditioning Subsystem (SCS), Data Acquisition Subsystem (DAS), Digital Processing Subsystem (DPS), and Graphical User Interface Subsystem (GUIS). The objective was to assess the system's ability to replicate the original HP141T's functionality on a Raspberry Pi 4B platform, focusing on accurate waveform emulation, signal scaling, data acquisition, and real-time display. Testing involved approximating the HP141T's auxiliary outputs using a Siglent SDG1010 waveform generator, measuring with a Picoscope 2204 USB oscilloscope, and implementing subsystems on custom PCBs and software. Results indicate that the SCS successfully inverted and scaled signals from -0.8 V to 0 V to the ADC-compatible 0 V to 3.3 V range, handling noisy inputs effectively, while the DPS and GUIS achieved accurate decibel scaling, near real-time updates (50-100 ms latency), and a user-friendly 8x10 grid display with CRT styling. However, the HP141T Emulator failed to produce expected waveforms due to component mismatches, and the original system's horizontal and pen-lift outputs could not be accurately emulated due to hardware limitations. The DAS, adapted to use the Picoscope, met sampling requirements but compromised real-time performance. In conclusion, while the digitized system excels in software fidelity and signal conditioning, hardware emulation requires further refinement to fully replicate the original HP141T's functionality, with recommendations for component optimization and enhanced waveform generation.
+	
 \ifstandalone
 % \bibliography{../Bibliography/References.bib}
 % \printnoidxglossary[type=\acronymtype,nonumberlist]
